@@ -46,11 +46,11 @@
     font-weight: bold;
 }
 </style>
-<h1>api-documentation for
+<h1>api documentation for
     <a
-        
+
         href="http://www.browsersync.io/"
-        
+
     >browser-sync (v2.18.8)</a>
 </h1>
 <h4>Live CSS Reload & Browser Syncing</h4>
@@ -58,1091 +58,1091 @@
     href="#apidoc.tableOfContents"
     id="apidoc.tableOfContents"
 ><h1>table of contents</h1></a><ol>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync">module browser-sync</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync">
             function <span class="apidocSignatureSpan">browser-sync.</span>browser_sync
             <span class="apidocSignatureSpan">(emitter)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.create">
             function <span class="apidocSignatureSpan">browser-sync.</span>create
             <span class="apidocSignatureSpan">(name, emitter)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.exit">
             function <span class="apidocSignatureSpan">browser-sync.</span>exit
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.get">
             function <span class="apidocSignatureSpan">browser-sync.</span>get
             <span class="apidocSignatureSpan">(name)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.has">
             function <span class="apidocSignatureSpan">browser-sync.</span>has
             <span class="apidocSignatureSpan">(name)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.init">
             function <span class="apidocSignatureSpan">browser-sync.</span>init
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.notify">
             function <span class="apidocSignatureSpan">browser-sync.</span>notify
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.pause">
             function <span class="apidocSignatureSpan">browser-sync.</span>pause
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.reload">
             function <span class="apidocSignatureSpan">browser-sync.</span>reload
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.reset">
             function <span class="apidocSignatureSpan">browser-sync.</span>reset
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.resume">
             function <span class="apidocSignatureSpan">browser-sync.</span>resume
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.stream">
             function <span class="apidocSignatureSpan">browser-sync.</span>stream
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.use">
             function <span class="apidocSignatureSpan">browser-sync.</span>use
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.watch">
             function <span class="apidocSignatureSpan">browser-sync.</span>watch
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>async</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>browser_sync.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>connect_utils</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>file_event_handler</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>file_utils</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>file_watcher</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>hooks</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>http_protocol</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>instances</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>logger</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>options</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>plugins</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>server</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>sockets</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>utils</span>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.async">module browser-sync.async</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.getEmptyPort">
             function <span class="apidocSignatureSpan">browser-sync.async.</span>getEmptyPort
             <span class="apidocSignatureSpan">(bs, done)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.getExtraPortForProxy">
             function <span class="apidocSignatureSpan">browser-sync.async.</span>getExtraPortForProxy
             <span class="apidocSignatureSpan">(bs, done)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.getOnlineStatus">
             function <span class="apidocSignatureSpan">browser-sync.async.</span>getOnlineStatus
             <span class="apidocSignatureSpan">(bs, done)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.initUserPlugins">
             function <span class="apidocSignatureSpan">browser-sync.async.</span>initUserPlugins
             <span class="apidocSignatureSpan">(bs, done)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.mergeMiddlewares">
             function <span class="apidocSignatureSpan">browser-sync.async.</span>mergeMiddlewares
             <span class="apidocSignatureSpan">(bs, done)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.mergeUiSettings">
             function <span class="apidocSignatureSpan">browser-sync.async.</span>mergeUiSettings
             <span class="apidocSignatureSpan">(bs, done)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.resolveInlineUserPlugins">
             function <span class="apidocSignatureSpan">browser-sync.async.</span>resolveInlineUserPlugins
             <span class="apidocSignatureSpan">(bs, done)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.setFileWatchers">
             function <span class="apidocSignatureSpan">browser-sync.async.</span>setFileWatchers
             <span class="apidocSignatureSpan">(bs, done)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.setInternalEvents">
             function <span class="apidocSignatureSpan">browser-sync.async.</span>setInternalEvents
             <span class="apidocSignatureSpan">(bs, done)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.setOptions">
             function <span class="apidocSignatureSpan">browser-sync.async.</span>setOptions
             <span class="apidocSignatureSpan">(bs, done)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.startServer">
             function <span class="apidocSignatureSpan">browser-sync.async.</span>startServer
             <span class="apidocSignatureSpan">(bs, done)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.startSockets">
             function <span class="apidocSignatureSpan">browser-sync.async.</span>startSockets
             <span class="apidocSignatureSpan">(bs, done)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.startTunnel">
             function <span class="apidocSignatureSpan">browser-sync.async.</span>startTunnel
             <span class="apidocSignatureSpan">(bs, done)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.startUi">
             function <span class="apidocSignatureSpan">browser-sync.async.</span>startUi
             <span class="apidocSignatureSpan">(bs, done)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.browser_sync">module browser-sync.browser_sync</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.browser_sync">
             function <span class="apidocSignatureSpan">browser-sync.</span>browser_sync
             <span class="apidocSignatureSpan">(emitter)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.browser_sync.prototype">module browser-sync.browser_sync.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype._addMiddlewareToStack">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>_addMiddlewareToStack
             <span class="apidocSignatureSpan">(entry)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.addMiddleware">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>addMiddleware
             <span class="apidocSignatureSpan">(route, handle, opts)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.addRewriteRule">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>addRewriteRule
             <span class="apidocSignatureSpan">(rule)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.callback">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>callback
             <span class="apidocSignatureSpan">(name)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.cleanup">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>cleanup
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.getExternalSocketConnector">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getExternalSocketConnector
             <span class="apidocSignatureSpan">(opts)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.getLogger">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getLogger
             <span class="apidocSignatureSpan">(name)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.getMiddleware">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getMiddleware
             <span class="apidocSignatureSpan">(type)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.getOption">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getOption
             <span class="apidocSignatureSpan">(name)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.getOptionIn">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getOptionIn
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.getOptions">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getOptions
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.getSocketConnector">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getSocketConnector
             <span class="apidocSignatureSpan">(opts)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.getSocketIoScript">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getSocketIoScript
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.getUserPlugin">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getUserPlugin
             <span class="apidocSignatureSpan">(name)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.getUserPlugins">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getUserPlugins
             <span class="apidocSignatureSpan">(filter)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.init">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>init
             <span class="apidocSignatureSpan">(options, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.registerCleanupTask">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>registerCleanupTask
             <span class="apidocSignatureSpan">(fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.registerPlugin">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>registerPlugin
             <span class="apidocSignatureSpan">(module, opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.removeMiddleware">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>removeMiddleware
             <span class="apidocSignatureSpan">(id)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.removeRewriteRule">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>removeRewriteRule
             <span class="apidocSignatureSpan">(id)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.resetMiddlewareStack">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>resetMiddlewareStack
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.serveFile">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>serveFile
             <span class="apidocSignatureSpan">(path, props)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.setMany">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>setMany
             <span class="apidocSignatureSpan">(fn, opts)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.setOption">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>setOption
             <span class="apidocSignatureSpan">(name, value, opts)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.setOptionIn">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>setOptionIn
             <span class="apidocSignatureSpan">(path, value, opts)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.setRewriteRules">
             function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>setRewriteRules
             <span class="apidocSignatureSpan">(rules)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.connect_utils">module browser-sync.connect_utils</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.connect_utils.clientScript">
             function <span class="apidocSignatureSpan">browser-sync.connect_utils.</span>clientScript
             <span class="apidocSignatureSpan">(options, both)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.connect_utils.getConnectionUrl">
             function <span class="apidocSignatureSpan">browser-sync.connect_utils.</span>getConnectionUrl
             <span class="apidocSignatureSpan">(options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.connect_utils.getNamespace">
             function <span class="apidocSignatureSpan">browser-sync.connect_utils.</span>getNamespace
             <span class="apidocSignatureSpan">(socketOpts, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.connect_utils.scriptTags">
             function <span class="apidocSignatureSpan">browser-sync.connect_utils.</span>scriptTags
             <span class="apidocSignatureSpan">(options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.connect_utils.socketConnector">
             function <span class="apidocSignatureSpan">browser-sync.connect_utils.</span>socketConnector
             <span class="apidocSignatureSpan">(options)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.file_event_handler">module browser-sync.file_event_handler</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.file_event_handler.applyReloadOperators">
             function <span class="apidocSignatureSpan">browser-sync.file_event_handler.</span>applyReloadOperators
             <span class="apidocSignatureSpan">(subject, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.file_event_handler.fileChanges">
             function <span class="apidocSignatureSpan">browser-sync.file_event_handler.</span>fileChanges
             <span class="apidocSignatureSpan">(subject, options)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.file_utils">module browser-sync.file_utils</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.file_utils.changedFile">
             function <span class="apidocSignatureSpan">browser-sync.file_utils.</span>changedFile
             <span class="apidocSignatureSpan">(bs, data)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.file_utils.getFileInfo">
             function <span class="apidocSignatureSpan">browser-sync.file_utils.</span>getFileInfo
             <span class="apidocSignatureSpan">(data, options)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.file_watcher">module browser-sync.file_watcher</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.file_watcher.plugin">
             function <span class="apidocSignatureSpan">browser-sync.file_watcher.</span>plugin
             <span class="apidocSignatureSpan">(bs)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.file_watcher.watch">
             function <span class="apidocSignatureSpan">browser-sync.file_watcher.</span>watch
             <span class="apidocSignatureSpan">(patterns, opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.hooks">module browser-sync.hooks</a><ol>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.http_protocol">module browser-sync.http_protocol</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.http_protocol.getUrl">
             function <span class="apidocSignatureSpan">browser-sync.http_protocol.</span>getUrl
             <span class="apidocSignatureSpan">(args, url)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.http_protocol.middleware">
             function <span class="apidocSignatureSpan">browser-sync.http_protocol.</span>middleware
             <span class="apidocSignatureSpan">(bs)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.logger">module browser-sync.logger</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.logger.getLogger">
             function <span class="apidocSignatureSpan">browser-sync.logger.</span>getLogger
             <span class="apidocSignatureSpan">(name)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.logger.plugin">
             function <span class="apidocSignatureSpan">browser-sync.logger.</span>plugin
             <span class="apidocSignatureSpan">(emitter, bs)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>logger</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.logger.</span>callbacks</span>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.options">module browser-sync.options</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.options.update">
             function <span class="apidocSignatureSpan">browser-sync.options.</span>update
             <span class="apidocSignatureSpan">(options)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.plugins">module browser-sync.plugins</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.plugins.requirePlugin">
             function <span class="apidocSignatureSpan">browser-sync.plugins.</span>requirePlugin
             <span class="apidocSignatureSpan">(item)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.plugins.resolvePlugin">
             function <span class="apidocSignatureSpan">browser-sync.plugins.</span>resolvePlugin
             <span class="apidocSignatureSpan">(item)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.server">module browser-sync.server</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.server.createServer">
             function <span class="apidocSignatureSpan">browser-sync.server.</span>createServer
             <span class="apidocSignatureSpan">(bs)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.server.plugin">
             function <span class="apidocSignatureSpan">browser-sync.server.</span>plugin
             <span class="apidocSignatureSpan">(bs)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.sockets">module browser-sync.sockets</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.sockets.init">
             function <span class="apidocSignatureSpan">browser-sync.sockets.</span>init
             <span class="apidocSignatureSpan">(server, clientEvents, bs)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.sockets.plugin">
             function <span class="apidocSignatureSpan">browser-sync.sockets.</span>plugin
             <span class="apidocSignatureSpan">(server, clientEvents, bs)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.utils">module browser-sync.utils</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.UAParser">
             function <span class="apidocSignatureSpan">browser-sync.utils.</span>UAParser
             <span class="apidocSignatureSpan">(uastring, extensions)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils._makeUrl">
             function <span class="apidocSignatureSpan">browser-sync.utils.</span>_makeUrl
             <span class="apidocSignatureSpan">(scheme, host, port)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.arrayify">
             function <span class="apidocSignatureSpan">browser-sync.utils.</span>arrayify
             <span class="apidocSignatureSpan">(incoming)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.connect">
             function <span class="apidocSignatureSpan">browser-sync.utils.</span>connect
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.defaultCallback">
             function <span class="apidocSignatureSpan">browser-sync.utils.</span>defaultCallback
             <span class="apidocSignatureSpan">(err)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.eachSeries">
             function <span class="apidocSignatureSpan">browser-sync.utils.</span>eachSeries
             <span class="apidocSignatureSpan">(arr, iterator, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.easyExtender">
             function <span class="apidocSignatureSpan">browser-sync.utils.</span>easyExtender
             <span class="apidocSignatureSpan">(plugins, hooks)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.fail">
             function <span class="apidocSignatureSpan">browser-sync.utils.</span>fail
             <span class="apidocSignatureSpan">(kill, errMessage, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.getConfigErrors">
             function <span class="apidocSignatureSpan">browser-sync.utils.</span>getConfigErrors
             <span class="apidocSignatureSpan">(options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.getHostIp">
             function <span class="apidocSignatureSpan">browser-sync.utils.</span>getHostIp
             <span class="apidocSignatureSpan">(options, devIp)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.getPort">
             function <span class="apidocSignatureSpan">browser-sync.utils.</span>getPort
             <span class="apidocSignatureSpan">(port, max, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.getPorts">
             function <span class="apidocSignatureSpan">browser-sync.utils.</span>getPorts
             <span class="apidocSignatureSpan">(options, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.getUaString">
             function <span class="apidocSignatureSpan">browser-sync.utils.</span>getUaString
             <span class="apidocSignatureSpan">(ua)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.getUrl">
             function <span class="apidocSignatureSpan">browser-sync.utils.</span>getUrl
             <span class="apidocSignatureSpan">(url, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.getUrlOptions">
             function <span class="apidocSignatureSpan">browser-sync.utils.</span>getUrlOptions
             <span class="apidocSignatureSpan">(options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.getUrls">
             function <span class="apidocSignatureSpan">browser-sync.utils.</span>getUrls
             <span class="apidocSignatureSpan">(external, local, scheme, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.isList">
             function <span class="apidocSignatureSpan">browser-sync.utils.</span>isList
             <span class="apidocSignatureSpan">(maybeList)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.open">
             function <span class="apidocSignatureSpan">browser-sync.utils.</span>open
             <span class="apidocSignatureSpan">(url, name, bs)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.openBrowser">
             function <span class="apidocSignatureSpan">browser-sync.utils.</span>openBrowser
             <span class="apidocSignatureSpan">(url, options, bs)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.serveStatic">
             function <span class="apidocSignatureSpan">browser-sync.utils.</span>serveStatic
             <span class="apidocSignatureSpan">(root, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.verifyConfig">
             function <span class="apidocSignatureSpan">browser-sync.utils.</span>verifyConfig
             <span class="apidocSignatureSpan">(options, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.willCauseReload">
             function <span class="apidocSignatureSpan">browser-sync.utils.</span>willCauseReload
             <span class="apidocSignatureSpan">(needles, haystack)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.xip">
             function <span class="apidocSignatureSpan">browser-sync.utils.</span>xip
             <span class="apidocSignatureSpan">(host, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.utils.</span>devIp</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.utils.</span>portscanner</span>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.browser-sync" id="apidoc.module.browser-sync">module browser-sync</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync" id="apidoc.element.browser-sync.browser_sync">
         function <span class="apidocSignatureSpan">browser-sync.</span>browser_sync
@@ -1171,9 +1171,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.create" id="apidoc.element.browser-sync.create">
         function <span class="apidocSignatureSpan">browser-sync.</span>create
@@ -1249,8 +1249,8 @@ if (instances.length) {
         return item.name === &#x22;singleton&#x22;;
     });
     if (instance.length) {
-        logger.error(&#x22;{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.<s\
-pan class="apidocCodeKeywordSpan">create</span>().init()&#x22;);
+        logger.error(&#x22;{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.<span
+ class="apidocCodeKeywordSpan">create</span>().init()&#x22;);
         return instance;
     }
 }
@@ -1260,9 +1260,9 @@ singleton = create(&#x22;singleton&#x22;, getSingletonEmitter());
 if (singletonPlugins.length) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.exit" id="apidoc.element.browser-sync.exit">
         function <span class="apidocSignatureSpan">browser-sync.</span>exit
@@ -1298,9 +1298,9 @@ if (singletonPlugins.length) {
  * @returns {String}
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.get" id="apidoc.element.browser-sync.get">
         function <span class="apidocSignatureSpan">browser-sync.</span>get
@@ -1333,9 +1333,9 @@ if (bs.options.<span class="apidocCodeKeywordSpan">get</span>(&#x22;mode&#x22;) 
 if (!bs.options.getIn([&#x22;proxy&#x22;, &#x22;ws&#x22;])) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.has" id="apidoc.element.browser-sync.has">
         function <span class="apidocSignatureSpan">browser-sync.</span>has
@@ -1368,9 +1368,9 @@ var options = item.get(&#x22;options&#x22;);
  * inline plugin references, but with options
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.init" id="apidoc.element.browser-sync.init">
         function <span class="apidocSignatureSpan">browser-sync.</span>init
@@ -1385,8 +1385,8 @@ var options = item.get(&#x22;options&#x22;);
             return item.name === &#x22;singleton&#x22;;
         });
         if (instance.length) {
-            logger.error(&#x22;{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.cre\
-ate().init()&#x22;);
+            logger.error(&#x22;{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.create
+().init()&#x22;);
             return instance;
         }
     }
@@ -1410,8 +1410,8 @@ if (instances.length) {
         return item.name === &#x22;singleton&#x22;;
     });
     if (instance.length) {
-        logger.error(&#x22;{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.cr\
-eate().<span class="apidocCodeKeywordSpan">init</span>()&#x22;);
+        logger.error(&#x22;{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.create
+().<span class="apidocCodeKeywordSpan">init</span>()&#x22;);
         return instance;
     }
 }
@@ -1421,9 +1421,9 @@ singleton = create(&#x22;singleton&#x22;, getSingletonEmitter());
 if (singletonPlugins.length) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.notify" id="apidoc.element.browser-sync.notify">
         function <span class="apidocSignatureSpan">browser-sync.</span>notify
@@ -1443,9 +1443,9 @@ if (singletonPlugins.length) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.pause" id="apidoc.element.browser-sync.pause">
         function <span class="apidocSignatureSpan">browser-sync.</span>pause
@@ -1465,9 +1465,9 @@ if (singletonPlugins.length) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.reload" id="apidoc.element.browser-sync.reload">
         function <span class="apidocSignatureSpan">browser-sync.</span>reload
@@ -1487,9 +1487,9 @@ if (singletonPlugins.length) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.reset" id="apidoc.element.browser-sync.reset">
         function <span class="apidocSignatureSpan">browser-sync.</span>reset
@@ -1508,9 +1508,9 @@ if (singletonPlugins.length) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.resume" id="apidoc.element.browser-sync.resume">
         function <span class="apidocSignatureSpan">browser-sync.</span>resume
@@ -1530,9 +1530,9 @@ if (singletonPlugins.length) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.stream" id="apidoc.element.browser-sync.stream">
         function <span class="apidocSignatureSpan">browser-sync.</span>stream
@@ -1552,9 +1552,9 @@ if (singletonPlugins.length) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.use" id="apidoc.element.browser-sync.use">
         function <span class="apidocSignatureSpan">browser-sync.</span>use
@@ -1570,9 +1570,9 @@ if (singletonPlugins.length) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.watch" id="apidoc.element.browser-sync.watch">
         function <span class="apidocSignatureSpan">browser-sync.</span>watch
@@ -1608,44 +1608,44 @@ if (singletonPlugins.length) {
 }
 ...</pre></li>
     </ul>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.browser-sync.async" id="apidoc.module.browser-sync.async">module browser-sync.async</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.async.getEmptyPort" id="apidoc.element.browser-sync.async.getEmptyPort">
         function <span class="apidocSignatureSpan">browser-sync.async.</span>getEmptyPort
@@ -1668,9 +1668,9 @@ if (singletonPlugins.length) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.async.getExtraPortForProxy" id="apidoc.element.browser-sync.async.getExtraPortForProxy">
         function <span class="apidocSignatureSpan">browser-sync.async.</span>getExtraPortForProxy
@@ -1721,9 +1721,9 @@ if (singletonPlugins.length) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.async.getOnlineStatus" id="apidoc.element.browser-sync.async.getOnlineStatus">
         function <span class="apidocSignatureSpan">browser-sync.async.</span>getOnlineStatus
@@ -1753,9 +1753,9 @@ if (singletonPlugins.length) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.async.initUserPlugins" id="apidoc.element.browser-sync.async.initUserPlugins">
         function <span class="apidocSignatureSpan">browser-sync.async.</span>initUserPlugins
@@ -1791,9 +1791,9 @@ initUserPlugins: function (bs, done) {
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.async.mergeMiddlewares" id="apidoc.element.browser-sync.async.mergeMiddlewares">
         function <span class="apidocSignatureSpan">browser-sync.async.</span>mergeMiddlewares
@@ -1814,9 +1814,9 @@ initUserPlugins: function (bs, done) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.async.mergeUiSettings" id="apidoc.element.browser-sync.async.mergeUiSettings">
         function <span class="apidocSignatureSpan">browser-sync.async.</span>mergeUiSettings
@@ -1838,9 +1838,9 @@ initUserPlugins: function (bs, done) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.async.resolveInlineUserPlugins" id="apidoc.element.browser-sync.async.resolveInlineUserPlugins">
         function <span class="apidocSignatureSpan">browser-sync.async.</span>resolveInlineUserPlugins
@@ -1874,9 +1874,9 @@ initUserPlugins: function (bs, done) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.async.setFileWatchers" id="apidoc.element.browser-sync.async.setFileWatchers">
         function <span class="apidocSignatureSpan">browser-sync.async.</span>setFileWatchers
@@ -1893,9 +1893,9 @@ initUserPlugins: function (bs, done) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.async.setInternalEvents" id="apidoc.element.browser-sync.async.setInternalEvents">
         function <span class="apidocSignatureSpan">browser-sync.async.</span>setInternalEvents
@@ -1909,9 +1909,9 @@ initUserPlugins: function (bs, done) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.async.setOptions" id="apidoc.element.browser-sync.async.setOptions">
         function <span class="apidocSignatureSpan">browser-sync.async.</span>setOptions
@@ -1935,9 +1935,9 @@ initUserPlugins: function (bs, done) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.async.startServer" id="apidoc.element.browser-sync.async.startServer">
         function <span class="apidocSignatureSpan">browser-sync.async.</span>startServer
@@ -1958,9 +1958,9 @@ initUserPlugins: function (bs, done) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.async.startSockets" id="apidoc.element.browser-sync.async.startSockets">
         function <span class="apidocSignatureSpan">browser-sync.async.</span>startSockets
@@ -1993,9 +1993,9 @@ initUserPlugins: function (bs, done) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.async.startTunnel" id="apidoc.element.browser-sync.async.startTunnel">
         function <span class="apidocSignatureSpan">browser-sync.async.</span>startTunnel
@@ -2029,9 +2029,9 @@ initUserPlugins: function (bs, done) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.async.startUi" id="apidoc.element.browser-sync.async.startUi">
         function <span class="apidocSignatureSpan">browser-sync.async.</span>startUi
@@ -2070,14 +2070,14 @@ initUserPlugins: function (bs, done) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.browser-sync.browser_sync" id="apidoc.module.browser-sync.browser_sync">module browser-sync.browser_sync</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.browser_sync" id="apidoc.element.browser-sync.browser_sync.browser_sync">
         function <span class="apidocSignatureSpan">browser-sync.</span>browser_sync
@@ -2106,14 +2106,14 @@ initUserPlugins: function (bs, done) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.browser-sync.browser_sync.prototype" id="apidoc.module.browser-sync.browser_sync.prototype">module browser-sync.browser_sync.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype._addMiddlewareToStack" id="apidoc.element.browser-sync.browser_sync.prototype._addMiddlewareToStack">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>_addMiddlewareToStack
@@ -2147,9 +2147,9 @@ initUserPlugins: function (bs, done) {
 BrowserSync.prototype._addMiddlewareToStack = function (entry) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.addMiddleware" id="apidoc.element.browser-sync.browser_sync.prototype.addMiddleware">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>addMiddleware
@@ -2196,9 +2196,9 @@ BrowserSync.prototype._addMiddlewareToStack = function (entry) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.addRewriteRule" id="apidoc.element.browser-sync.browser_sync.prototype.addRewriteRule">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>addRewriteRule
@@ -2217,9 +2217,9 @@ BrowserSync.prototype._addMiddlewareToStack = function (entry) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.callback" id="apidoc.element.browser-sync.browser_sync.prototype.callback">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>callback
@@ -2254,9 +2254,9 @@ BrowserSync.prototype._addMiddlewareToStack = function (entry) {
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.cleanup" id="apidoc.element.browser-sync.browser_sync.prototype.cleanup">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>cleanup
@@ -2329,9 +2329,9 @@ module.exports.reset = function () {
 };
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.getExternalSocketConnector" id="apidoc.element.browser-sync.browser_sync.prototype.getExternalSocketConnector">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getExternalSocketConnector
@@ -2370,9 +2370,9 @@ BrowserSync.prototype.getSocketConnector = function (opts) {
 * @returns {*}
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.getLogger" id="apidoc.element.browser-sync.browser_sync.prototype.getLogger">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getLogger
@@ -2388,9 +2388,9 @@ BrowserSync.prototype.getSocketConnector = function (opts) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.getMiddleware" id="apidoc.element.browser-sync.browser_sync.prototype.getMiddleware">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getMiddleware
@@ -2414,9 +2414,9 @@ BrowserSync.prototype.getSocketConnector = function (opts) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.getOption" id="apidoc.element.browser-sync.browser_sync.prototype.getOption">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getOption
@@ -2431,9 +2431,9 @@ BrowserSync.prototype.getSocketConnector = function (opts) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.getOptionIn" id="apidoc.element.browser-sync.browser_sync.prototype.getOptionIn">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getOptionIn
@@ -2448,9 +2448,9 @@ BrowserSync.prototype.getSocketConnector = function (opts) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.getOptions" id="apidoc.element.browser-sync.browser_sync.prototype.getOptions">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getOptions
@@ -2463,9 +2463,9 @@ BrowserSync.prototype.getSocketConnector = function (opts) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.getSocketConnector" id="apidoc.element.browser-sync.browser_sync.prototype.getSocketConnector">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getSocketConnector
@@ -2484,9 +2484,9 @@ BrowserSync.prototype.getSocketConnector = function (opts) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.getSocketIoScript" id="apidoc.element.browser-sync.browser_sync.prototype.getSocketIoScript">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getSocketIoScript
@@ -2500,9 +2500,9 @@ BrowserSync.prototype.getSocketConnector = function (opts) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.getUserPlugin" id="apidoc.element.browser-sync.browser_sync.prototype.getUserPlugin">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getUserPlugin
@@ -2526,9 +2526,9 @@ BrowserSync.prototype.getSocketConnector = function (opts) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.getUserPlugins" id="apidoc.element.browser-sync.browser_sync.prototype.getUserPlugins">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getUserPlugins
@@ -2574,9 +2574,9 @@ if (!uiOpts || uiOpts.get(&#x22;enabled&#x22;) === false) {
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.init" id="apidoc.element.browser-sync.browser_sync.prototype.init">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>init
@@ -2652,8 +2652,8 @@ if (instances.length) {
         return item.name === &#x22;singleton&#x22;;
     });
     if (instance.length) {
-        logger.error(&#x22;{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.cr\
-eate().<span class="apidocCodeKeywordSpan">init</span>()&#x22;);
+        logger.error(&#x22;{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.create
+().<span class="apidocCodeKeywordSpan">init</span>()&#x22;);
         return instance;
     }
 }
@@ -2663,9 +2663,9 @@ singleton = create(&#x22;singleton&#x22;, getSingletonEmitter());
 if (singletonPlugins.length) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.registerCleanupTask" id="apidoc.element.browser-sync.browser_sync.prototype.registerCleanupTask">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>registerCleanupTask
@@ -2692,9 +2692,9 @@ if (singletonPlugins.length) {
 };
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.registerPlugin" id="apidoc.element.browser-sync.browser_sync.prototype.registerPlugin">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>registerPlugin
@@ -2730,9 +2730,9 @@ function logPluginError (plugin) {
 done();
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.removeMiddleware" id="apidoc.element.browser-sync.browser_sync.prototype.removeMiddleware">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>removeMiddleware
@@ -2758,9 +2758,9 @@ done();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.removeRewriteRule" id="apidoc.element.browser-sync.browser_sync.prototype.removeRewriteRule">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>removeRewriteRule
@@ -2780,9 +2780,9 @@ done();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.resetMiddlewareStack" id="apidoc.element.browser-sync.browser_sync.prototype.resetMiddlewareStack">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>resetMiddlewareStack
@@ -2815,9 +2815,9 @@ done();
 */
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.serveFile" id="apidoc.element.browser-sync.browser_sync.prototype.serveFile">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>serveFile
@@ -2842,9 +2842,9 @@ done();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.setMany" id="apidoc.element.browser-sync.browser_sync.prototype.setMany">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>setMany
@@ -2883,9 +2883,9 @@ if (Object.keys(options).length &#x3e; 1) {
     Object.keys(options).forEach(function (key) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.setOption" id="apidoc.element.browser-sync.browser_sync.prototype.setOption">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>setOption
@@ -2926,9 +2926,9 @@ if (Object.keys(options).length &#x3e; 1) {
 * @param {BrowserSync} bs
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.setOptionIn" id="apidoc.element.browser-sync.browser_sync.prototype.setOptionIn">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>setOptionIn
@@ -2967,9 +2967,9 @@ if (out.optionsIn) {
 if (out.instance) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.browser_sync.prototype.setRewriteRules" id="apidoc.element.browser-sync.browser_sync.prototype.setRewriteRules">
         function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>setRewriteRules
@@ -2987,14 +2987,14 @@ if (out.instance) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.browser-sync.connect_utils" id="apidoc.module.browser-sync.connect_utils">module browser-sync.connect_utils</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.connect_utils.clientScript" id="apidoc.element.browser-sync.connect_utils.clientScript">
         function <span class="apidocSignatureSpan">browser-sync.connect_utils.</span>clientScript
@@ -3025,8 +3025,7 @@ setOptions: function (bs, done) {
         options: {
             urls:        utils.getUrlOptions(bs.options),
             snippet:     connectUtils.scriptTags(bs.options),
-            scriptPaths: Immutable.fromJS(connectUtils.<span class="apidocCodeKeywordSpan">clientScript</span>(bs.options, true)\
-),
+            scriptPaths: Immutable.fromJS(connectUtils.<span class="apidocCodeKeywordSpan">clientScript</span>(bs.options, true)),
             files:       bs.pluginManager.hook(
                 &#x22;files:watch&#x22;,
                 bs.options.get(&#x22;files&#x22;),
@@ -3036,9 +3035,9 @@ setOptions: function (bs, done) {
     });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.connect_utils.getConnectionUrl" id="apidoc.element.browser-sync.connect_utils.getConnectionUrl">
         function <span class="apidocSignatureSpan">browser-sync.connect_utils.</span>getConnectionUrl
@@ -3123,9 +3122,9 @@ var url           = connectUtils.<span class="apidocCodeKeywordSpan">getConnecti
 var clientConfig  = socket
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.connect_utils.getNamespace" id="apidoc.element.browser-sync.connect_utils.getNamespace">
         function <span class="apidocSignatureSpan">browser-sync.connect_utils.</span>getNamespace
@@ -3164,9 +3163,9 @@ var withDomain       = &#x22;&#x27;{domain}{ns}&#x27;&#x22;;
 var port             = options.get(&#x22;port&#x22;);
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.connect_utils.scriptTags" id="apidoc.element.browser-sync.connect_utils.scriptTags">
         function <span class="apidocSignatureSpan">browser-sync.connect_utils.</span>scriptTags
@@ -3274,9 +3273,9 @@ setOptions: function (bs, done) {
         }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.connect_utils.socketConnector" id="apidoc.element.browser-sync.connect_utils.socketConnector">
         function <span class="apidocSignatureSpan">browser-sync.connect_utils.</span>socketConnector
@@ -3325,14 +3324,14 @@ if (type in types) {
         res.end(types[type]);
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.browser-sync.file_event_handler" id="apidoc.module.browser-sync.file_event_handler">module browser-sync.file_event_handler</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.file_event_handler.applyReloadOperators" id="apidoc.element.browser-sync.file_event_handler.applyReloadOperators">
         function <span class="apidocSignatureSpan">browser-sync.file_event_handler.</span>applyReloadOperators
@@ -3366,8 +3365,8 @@ Object.keys(events).forEach(function (event) {
     bs.events.on(event, events[event]);
 });
 
-var reloader = fileHandler.<span class="apidocCodeKeywordSpan">applyReloadOperators</span>(fromEvent(bs.events, &#x22;_browser:r\
-eload&#x22;), bs.options)
+var reloader = fileHandler.<span class="apidocCodeKeywordSpan">applyReloadOperators</span>(fromEvent(bs.events, &#x22;_browser:reload
+&#x22;), bs.options)
     .subscribe(function() {
         bs.events.emit(&#x22;browser:reload&#x22;);
     });
@@ -3377,9 +3376,9 @@ var coreNamespacedWatchers = fromEvent(bs.events, &#x22;file:changed&#x22;)
     .filter(function(x) { return  x.namespace === &#x22;core&#x22; });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.file_event_handler.fileChanges" id="apidoc.element.browser-sync.file_event_handler.fileChanges">
         function <span class="apidocSignatureSpan">browser-sync.file_event_handler.</span>fileChanges
@@ -3448,14 +3447,14 @@ var handler = fileHandler.<span class="apidocCodeKeywordSpan">fileChanges</span>
                 if (!bs.paused &#x26;&#x26; data.namespace === &#x22;core&#x22;) {
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.browser-sync.file_utils" id="apidoc.module.browser-sync.file_utils">module browser-sync.file_utils</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.file_utils.changedFile" id="apidoc.element.browser-sync.file_utils.changedFile">
         function <span class="apidocSignatureSpan">browser-sync.file_utils.</span>changedFile
@@ -3484,9 +3483,9 @@ var handler = fileHandler.<span class="apidocCodeKeywordSpan">fileChanges</span>
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.file_utils.getFileInfo" id="apidoc.element.browser-sync.file_utils.getFileInfo">
         function <span class="apidocSignatureSpan">browser-sync.file_utils.</span>getFileInfo
@@ -3526,8 +3525,8 @@ var handler = fileHandler.<span class="apidocCodeKeywordSpan">fileChanges</span>
      */
     if (bs.options.get(&#x22;watchEvents&#x22;).indexOf(data.event) &#x3e; -1) {
         if (!bs.paused &#x26;&#x26; data.namespace === &#x22;core&#x22;) {
-            bs.events.emit(&#x22;file:reload&#x22;, fileUtils.<span class="apidocCodeKeywordSpan">getFileInfo</span>(data, bs.op\
-tions));
+            bs.events.emit(&#x22;file:reload&#x22;, fileUtils.<span class="apidocCodeKeywordSpan">getFileInfo</span>(data, bs.options
+));
         }
     }
 },
@@ -3537,14 +3536,14 @@ tions));
  * @returns {{assetFileName: *, fileExtension: String}}
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.browser-sync.file_watcher" id="apidoc.module.browser-sync.file_watcher">module browser-sync.file_watcher</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.file_watcher.plugin" id="apidoc.element.browser-sync.file_watcher.plugin">
         function <span class="apidocSignatureSpan">browser-sync.file_watcher.</span>plugin
@@ -3605,9 +3604,9 @@ tions));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.file_watcher.watch" id="apidoc.element.browser-sync.file_watcher.watch">
         function <span class="apidocSignatureSpan">browser-sync.file_watcher.</span>watch
@@ -3649,19 +3648,19 @@ tions));
 }
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.browser-sync.hooks" id="apidoc.module.browser-sync.hooks">module browser-sync.hooks</a></h1>
-    
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.browser-sync.http_protocol" id="apidoc.module.browser-sync.http_protocol">module browser-sync.http_protocol</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.http_protocol.getUrl" id="apidoc.element.browser-sync.http_protocol.getUrl">
         function <span class="apidocSignatureSpan">browser-sync.http_protocol.</span>getUrl
@@ -3695,9 +3694,9 @@ var localhost = &#x22;localhost&#x22;;
 if (options.get(&#x22;xip&#x22;)) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.http_protocol.middleware" id="apidoc.element.browser-sync.http_protocol.middleware">
         function <span class="apidocSignatureSpan">browser-sync.http_protocol.</span>middleware
@@ -3745,14 +3744,14 @@ if (options.get(&#x22;xip&#x22;)) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.browser-sync.logger" id="apidoc.module.browser-sync.logger">module browser-sync.logger</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.logger.getLogger" id="apidoc.element.browser-sync.logger.getLogger">
         function <span class="apidocSignatureSpan">browser-sync.logger.</span>getLogger
@@ -3768,9 +3767,9 @@ if (options.get(&#x22;xip&#x22;)) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.logger.plugin" id="apidoc.element.browser-sync.logger.plugin">
         function <span class="apidocSignatureSpan">browser-sync.logger.</span>plugin
@@ -3802,18 +3801,18 @@ if (options.get(&#x22;xip&#x22;)) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.browser-sync.options" id="apidoc.module.browser-sync.options">module browser-sync.options</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.options.update" id="apidoc.element.browser-sync.options.update">
         function <span class="apidocSignatureSpan">browser-sync.options.</span>update
@@ -3859,14 +3858,14 @@ bs.pluginManager.init();
 /**
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.browser-sync.plugins" id="apidoc.module.browser-sync.plugins">module browser-sync.plugins</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.plugins.requirePlugin" id="apidoc.element.browser-sync.plugins.requirePlugin">
         function <span class="apidocSignatureSpan">browser-sync.plugins.</span>requirePlugin
@@ -3918,9 +3917,9 @@ bs.pluginManager.init();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.plugins.resolvePlugin" id="apidoc.element.browser-sync.plugins.resolvePlugin">
         function <span class="apidocSignatureSpan">browser-sync.plugins.</span>resolvePlugin
@@ -4016,14 +4015,14 @@ bs.pluginManager.init();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.browser-sync.server" id="apidoc.module.browser-sync.server">module browser-sync.server</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.server.createServer" id="apidoc.element.browser-sync.server.createServer">
         function <span class="apidocSignatureSpan">browser-sync.server.</span>createServer
@@ -4050,9 +4049,9 @@ bs.pluginManager.init();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.server.plugin" id="apidoc.element.browser-sync.server.plugin">
         function <span class="apidocSignatureSpan">browser-sync.server.</span>plugin
@@ -4123,14 +4122,14 @@ bs.pluginManager.init();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.browser-sync.sockets" id="apidoc.module.browser-sync.sockets">module browser-sync.sockets</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.sockets.init" id="apidoc.element.browser-sync.sockets.init">
         function <span class="apidocSignatureSpan">browser-sync.sockets.</span>init
@@ -4227,8 +4226,8 @@ if (instances.length) {
         return item.name === &#x22;singleton&#x22;;
     });
     if (instance.length) {
-        logger.error(&#x22;{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.cr\
-eate().<span class="apidocCodeKeywordSpan">init</span>()&#x22;);
+        logger.error(&#x22;{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.create
+().<span class="apidocCodeKeywordSpan">init</span>()&#x22;);
         return instance;
     }
 }
@@ -4238,9 +4237,9 @@ singleton = create(&#x22;singleton&#x22;, getSingletonEmitter());
 if (singletonPlugins.length) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.sockets.plugin" id="apidoc.element.browser-sync.sockets.plugin">
         function <span class="apidocSignatureSpan">browser-sync.sockets.</span>plugin
@@ -4253,14 +4252,14 @@ if (singletonPlugins.length) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.browser-sync.utils" id="apidoc.module.browser-sync.utils">module browser-sync.utils</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.utils.UAParser" id="apidoc.element.browser-sync.utils.UAParser">
         function <span class="apidocSignatureSpan">browser-sync.utils.</span>UAParser
@@ -4315,9 +4314,9 @@ if (singletonPlugins.length) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.utils._makeUrl" id="apidoc.element.browser-sync.utils._makeUrl">
         function <span class="apidocSignatureSpan">browser-sync.utils.</span>_makeUrl
@@ -4336,8 +4335,8 @@ if (singletonPlugins.length) {
     getUrls: function (external, local, scheme, options) {
 
 var urls = {
-    local: utils.getUrl(utils.<span class="apidocCodeKeywordSpan">_makeUrl</span>(scheme, local, options.get(&#x22;port&#x22;)),\
- options)
+    local: utils.getUrl(utils.<span class="apidocCodeKeywordSpan">_makeUrl</span>(scheme, local, options.get(&#x22;port&#x22;)),
+options)
 };
 
 if (external !== local) {
@@ -4347,9 +4346,9 @@ if (external !== local) {
 return urls;
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.utils.arrayify" id="apidoc.element.browser-sync.utils.arrayify">
         function <span class="apidocSignatureSpan">browser-sync.utils.</span>arrayify
@@ -4381,9 +4380,9 @@ return urls;
  * @returns {Object}
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.utils.connect" id="apidoc.element.browser-sync.utils.connect">
         function <span class="apidocSignatureSpan">browser-sync.utils.</span>connect
@@ -4401,9 +4400,9 @@ return urls;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.utils.defaultCallback" id="apidoc.element.browser-sync.utils.defaultCallback">
         function <span class="apidocSignatureSpan">browser-sync.utils.</span>defaultCallback
@@ -4418,9 +4417,9 @@ return urls;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.utils.eachSeries" id="apidoc.element.browser-sync.utils.eachSeries">
         function <span class="apidocSignatureSpan">browser-sync.utils.</span>eachSeries
@@ -4450,9 +4449,9 @@ return urls;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.utils.easyExtender" id="apidoc.element.browser-sync.utils.easyExtender">
         function <span class="apidocSignatureSpan">browser-sync.utils.</span>easyExtender
@@ -4473,9 +4472,9 @@ return urls;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.utils.fail" id="apidoc.element.browser-sync.utils.fail">
         function <span class="apidocSignatureSpan">browser-sync.utils.</span>fail
@@ -4513,9 +4512,9 @@ getEmptyPort: function (bs, done) {
         });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.utils.getConfigErrors" id="apidoc.element.browser-sync.utils.getConfigErrors">
         function <span class="apidocSignatureSpan">browser-sync.utils.</span>getConfigErrors
@@ -4553,9 +4552,9 @@ verifyConfig: function (options, cb) {
 /**
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.utils.getHostIp" id="apidoc.element.browser-sync.utils.getHostIp">
         function <span class="apidocSignatureSpan">browser-sync.utils.</span>getHostIp
@@ -4595,9 +4594,9 @@ if (options.get(&#x22;xip&#x22;)) {
 localhost = utils.xip(localhost, options);
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.utils.getPort" id="apidoc.element.browser-sync.utils.getPort">
         function <span class="apidocSignatureSpan">browser-sync.utils.</span>getPort
@@ -4629,9 +4628,9 @@ utils.<span class="apidocCodeKeywordSpan">getPort</span>(socketPort, null, funct
                 path: [&#x22;socket&#x22;, &#x22;port&#x22;],
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.utils.getPorts" id="apidoc.element.browser-sync.utils.getPorts">
         function <span class="apidocSignatureSpan">browser-sync.utils.</span>getPorts
@@ -4670,9 +4669,9 @@ getEmptyPort: function (bs, done) {
                 port: port
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.utils.getUaString" id="apidoc.element.browser-sync.utils.getUaString">
         function <span class="apidocSignatureSpan">browser-sync.utils.</span>getUaString
@@ -4700,9 +4699,9 @@ if (!bs.options.get(&#x22;logConnections&#x22;)) {
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.utils.getUrl" id="apidoc.element.browser-sync.utils.getUrl">
         function <span class="apidocSignatureSpan">browser-sync.utils.</span>getUrl
@@ -4742,9 +4741,9 @@ var localhost = &#x22;localhost&#x22;;
 if (options.get(&#x22;xip&#x22;)) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.utils.getUrlOptions" id="apidoc.element.browser-sync.utils.getUrlOptions">
         function <span class="apidocSignatureSpan">browser-sync.utils.</span>getUrlOptions
@@ -4793,9 +4792,9 @@ setOptions: function (bs, done) {
             )
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.utils.getUrls" id="apidoc.element.browser-sync.utils.getUrls">
         function <span class="apidocSignatureSpan">browser-sync.utils.</span>getUrls
@@ -4833,9 +4832,9 @@ setOptions: function (bs, done) {
  */
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.utils.isList" id="apidoc.element.browser-sync.utils.isList">
         function <span class="apidocSignatureSpan">browser-sync.utils.</span>isList
@@ -4863,9 +4862,9 @@ if (type === &#x22;server&#x22;) {
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.utils.open" id="apidoc.element.browser-sync.utils.open">
         function <span class="apidocSignatureSpan">browser-sync.utils.</span>open
@@ -4906,9 +4905,9 @@ if (open) {
     }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.utils.openBrowser" id="apidoc.element.browser-sync.utils.openBrowser">
         function <span class="apidocSignatureSpan">browser-sync.utils.</span>openBrowser
@@ -4948,8 +4947,7 @@ if (open) {
     var mode = bs.options.get(&#x22;mode&#x22;);
     var open = bs.options.get(&#x22;open&#x22;);
 
-    if (mode === &#x22;proxy&#x22; || mode === &#x22;server&#x22; || open === &#x22;ui&#x22; || open === &#x22;ui-external&#x22;\
-) {
+    if (mode === &#x22;proxy&#x22; || mode === &#x22;server&#x22; || open === &#x22;ui&#x22; || open === &#x22;ui-external&#x22;) {
         utils.<span class="apidocCodeKeywordSpan">openBrowser</span>(data.url, bs.options, bs);
     }
 
@@ -4960,9 +4958,9 @@ if (open) {
 },
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.utils.serveStatic" id="apidoc.element.browser-sync.utils.serveStatic">
         function <span class="apidocSignatureSpan">browser-sync.utils.</span>serveStatic
@@ -5062,9 +5060,9 @@ if (open) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.utils.verifyConfig" id="apidoc.element.browser-sync.utils.verifyConfig">
         function <span class="apidocSignatureSpan">browser-sync.utils.</span>verifyConfig
@@ -5098,9 +5096,9 @@ if (!utils.<span class="apidocCodeKeywordSpan">verifyConfig</span>(options, bs.c
  * @private
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.utils.willCauseReload" id="apidoc.element.browser-sync.utils.willCauseReload">
         function <span class="apidocSignatureSpan">browser-sync.utils.</span>willCauseReload
@@ -5131,9 +5129,9 @@ return {
     type: &#x22;inject&#x22;,
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.browser-sync.utils.xip" id="apidoc.element.browser-sync.utils.xip">
         function <span class="apidocSignatureSpan">browser-sync.utils.</span>xip
@@ -5169,12 +5167,12 @@ if (options.get(&#x22;xip&#x22;)) {
 localhost = utils.xip(localhost, options);
 ...</pre></li>
     </ul>
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
 </div>
 
 <div class="apidocFooterDiv">
