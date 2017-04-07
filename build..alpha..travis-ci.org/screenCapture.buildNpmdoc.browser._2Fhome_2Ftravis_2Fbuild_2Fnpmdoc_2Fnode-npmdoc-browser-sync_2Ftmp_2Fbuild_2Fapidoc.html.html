@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="http://www.browsersync.io/"
-
-    >browser-sync (v2.18.8)</a>
+    <a href="http://www.browsersync.io/">browser-sync (v2.18.8)</a>
 </h1>
-<h4>Live CSS Reload & Browser Syncing</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<h4>Live CSS Reload &amp; Browser Syncing</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync">module browser-sync</a><ol>
 
@@ -1551,29 +1544,29 @@
     var instance = {
         name:      name,
         instance:  browserSync,
-        exit:      require(&#x22;./lib/public/exit&#x22;)(browserSync),
-        notify:    require(&#x22;./lib/public/notify&#x22;)(browserSync),
-        pause:     require(&#x22;./lib/public/pause&#x22;)(browserSync),
-        resume:    require(&#x22;./lib/public/resume&#x22;)(browserSync),
-        reload:    require(&#x22;./lib/public/reload&#x22;)(emitter),
-        stream:    require(&#x22;./lib/public/stream&#x22;)(emitter),
+        exit:      require("./lib/public/exit")(browserSync),
+        notify:    require("./lib/public/notify")(browserSync),
+        pause:     require("./lib/public/pause")(browserSync),
+        resume:    require("./lib/public/resume")(browserSync),
+        reload:    require("./lib/public/reload")(emitter),
+        stream:    require("./lib/public/stream")(emitter),
         cleanup:   browserSync.cleanup.bind(browserSync),
         use:       browserSync.registerPlugin.bind(browserSync),
         getOption: browserSync.getOption.bind(browserSync),
         emitter:   browserSync.events,
-        watch:     require(&#x22;./lib/file-watcher&#x22;).watch
+        watch:     require("./lib/file-watcher").watch
     };
 
     browserSync.publicInstance = instance;
-    instance.init = require(&#x22;./lib/public/init&#x22;)(browserSync, name, pjson);
+    instance.init = require("./lib/public/init")(browserSync, name, pjson);
 
-    Object.defineProperty(instance, &#x22;active&#x22;, {
+    Object.defineProperty(instance, "active", {
         get: function () {
             return browserSync.active;
         }
     });
 
-    Object.defineProperty(instance, &#x22;paused&#x22;, {
+    Object.defineProperty(instance, "paused", {
         get: function () {
             return browserSync.paused;
         }
@@ -1584,7 +1577,7 @@
      *
      * @property sockets
      */
-</span>    Object.defineProperty(instance, &#x22;sockets&#x22;, {
+</span>    Object.defineProperty(instance, "sockets", {
         get: function () {
             if (!browserSync.active) {
                 return {
@@ -1606,16 +1599,15 @@ function initSingleton() {
 var instance;
 if (instances.length) {
     instance = instances.filter(function (item) {
-        return item.name === &#x22;singleton&#x22;;
+        return item.name === "singleton";
     });
     if (instance.length) {
-        logger.error(&#x22;{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.<span
- class="apidocCodeKeywordSpan">create</span>().init()&#x22;);
+        logger.error("{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.<span class="apidocCodeKeywordSpan">create</span>().init()");
         return instance;
     }
 }
 var args = Array.prototype.slice.call(arguments);
-singleton = create(&#x22;singleton&#x22;, getSingletonEmitter());
+singleton = create("singleton", getSingletonEmitter());
 
 if (singletonPlugins.length) {
 ...</pre></li>
@@ -1673,7 +1665,7 @@ if (singletonPlugins.length) {
     if (instance) {
         return instance;
     }
-    throw new Error(&#x22;An instance with the name `%s` was not found.&#x22;.replace(&#x22;%s&#x22;, name));
+    throw new Error("An instance with the name `%s` was not found.".replace("%s", name));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
      * @param bs
@@ -1683,14 +1675,14 @@ if (singletonPlugins.length) {
 /**
  * An extra port is not needed in snippet/server mode
  */
-if (bs.options.<span class="apidocCodeKeywordSpan">get</span>(&#x22;mode&#x22;) !== &#x22;proxy&#x22;) {
+if (bs.options.<span class="apidocCodeKeywordSpan">get</span>("mode") !== "proxy") {
     return done();
 }
 
 /**
  * Web socket support is disabled by default
  */
-if (!bs.options.getIn([&#x22;proxy&#x22;, &#x22;ws&#x22;])) {
+if (!bs.options.getIn(["proxy", "ws"])) {
 ...</pre></li>
     </ul>
 
@@ -1715,16 +1707,16 @@ return getFromString(item);
     }
 
     if (!isMap(item)) {
-return new Plugin().mergeDeep({errors: [new Error(&#x22;Plugin not supported in this format&#x22;)]});
+return new Plugin().mergeDeep({errors: [new Error("Plugin not supported in this format")]});
     }
 
-    if (item.<span class="apidocCodeKeywordSpan">has</span>(&#x22;module&#x22;)) {
+    if (item.<span class="apidocCodeKeywordSpan">has</span>("module")) {
 
-var nameOrObj = item.get(&#x22;module&#x22;);
-var options = item.get(&#x22;options&#x22;);
+var nameOrObj = item.get("module");
+var options = item.get("options");
 
 /**
- * The &#x27;module&#x27; key can be a string, this allows
+ * The 'module' key can be a string, this allows
  * inline plugin references, but with options
 ...</pre></li>
     </ul>
@@ -1742,16 +1734,16 @@ var options = item.get(&#x22;options&#x22;);
     var instance;
     if (instances.length) {
         instance = instances.filter(function (item) {
-            return item.name === &#x22;singleton&#x22;;
+            return item.name === "singleton";
         });
         if (instance.length) {
-            logger.error(&#x22;{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.create
-().init()&#x22;);
+            logger.error("{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.create
+().init()");
             return instance;
         }
     }
     var args = Array.prototype.slice.call(arguments);
-    singleton = create(&#x22;singleton&#x22;, getSingletonEmitter());
+    singleton = create("singleton", getSingletonEmitter());
 
     if (singletonPlugins.length) {
         singletonPlugins.forEach(function (obj) {
@@ -1767,16 +1759,16 @@ function initSingleton() {
 var instance;
 if (instances.length) {
     instance = instances.filter(function (item) {
-        return item.name === &#x22;singleton&#x22;;
+        return item.name === "singleton";
     });
     if (instance.length) {
-        logger.error(&#x22;{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.create
-().<span class="apidocCodeKeywordSpan">init</span>()&#x22;);
+        logger.error("{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.create
+().<span class="apidocCodeKeywordSpan">init</span>()");
         return instance;
     }
 }
 var args = Array.prototype.slice.call(arguments);
-singleton = create(&#x22;singleton&#x22;, getSingletonEmitter());
+singleton = create("singleton", getSingletonEmitter());
 
 if (singletonPlugins.length) {
 ...</pre></li>
@@ -1954,16 +1946,16 @@ if (singletonPlugins.length) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-    if (typeof opts === &#x22;function&#x22;) {
+    if (typeof opts === "function") {
         cb = opts;
         opts = {};
     }
 
-    var watcher = require(&#x22;chokidar&#x22;)
+    var watcher = require("chokidar")
         .<span class="apidocCodeKeywordSpan">watch</span>(patterns, opts);
 
     if (_.isFunction(cb)) {
-        watcher.on(&#x22;all&#x22;, cb);
+        watcher.on("all", cb);
     }
 
     return watcher;
@@ -2018,7 +2010,7 @@ if (singletonPlugins.length) {
         if (err) {
             return utils.fail(true, err, bs.cb);
         }
-        bs.debug(&#x22;Found a free port: {magenta:%s&#x22;, port);
+        bs.debug("Found a free port: {magenta:%s", port);
         done(null, {
             options: {
                 port: port
@@ -2042,27 +2034,27 @@ if (singletonPlugins.length) {
 <span class="apidocCodeCommentSpan">    /**
      * An extra port is not needed in snippet/server mode
      */
-</span>    if (bs.options.get(&#x22;mode&#x22;) !== &#x22;proxy&#x22;) {
+</span>    if (bs.options.get("mode") !== "proxy") {
         return done();
     }
 
     /**
      * Web socket support is disabled by default
      */
-    if (!bs.options.getIn([&#x22;proxy&#x22;, &#x22;ws&#x22;])) {
+    if (!bs.options.getIn(["proxy", "ws"])) {
         return done();
     }
 
     /**
      * Use 1 higher than server port by default...
      */
-    var socketPort = bs.options.get(&#x22;port&#x22;) + 1;
+    var socketPort = bs.options.get("port") + 1;
 
     /**
      * Or use the user-defined socket.port option instead
      */
-    if (bs.options.hasIn([&#x22;socket&#x22;, &#x22;port&#x22;])) {
-        socketPort = bs.options.getIn([&#x22;socket&#x22;, &#x22;port&#x22;]);
+    if (bs.options.hasIn(["socket", "port"])) {
+        socketPort = bs.options.getIn(["socket", "port"]);
     }
 
     utils.getPort(socketPort, null, function (err, port) {
@@ -2072,7 +2064,7 @@ if (singletonPlugins.length) {
         done(null, {
             optionsIn: [
                 {
-                    path: [&#x22;socket&#x22;, &#x22;port&#x22;],
+                    path: ["socket", "port"],
                     value: port
                 }
             ]
@@ -2092,13 +2084,13 @@ if (singletonPlugins.length) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getOnlineStatus = function (bs, done) {
-    if (_.isUndefined(bs.options.get(&#x22;online&#x22;)) &#x26;&#x26; _.isUndefined(process.env.TESTING)) {
-        require(&#x22;dns&#x22;).resolve(&#x22;www.google.com&#x22;, function (err) {
+    if (_.isUndefined(bs.options.get("online")) &amp;&amp; _.isUndefined(process.env.TESTING)) {
+        require("dns").resolve("www.google.com", function (err) {
             var online = false;
             if (err) {
-                bs.debug(&#x22;Could not resolve www.google.com, setting {magenta:online: false}&#x22;);
+                bs.debug("Could not resolve www.google.com, setting {magenta:online: false}");
             } else {
-                bs.debug(&#x22;Resolved www.google.com, setting {magenta:online: true}&#x22;);
+                bs.debug("Resolved www.google.com, setting {magenta:online: true}");
                 online = true;
             }
             done(null, {
@@ -2166,8 +2158,8 @@ initUserPlugins: function (bs, done) {
     done(null, {
         options: {
             middleware: bs.pluginManager.hook(
-                &#x22;server:middleware&#x22;,
-                bs.options.get(&#x22;middleware&#x22;)
+                "server:middleware",
+                bs.options.get("middleware")
             )
         }
     });
@@ -2192,7 +2184,7 @@ initUserPlugins: function (bs, done) {
 
     done(null, {
         options: {
-            urls: bs.options.get(&#x22;urls&#x22;).merge(bs.ui.options.get(&#x22;urls&#x22;))
+            urls: bs.options.get("urls").merge(bs.ui.options.get("urls"))
         }
     });
 }</pre></li>
@@ -2211,13 +2203,13 @@ initUserPlugins: function (bs, done) {
     <li>description and source-code<pre class="apidocCodePre">resolveInlineUserPlugins = function (bs, done) {
 
     var plugins = bs.options
-        .get(&#x22;plugins&#x22;)
+        .get("plugins")
         .map(pluginUtils.resolvePlugin)
         .map(pluginUtils.requirePlugin);
 
     plugins
         .forEach(function (plugin) {
-            if (plugin.get(&#x22;errors&#x22;).size) {
+            if (plugin.get("errors").size) {
                 return logPluginError(plugin);
             }
             var jsPlugin = plugin.toJS();
@@ -2227,7 +2219,7 @@ initUserPlugins: function (bs, done) {
         });
 
     function logPluginError (plugin) {
-        utils.fail(true, plugin.getIn([&#x22;errors&#x22;, 0]), bs.cb);
+        utils.fail(true, plugin.getIn(["errors", 0]), bs.cb);
     }
 
     done();
@@ -2247,7 +2239,7 @@ initUserPlugins: function (bs, done) {
     <li>description and source-code<pre class="apidocCodePre">setFileWatchers = function (bs, done) {
     done(null, {
         instance: {
-            watchers: bs.pluginManager.get(&#x22;file:watcher&#x22;)(bs)
+            watchers: bs.pluginManager.get("file:watcher")(bs)
         }
     });
 }</pre></li>
@@ -2264,7 +2256,7 @@ initUserPlugins: function (bs, done) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setInternalEvents = function (bs, done) {
-    require(&#x22;./internal-events&#x22;)(bs);
+    require("./internal-events")(bs);
     done();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -2286,8 +2278,8 @@ initUserPlugins: function (bs, done) {
             snippet:     connectUtils.scriptTags(bs.options),
             scriptPaths: Immutable.fromJS(connectUtils.clientScript(bs.options, true)),
             files:       bs.pluginManager.hook(
-                &#x22;files:watch&#x22;,
-                bs.options.get(&#x22;files&#x22;),
+                "files:watch",
+                bs.options.get("files"),
                 bs.pluginManager.pluginOptions
             )
         }
@@ -2307,7 +2299,7 @@ initUserPlugins: function (bs, done) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">startServer = function (bs, done) {
 
-    var server = bs.pluginManager.get(&#x22;server&#x22;)(bs);
+    var server = bs.pluginManager.get("server")(bs);
 
     done(null, {
         instance: {
@@ -2331,12 +2323,12 @@ initUserPlugins: function (bs, done) {
     <li>description and source-code<pre class="apidocCodePre">startSockets = function (bs, done) {
 
     var clientEvents = bs.pluginManager.hook(
-        &#x22;client:events&#x22;,
-        bs.options.get(&#x22;clientEvents&#x22;).toJS()
+        "client:events",
+        bs.options.get("clientEvents").toJS()
     );
 
     // Start the socket, needs an existing server.
-    var io = bs.pluginManager.get(&#x22;socket&#x22;)(
+    var io = bs.pluginManager.get("socket")(
         bs.server,
         clientEvents,
         bs
@@ -2364,8 +2356,8 @@ initUserPlugins: function (bs, done) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">startTunnel = function (bs, done) {
-    if (bs.options.get(&#x22;tunnel&#x22;) &#x26;&#x26; bs.options.get(&#x22;online&#x22;)) {
-        var localTunnel = require(&#x22;./tunnel&#x22;);
+    if (bs.options.get("tunnel") &amp;&amp; bs.options.get("online")) {
+        var localTunnel = require("./tunnel");
         localTunnel(bs, function (err, tunnel) {
             if (err) {
                 return done(err);
@@ -2373,7 +2365,7 @@ initUserPlugins: function (bs, done) {
                 return done(null, {
                     optionsIn: [
                         {
-                            path:  [&#x22;urls&#x22;, &#x22;tunnel&#x22;],
+                            path:  ["urls", "tunnel"],
                             value: tunnel.url
                         }
                     ],
@@ -2401,12 +2393,12 @@ initUserPlugins: function (bs, done) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">startUi = function (bs, done) {
 
-    var PLUGIN_NAME = &#x22;UI&#x22;;
+    var PLUGIN_NAME = "UI";
     var userPlugins   = bs.getUserPlugins();
     var ui            = bs.pluginManager.get(PLUGIN_NAME);
-    var uiOpts        = bs.options.get(&#x22;ui&#x22;);
+    var uiOpts        = bs.options.get("ui");
 
-    if (!uiOpts || uiOpts.get(&#x22;enabled&#x22;) === false) {
+    if (!uiOpts || uiOpts.get("enabled") === false) {
         return done();
     }
 
@@ -2414,7 +2406,7 @@ initUserPlugins: function (bs, done) {
     if (userPlugins.some(function (item) {
         return item.name === PLUGIN_NAME;
     })) {
-        uiOpts = bs.options.get(&#x22;ui&#x22;).mergeDeep(Immutable.fromJS(bs.pluginManager.pluginOptions[PLUGIN_NAME]));
+        uiOpts = bs.options.get("ui").mergeDeep(Immutable.fromJS(bs.pluginManager.pluginOptions[PLUGIN_NAME]));
     }
 
     return ui(uiOpts.toJS(), bs, function (err, ui) {
@@ -2483,17 +2475,17 @@ initUserPlugins: function (bs, done) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_addMiddlewareToStack = function (entry) {
     var bs = this;
-    if (bs.options.get(&#x22;mode&#x22;) === &#x22;proxy&#x22;) {
+    if (bs.options.get("mode") === "proxy") {
         bs.app.stack.splice(bs.app.stack.length-1, 0, entry);
     } else {
         bs.app.stack.push(entry);
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-            res.setHeader(&#x22;Content-Type&#x22;, props.type);
+            res.setHeader("Content-Type", props.type);
             res.end(props.content);
         },
-        id: &#x22;Browsersync - &#x22; + _serveFileCount++,
+        id: "Browsersync - " + _serveFileCount++,
         route: path
     };
 
@@ -2528,11 +2520,11 @@ BrowserSync.prototype._addMiddlewareToStack = function (entry) {
     opts = opts || {};
 
     if (!opts.id) {
-        opts.id = &#x22;bs-mw-&#x22; + _addMiddlewareCount++;
+        opts.id = "bs-mw-" + _addMiddlewareCount++;
     }
 
-    if (route === &#x22;*&#x22;) {
-        route = &#x22;&#x22;;
+    if (route === "*") {
+        route = "";
     }
 
     var entry = {
@@ -2545,8 +2537,8 @@ BrowserSync.prototype._addMiddlewareToStack = function (entry) {
         entry.override = true;
     }
 
-    bs.options = bs.options.update(&#x22;middleware&#x22;, function (mw) {
-        if (bs.options.get(&#x22;mode&#x22;) === &#x22;proxy&#x22;) {
+    bs.options = bs.options.update("middleware", function (mw) {
+        if (bs.options.get("mode") === "proxy") {
             return mw.insert(mw.size-1, entry);
         }
         return mw.concat(entry);
@@ -2569,7 +2561,7 @@ BrowserSync.prototype._addMiddlewareToStack = function (entry) {
     <li>description and source-code<pre class="apidocCodePre">addRewriteRule = function (rule) {
     var bs = this;
 
-    bs.options = bs.options.update(&#x22;rewriteRules&#x22;, function (rules) {
+    bs.options = bs.options.update("rewriteRules", function (rules) {
         return rules.concat(rule);
     });
 
@@ -2590,21 +2582,21 @@ BrowserSync.prototype._addMiddlewareToStack = function (entry) {
     <li>description and source-code<pre class="apidocCodePre">callback = function (name) {
 
     var bs  = this;
-    var cb  = bs.options.getIn([&#x22;callbacks&#x22;, name]);
+    var cb  = bs.options.getIn(["callbacks", name]);
 
     if (_.isFunction(cb)) {
         cb.apply(bs.publicInstance, _.toArray(arguments).slice(1));
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-            urls:    bs.options.get(&#x22;urls&#x22;).toJS(),
-            tunnel:  bs.options.getIn([&#x22;urls&#x22;, &#x22;tunnel&#x22;])
+            urls:    bs.options.get("urls").toJS(),
+            tunnel:  bs.options.getIn(["urls", "tunnel"])
         });
 
         /**
          * Call any option-provided callbacks
          */
-        bs.<span class="apidocCodeKeywordSpan">callback</span>(&#x22;ready&#x22;, null, bs);
+        bs.<span class="apidocCodeKeywordSpan">callback</span>("ready", null, bs);
 
         /**
          * Finally, call the user-provided callback given as last arg
@@ -2633,7 +2625,7 @@ BrowserSync.prototype._addMiddlewareToStack = function (entry) {
 
     // Remove all event listeners
     if (bs.events) {
-        bs.debug(&#x22;Removing event listeners...&#x22;);
+        bs.debug("Removing event listeners...");
         bs.events.removeAllListeners();
     }
 
@@ -2654,7 +2646,7 @@ BrowserSync.prototype._addMiddlewareToStack = function (entry) {
     });
 
     // Reset the flag
-    bs.debug(&#x22;Setting {magenta:active: false&#x22;);
+    bs.debug("Setting {magenta:active: false");
     bs.active = false;
     bs.paused = false;
 
@@ -2705,9 +2697,9 @@ module.exports.reset = function () {
 
     return connectUtils.socketConnector(
         bs.options.withMutations(function (item) {
-            item.set(&#x22;socket&#x22;, item.get(&#x22;socket&#x22;).merge(opts));
-            if (!bs.options.getIn([&#x22;proxy&#x22;, &#x22;ws&#x22;])) {
-                item.set(&#x22;mode&#x22;, &#x22;snippet&#x22;);
+            item.set("socket", item.get("socket").merge(opts));
+            if (!bs.options.getIn(["proxy", "ws"])) {
+                item.set("mode", "snippet");
             }
         })
     );
@@ -2719,7 +2711,7 @@ BrowserSync.prototype.getSocketConnector = function (opts) {
    var bs = this;
 
    return function (req, res) {
-       res.setHeader(&#x22;Content-Type&#x22;, &#x22;text/javascript&#x22;);
+       res.setHeader("Content-Type", "text/javascript");
        res.end(bs.<span class="apidocCodeKeywordSpan">getExternalSocketConnector</span>(opts));
    };
 };
@@ -2742,7 +2734,7 @@ BrowserSync.prototype.getSocketConnector = function (opts) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getLogger = function (name) {
     return logger.clone(function (config) {
-        config.prefix = config.prefix + template.replace(&#x22;%s&#x22;, name);
+        config.prefix = config.prefix + template.replace("%s", name);
         return config;
     });
 }</pre></li>
@@ -2761,13 +2753,13 @@ BrowserSync.prototype.getSocketConnector = function (opts) {
     <li>description and source-code<pre class="apidocCodePre">getMiddleware = function (type) {
 
     var types = {
-        &#x22;connector&#x22;: connectUtils.socketConnector(this.options),
-        &#x22;socket-js&#x22;: require(&#x22;./snippet&#x22;).utils.getSocketScript()
+        "connector": connectUtils.socketConnector(this.options),
+        "socket-js": require("./snippet").utils.getSocketScript()
     };
 
     if (type in types) {
         return function (req, res) {
-            res.setHeader(&#x22;Content-Type&#x22;, &#x22;text/javascript&#x22;);
+            res.setHeader("Content-Type", "text/javascript");
             res.end(types[type]);
         };
     }
@@ -2786,7 +2778,7 @@ BrowserSync.prototype.getSocketConnector = function (opts) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getOption = function (name) {
 
-    this.debug(&#x22;Getting option: {magenta:%s&#x22;, name);
+    this.debug("Getting option: {magenta:%s", name);
     return this.options.get(name);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -2803,7 +2795,7 @@ BrowserSync.prototype.getSocketConnector = function (opts) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getOptionIn = function (path) {
 
-    this.debug(&#x22;Getting option via path: {magenta:%s&#x22;, path);
+    this.debug("Getting option via path: {magenta:%s", path);
     return this.options.getIn(path);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -2838,7 +2830,7 @@ BrowserSync.prototype.getSocketConnector = function (opts) {
     var bs = this;
 
     return function (req, res) {
-        res.setHeader(&#x22;Content-Type&#x22;, &#x22;text/javascript&#x22;);
+        res.setHeader("Content-Type", "text/javascript");
         res.end(bs.getExternalSocketConnector(opts));
     };
 }</pre></li>
@@ -2856,7 +2848,7 @@ BrowserSync.prototype.getSocketConnector = function (opts) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getSocketIoScript = function () {
 
-    return require(&#x22;./snippet&#x22;).utils.getSocketScript();
+    return require("./snippet").utils.getSocketScript();
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2875,10 +2867,10 @@ BrowserSync.prototype.getSocketConnector = function (opts) {
     var bs = this;
 
     var items = bs.getUserPlugins(function (item) {
-        return item[&#x22;plugin:name&#x22;] === name;
+        return item["plugin:name"] === name;
     });
 
-    if (items &#x26;&#x26; items.length) {
+    if (items &amp;&amp; items.length) {
         return items[0];
     }
 
@@ -2909,9 +2901,9 @@ BrowserSync.prototype.getSocketConnector = function (opts) {
      */
 </span>    bs.userPlugins = bs._userPlugins.filter(filter).map(function (plugin) {
         return {
-            name: plugin[&#x22;plugin:name&#x22;],
+            name: plugin["plugin:name"],
             active: plugin._enabled,
-            opts: bs.pluginManager.pluginOptions[plugin[&#x22;plugin:name&#x22;]]
+            opts: bs.pluginManager.pluginOptions[plugin["plugin:name"]]
         };
     });
 
@@ -2924,12 +2916,12 @@ BrowserSync.prototype.getSocketConnector = function (opts) {
      */
     startUi: function (bs, done) {
 
-var PLUGIN_NAME = &#x22;UI&#x22;;
+var PLUGIN_NAME = "UI";
 var userPlugins   = bs.<span class="apidocCodeKeywordSpan">getUserPlugins</span>();
 var ui            = bs.pluginManager.get(PLUGIN_NAME);
-var uiOpts        = bs.options.get(&#x22;ui&#x22;);
+var uiOpts        = bs.options.get("ui");
 
-if (!uiOpts || uiOpts.get(&#x22;enabled&#x22;) === false) {
+if (!uiOpts || uiOpts.get("enabled") === false) {
     return done();
 }
 ...</pre></li>
@@ -2979,7 +2971,7 @@ if (!uiOpts || uiOpts.get(&#x22;enabled&#x22;) === false) {
      * user may of provided
      * @type {Map}
      */
-    bs.options  = require(&#x22;./options&#x22;).update(options);
+    bs.options  = require("./options").update(options);
 
     /**
      * Kick off default plugins.
@@ -2987,9 +2979,9 @@ if (!uiOpts || uiOpts.get(&#x22;enabled&#x22;) === false) {
     bs.pluginManager.init();
 
     /**
-     * Create a base logger &#x26; debugger.
+     * Create a base logger &amp; debugger.
      */
-    bs.logger   = bs.pluginManager.get(&#x22;logger&#x22;)(bs.events, bs);
+    bs.logger   = bs.pluginManager.get("logger")(bs.events, bs);
     bs.debugger = bs.logger.clone({useLevelPrefixes: true});
     bs.debug    = bs.debugger.debug;
 
@@ -3009,16 +3001,16 @@ function initSingleton() {
 var instance;
 if (instances.length) {
     instance = instances.filter(function (item) {
-        return item.name === &#x22;singleton&#x22;;
+        return item.name === "singleton";
     });
     if (instance.length) {
-        logger.error(&#x22;{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.create
-().<span class="apidocCodeKeywordSpan">init</span>()&#x22;);
+        logger.error("{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.create
+().<span class="apidocCodeKeywordSpan">init</span>()");
         return instance;
     }
 }
 var args = Array.prototype.slice.call(arguments);
-singleton = create(&#x22;singleton&#x22;, getSingletonEmitter());
+singleton = create("singleton", getSingletonEmitter());
 
 if (singletonPlugins.length) {
 ...</pre></li>
@@ -3038,8 +3030,8 @@ if (singletonPlugins.length) {
     this._cleanupTasks.push(fn);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-                    if (!bs.paused &#x26;&#x26; data.namespace === &#x22;core&#x22;) {
-                        bs.events.emit(&#x22;file:reload&#x22;, fileUtils.getFileInfo(data, bs.options));
+                    if (!bs.paused &amp;&amp; data.namespace === "core") {
+                        bs.events.emit("file:reload", fileUtils.getFileInfo(data, bs.options));
                     }
                 });
             }
@@ -3068,13 +3060,13 @@ if (singletonPlugins.length) {
 
     bs.pluginManager.registerPlugin(module, opts, cb);
 
-    if (module[&#x22;plugin:name&#x22;]) {
+    if (module["plugin:name"]) {
         bs._userPlugins.push(module);
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
     .forEach(function (plugin) {
-        if (plugin.get(&#x22;errors&#x22;).size) {
+        if (plugin.get("errors").size) {
             return logPluginError(plugin);
         }
         var jsPlugin = plugin.toJS();
@@ -3084,7 +3076,7 @@ if (singletonPlugins.length) {
     });
 
 function logPluginError (plugin) {
-    utils.fail(true, plugin.getIn([&#x22;errors&#x22;, 0]), bs.cb);
+    utils.fail(true, plugin.getIn(["errors", 0]), bs.cb);
 }
 
 done();
@@ -3108,7 +3100,7 @@ done();
         return;
     }
 
-    bs.options = bs.options.update(&#x22;middleware&#x22;, function (mw) {
+    bs.options = bs.options.update("middleware", function (mw) {
         return mw.filter(function (mw) {
             return mw.id !== id;
         });
@@ -3130,7 +3122,7 @@ done();
     <ul>
     <li>description and source-code<pre class="apidocCodePre">removeRewriteRule = function (id) {
     var bs = this;
-    bs.options = bs.options.update(&#x22;rewriteRules&#x22;, function (rules) {
+    bs.options = bs.options.update("rewriteRules", function (rules) {
         return rules.filter(function (rule) {
             return rule.id !== id;
         });
@@ -3153,13 +3145,13 @@ done();
     <li>description and source-code<pre class="apidocCodePre">resetMiddlewareStack = function () {
 
     var bs = this;
-    var middlewares = require(&#x22;./server/utils&#x22;).getMiddlewares(bs, bs.options);
+    var middlewares = require("./server/utils").getMiddlewares(bs, bs.options);
 
     bs.app.stack = middlewares;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-   bs.options = bs.options.update(&#x22;middleware&#x22;, function (mw) {
-       if (bs.options.get(&#x22;mode&#x22;) === &#x22;proxy&#x22;) {
+   bs.options = bs.options.update("middleware", function (mw) {
+       if (bs.options.get("mode") === "proxy") {
            return mw.insert(mw.size-1, entry);
        }
        return mw.concat(entry);
@@ -3188,13 +3180,13 @@ done();
     <li>description and source-code<pre class="apidocCodePre">serveFile = function (path, props) {
 
     var bs = this;
-    var mode = bs.options.get(&#x22;mode&#x22;);
+    var mode = bs.options.get("mode");
     var entry = {
         handle: function (req, res) {
-            res.setHeader(&#x22;Content-Type&#x22;, props.type);
+            res.setHeader("Content-Type", props.type);
             res.end(props.content);
         },
-        id: &#x22;Browsersync - &#x22; + _serveFileCount++,
+        id: "Browsersync - " + _serveFileCount++,
         route: path
     };
 
@@ -3218,10 +3210,10 @@ done();
 
     opts = opts || {};
 
-    bs.debug(&#x22;Setting multiple Options&#x22;);
+    bs.debug("Setting multiple Options");
     bs.options = bs.options.withMutations(fn);
     if (!opts.silent) {
-        bs.events.emit(&#x22;options:set&#x22;, {options: bs.options.toJS()});
+        bs.events.emit("options:set", {options: bs.options.toJS()});
     }
     return this.options;
 }</pre></li>
@@ -3232,7 +3224,7 @@ function setOptions (bs, options) {
  * If multiple options were set, act on the immutable map
  * in an efficient way
  */
-if (Object.keys(options).length &#x3e; 1) {
+if (Object.keys(options).length &gt; 1) {
     bs.<span class="apidocCodeKeywordSpan">setMany</span>(function (item) {
         Object.keys(options).forEach(function (key) {
             item.set(key, options[key]);
@@ -3259,12 +3251,12 @@ if (Object.keys(options).length &#x3e; 1) {
 
     opts = opts || {};
 
-    bs.debug(&#x22;Setting Option: {cyan:%s} - {magenta:%s&#x22;, name, value.toString());
+    bs.debug("Setting Option: {cyan:%s} - {magenta:%s", name, value.toString());
 
     bs.options = bs.options.set(name, value);
 
     if (!opts.silent) {
-        bs.events.emit(&#x22;options:set&#x22;, {path: name, value: value, options: bs.options});
+        bs.events.emit("options:set", {path: name, value: value, options: bs.options});
     }
     return this.options;
 }</pre></li>
@@ -3302,10 +3294,10 @@ if (Object.keys(options).length &#x3e; 1) {
 
     opts = opts || {};
 
-    bs.debug(&#x22;Setting Option: {cyan:%s} - {magenta:%s&#x22;, path.join(&#x22;.&#x22;), value.toString());
+    bs.debug("Setting Option: {cyan:%s} - {magenta:%s", path.join("."), value.toString());
     bs.options = bs.options.setIn(path, value);
     if (!opts.silent) {
-        bs.events.emit(&#x22;options:set&#x22;, {path: path, value: value, options: bs.options});
+        bs.events.emit("options:set", {path: path, value: value, options: bs.options});
     }
     return bs.options;
 }</pre></li>
@@ -3339,7 +3331,7 @@ if (out.instance) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setRewriteRules = function (rules) {
     var bs = this;
-    bs.options = bs.options.update(&#x22;rewriteRules&#x22;, function (_) {
+    bs.options = bs.options.update("rewriteRules", function (_) {
         return rules;
     });
 
@@ -3364,9 +3356,9 @@ if (out.instance) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">clientScript = function (options, both) {
 
-    var prefix    = options.getIn([&#x22;socket&#x22;, &#x22;clientPath&#x22;]);
-    var script    = prefix + &#x22;/browser-sync-client.js&#x22;;
-    var versioned = prefix + &#x22;/browser-sync-client.js?v=&#x22; + options.get(&#x22;version&#x22;);
+    var prefix    = options.getIn(["socket", "clientPath"]);
+    var script    = prefix + "/browser-sync-client.js";
+    var versioned = prefix + "/browser-sync-client.js?v=" + options.get("version");
 
     if (both) {
         return {
@@ -3387,8 +3379,8 @@ setOptions: function (bs, done) {
             snippet:     connectUtils.scriptTags(bs.options),
             scriptPaths: Immutable.fromJS(connectUtils.<span class="apidocCodeKeywordSpan">clientScript</span>(bs.options, true)),
             files:       bs.pluginManager.hook(
-                &#x22;files:watch&#x22;,
-                bs.options.get(&#x22;files&#x22;),
+                "files:watch",
+                bs.options.get("files"),
                 bs.pluginManager.pluginOptions
             )
         }
@@ -3407,38 +3399,38 @@ setOptions: function (bs, done) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getConnectionUrl = function (options) {
 
-    var socketOpts       = options.get(&#x22;socket&#x22;).toJS();
+    var socketOpts       = options.get("socket").toJS();
     var namespace        = connectUtils.getNamespace(socketOpts, options);
 
-    var protocol         = &#x22;&#x22;;
-    var withHostnamePort = &#x22;&#x27;{protocol}&#x27; + location.hostname + &#x27;:{port}{ns}&#x27;&#x22;;
-    var withHost         = &#x22;&#x27;{protocol}&#x27; + location.host + &#x27;{ns}&#x27;&#x22;;
-    var withDomain       = &#x22;&#x27;{domain}{ns}&#x27;&#x22;;
-    var port             = options.get(&#x22;port&#x22;);
+    var protocol         = "";
+    var withHostnamePort = "'{protocol}' + location.hostname + ':{port}{ns}'";
+    var withHost         = "'{protocol}' + location.host + '{ns}'";
+    var withDomain       = "'{domain}{ns}'";
+    var port             = options.get("port");
 
     // default use-case is server/proxy
     var string           = withHost;
 
-    if (options.get(&#x22;mode&#x22;) !== &#x22;server&#x22;) {
-        protocol = options.get(&#x22;scheme&#x22;) + &#x22;://&#x22;;
+    if (options.get("mode") !== "server") {
+        protocol = options.get("scheme") + "://";
         string   = withHostnamePort;
     }
 
-    if (options.get(&#x22;mode&#x22;) === &#x22;proxy&#x22; &#x26;&#x26; options.getIn([&#x22;proxy&#x22;, &#x22;ws&#x22;])) {
-        port = options.getIn([&#x22;socket&#x22;, &#x22;port&#x22;]);
+    if (options.get("mode") === "proxy" &amp;&amp; options.getIn(["proxy", "ws"])) {
+        port = options.getIn(["socket", "port"]);
     }
 
 <span class="apidocCodeCommentSpan">    /**
      * Ensure socket.domain is always a string (for noop replacements later)
      */
 </span>    socketOpts.domain = (function () {
-        if (options.get(&#x22;localOnly&#x22;)) {
+        if (options.get("localOnly")) {
             string = withDomain;
             return [
-                options.get(&#x22;scheme&#x22;),
-                &#x22;://localhost:&#x22;,
-                options.get(&#x22;port&#x22;)
-            ].join(&#x22;&#x22;);
+                options.get("scheme"),
+                "://localhost:",
+                options.get("port")
+            ].join("");
         }
         if (socketOpts.domain) {
             string = withDomain;
@@ -3455,14 +3447,14 @@ setOptions: function (bs, done) {
                 return socketOpts.domain;
             }
         }
-        return &#x22;&#x22;;
+        return "";
     })();
 
     return string
-        .replace(&#x22;{protocol}&#x22;, protocol)
-        .replace(&#x22;{port}&#x22;,     port)
-        .replace(&#x22;{domain}&#x22;,   socketOpts.domain.replace(&#x22;{port}&#x22;, port))
-        .replace(&#x22;{ns}&#x22;,       namespace);
+        .replace("{protocol}", protocol)
+        .replace("{port}",     port)
+        .replace("{domain}",   socketOpts.domain.replace("{port}", port))
+        .replace("{ns}",       namespace);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
      * @param {Map} options
@@ -3470,13 +3462,13 @@ setOptions: function (bs, done) {
      */
     socketConnector: function (options) {
 
-var socket        = options.get(&#x22;socket&#x22;);
-var template      = fs.readFileSync(config.templates.connector, &#x22;utf-8&#x22;);
+var socket        = options.get("socket");
+var template      = fs.readFileSync(config.templates.connector, "utf-8");
 var url           = connectUtils.<span class="apidocCodeKeywordSpan">getConnectionUrl</span>(options);
 
 /**
  * ***Backwards compatibility***. While `socket.path` is technically a
- * socketIoClientConfig property, it&#x27;s been documented previously
+ * socketIoClientConfig property, it's been documented previously
  * as a top-level option, so must stay.
  */
 var clientConfig  = socket
@@ -3496,12 +3488,12 @@ var clientConfig  = socket
 
     var namespace = socketOpts.namespace;
 
-    if (typeof namespace === &#x22;function&#x22;) {
+    if (typeof namespace === "function") {
         return namespace(options);
     }
 
     if (!namespace.match(/^\//)) {
-        namespace = &#x22;/&#x22; + namespace;
+        namespace = "/" + namespace;
     }
 
     return namespace;
@@ -3513,14 +3505,14 @@ var clientConfig  = socket
      */
     getConnectionUrl: function (options) {
 
-var socketOpts       = options.get(&#x22;socket&#x22;).toJS();
+var socketOpts       = options.get("socket").toJS();
 var namespace        = connectUtils.<span class="apidocCodeKeywordSpan">getNamespace</span>(socketOpts, options);
 
-var protocol         = &#x22;&#x22;;
-var withHostnamePort = &#x22;&#x27;{protocol}&#x27; + location.hostname + &#x27;:{port}{ns}&#x27;&#x22;;
-var withHost         = &#x22;&#x27;{protocol}&#x27; + location.host + &#x27;{ns}&#x27;&#x22;;
-var withDomain       = &#x22;&#x27;{domain}{ns}&#x27;&#x22;;
-var port             = options.get(&#x22;port&#x22;);
+var protocol         = "";
+var withHostnamePort = "'{protocol}' + location.hostname + ':{port}{ns}'";
+var withHost         = "'{protocol}' + location.host + '{ns}'";
+var withDomain       = "'{domain}{ns}'";
+var port             = options.get("port");
 ...</pre></li>
     </ul>
 
@@ -3536,44 +3528,44 @@ var port             = options.get(&#x22;port&#x22;);
     <li>description and source-code<pre class="apidocCodePre">scriptTags = function (options) {
 
     var scriptPath     = this.clientScript(options);
-    var async          = options.getIn([&#x22;snippetOptions&#x22;, &#x22;async&#x22;]);
-    var scriptDomain   = options.getIn([&#x22;script&#x22;, &#x22;domain&#x22;]);
+    var async          = options.getIn(["snippetOptions", "async"]);
+    var scriptDomain   = options.getIn(["script", "domain"]);
 
 <span class="apidocCodeCommentSpan">    /**
      * Generate the [src] attribute based on user options
      */
 </span>    var scriptSrc = (function () {
 
-        if (options.get(&#x22;localOnly&#x22;)) {
+        if (options.get("localOnly")) {
             return [
-                options.get(&#x22;scheme&#x22;),
-                &#x22;://localhost:&#x22;,
-                options.get(&#x22;port&#x22;),
+                options.get("scheme"),
+                "://localhost:",
+                options.get("port"),
                 scriptPath
-            ].join(&#x22;&#x22;);
+            ].join("");
         }
 
         /**
-         * First, was &#x22;scriptPath&#x22; set? if so the user wanted full control over the
+         * First, was "scriptPath" set? if so the user wanted full control over the
          * script tag output
          *
          */
-        if (_.isFunction(options.get(&#x22;scriptPath&#x22;))) {
-            return options.get(&#x22;scriptPath&#x22;).apply(null, getScriptArgs(options, scriptPath));
+        if (_.isFunction(options.get("scriptPath"))) {
+            return options.get("scriptPath").apply(null, getScriptArgs(options, scriptPath));
         }
 
         /**
-         * Next, if &#x22;script.domain&#x22; was given, allow that + the path to the JS file
+         * Next, if "script.domain" was given, allow that + the path to the JS file
          * eg:
          *  script.domain=localhost:3000
-         * -&#x3e; localhost:3000/browser-sync/browser-sync-client.js
+         * -&gt; localhost:3000/browser-sync/browser-sync-client.js
          */
         if (scriptDomain) {
             if (_.isFunction(scriptDomain)) {
                 return scriptDomain.call(null, options) + scriptPath;
             }
             if (scriptDomain.match(/\{port\}/)) {
-                return scriptDomain.replace(&#x22;{port}&#x22;, options.get(&#x22;port&#x22;)) + scriptPath;
+                return scriptDomain.replace("{port}", options.get("port")) + scriptPath;
             }
             return scriptDomain + scriptPath;
         }
@@ -3582,26 +3574,26 @@ var port             = options.get(&#x22;port&#x22;);
          * Now if server or proxy, use dynamic script
          * eg:
          *  browser-sync start --server
-         * -&#x3e;
-         *  &#x22;HOST:3000/browser-sync/browser-sync-client.js&#x22;.replace(&#x22;HOST&#x22;, location.hostname)
+         * -&gt;
+         *  "HOST:3000/browser-sync/browser-sync-client.js".replace("HOST", location.hostname)
          */
-        if (options.get(&#x22;server&#x22;) || options.get(&#x22;proxy&#x22;)) {
+        if (options.get("server") || options.get("proxy")) {
             return scriptPath;
         }
 
         /**
          * Final use case is snippet mode
-         * -&#x3e; &#x22;http://HOST:3000/browser-sync/browser-sync-client.js&#x22;.replace(&#x22;HOST&#x22;, location.hostname)
-         * -&#x3e; &#x22;//HOST:3000/browser-sync/browser-sync-client.js&#x22;.replace(&#x22;HOST&#x22;, location.hostname)&#x22;
+         * -&gt; "http://HOST:3000/browser-sync/browser-sync-client.js".replace("HOST", location.hostname)
+         * -&gt; "//HOST:3000/browser-sync/browser-sync-client.js".replace("HOST", location.hostname)"
          */
-        return getPath(options, scriptPath, options.get(&#x22;port&#x22;));
+        return getPath(options, scriptPath, options.get("port"));
     })();
 
     /**
      * Decide which template shall be used to generate the script tags
      */
     var template = (function () {
-        if (scriptDomain || options.get(&#x22;localOnly&#x22;)) {
+        if (scriptDomain || options.get("localOnly")) {
             return config.templates.scriptTagSimple;
         }
         return config.templates.scriptTag;
@@ -3611,9 +3603,9 @@ var port             = options.get(&#x22;port&#x22;);
      * Finally read the template file from disk and replace
      * the dynamic values.
      */
-    return fs.readFileSync(template, &#x22;utf8&#x22;)
-        .replace(&#x22;%script%&#x22;, scriptSrc)
-        .replace(&#x22;%async%&#x22;, async ? &#x22;async&#x22; : &#x22;&#x22;);
+    return fs.readFileSync(template, "utf8")
+        .replace("%script%", scriptSrc)
+        .replace("%async%", async ? "async" : "");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  * @param {BrowserSync} bs
@@ -3626,8 +3618,8 @@ setOptions: function (bs, done) {
             snippet:     connectUtils.<span class="apidocCodeKeywordSpan">scriptTags</span>(bs.options),
             scriptPaths: Immutable.fromJS(connectUtils.clientScript(bs.options, true)),
             files:       bs.pluginManager.hook(
-                &#x22;files:watch&#x22;,
-                bs.options.get(&#x22;files&#x22;),
+                "files:watch",
+                bs.options.get("files"),
                 bs.pluginManager.pluginOptions
             )
         }
@@ -3645,24 +3637,24 @@ setOptions: function (bs, done) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">socketConnector = function (options) {
 
-    var socket        = options.get(&#x22;socket&#x22;);
-    var template      = fs.readFileSync(config.templates.connector, &#x22;utf-8&#x22;);
+    var socket        = options.get("socket");
+    var template      = fs.readFileSync(config.templates.connector, "utf-8");
     var url           = connectUtils.getConnectionUrl(options);
 
 <span class="apidocCodeCommentSpan">    /**
      * ***Backwards compatibility***. While `socket.path` is technically a
-     * socketIoClientConfig property, it&#x27;s been documented previously
+     * socketIoClientConfig property, it's been documented previously
      * as a top-level option, so must stay.
      */
 </span>    var clientConfig  = socket
-        .get(&#x22;socketIoClientConfig&#x22;)
+        .get("socketIoClientConfig")
         .merge({
-            path: socket.get(&#x22;path&#x22;)
+            path: socket.get("path")
         });
 
     template = template
-        .replace(&#x22;%config%&#x22;, JSON.stringify(clientConfig.toJS()))
-        .replace(&#x22;%url%&#x22;,  url);
+        .replace("%config%", JSON.stringify(clientConfig.toJS()))
+        .replace("%url%",  url);
 
     return template;
 }</pre></li>
@@ -3674,13 +3666,13 @@ setOptions: function (bs, done) {
 BrowserSync.prototype.getMiddleware = function (type) {
 
 var types = {
-    &#x22;connector&#x22;: connectUtils.<span class="apidocCodeKeywordSpan">socketConnector</span>(this.options),
-    &#x22;socket-js&#x22;: require(&#x22;./snippet&#x22;).utils.getSocketScript()
+    "connector": connectUtils.<span class="apidocCodeKeywordSpan">socketConnector</span>(this.options),
+    "socket-js": require("./snippet").utils.getSocketScript()
 };
 
 if (type in types) {
     return function (req, res) {
-        res.setHeader(&#x22;Content-Type&#x22;, &#x22;text/javascript&#x22;);
+        res.setHeader("Content-Type", "text/javascript");
         res.end(types[type]);
 ...</pre></li>
     </ul>
@@ -3702,20 +3694,20 @@ if (type in types) {
     <li>description and source-code<pre class="apidocCodePre">function applyReloadOperators(subject, options) {
     var operators = [
         {
-            option: &#x22;reloadDebounce&#x22;,
-            fnName: &#x22;debounce&#x22;
+            option: "reloadDebounce",
+            fnName: "debounce"
         },
         {
-            option: &#x22;reloadThrottle&#x22;,
-            fnName: &#x22;throttle&#x22;
+            option: "reloadThrottle",
+            fnName: "throttle"
         },
         {
-            option: &#x22;reloadDelay&#x22;,
-            fnName: &#x22;delay&#x22;
+            option: "reloadDelay",
+            fnName: "delay"
         }
     ];
 
-    return applyOperators(operators, subject, options, options.getIn([&#x22;debug&#x22;, &#x22;scheduler&#x22;]));
+    return applyOperators(operators, subject, options, options.getIn(["debug", "scheduler"]));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
     }
@@ -3725,15 +3717,15 @@ Object.keys(events).forEach(function (event) {
     bs.events.on(event, events[event]);
 });
 
-var reloader = fileHandler.<span class="apidocCodeKeywordSpan">applyReloadOperators</span>(fromEvent(bs.events, &#x22;_browser:reload
-&#x22;), bs.options)
+var reloader = fileHandler.<span class="apidocCodeKeywordSpan">applyReloadOperators</span>(fromEvent(bs.events, "_browser:reload
+"), bs.options)
     .subscribe(function() {
-        bs.events.emit(&#x22;browser:reload&#x22;);
+        bs.events.emit("browser:reload");
     });
 
-var coreNamespacedWatchers = fromEvent(bs.events, &#x22;file:changed&#x22;)
-    .filter(function() { return bs.options.get(&#x22;codeSync&#x22;) })
-    .filter(function(x) { return  x.namespace === &#x22;core&#x22; });
+var coreNamespacedWatchers = fromEvent(bs.events, "file:changed")
+    .filter(function() { return bs.options.get("codeSync") })
+    .filter(function(x) { return  x.namespace === "core" });
 ...</pre></li>
     </ul>
 
@@ -3749,23 +3741,23 @@ var coreNamespacedWatchers = fromEvent(bs.events, &#x22;file:changed&#x22;)
     <li>description and source-code<pre class="apidocCodePre">function fileChanges(subject, options) {
     var operators = [
         {
-            option: &#x22;reloadThrottle&#x22;,
-            fnName: &#x22;throttle&#x22;
+            option: "reloadThrottle",
+            fnName: "throttle"
         },
         {
-            option: &#x22;reloadDelay&#x22;,
-            fnName: &#x22;delay&#x22;
+            option: "reloadDelay",
+            fnName: "delay"
         }
     ];
 
-    var scheduler = options.getIn([&#x22;debug&#x22;, &#x22;scheduler&#x22;]);
+    var scheduler = options.getIn(["debug", "scheduler"]);
 
 <span class="apidocCodeCommentSpan">    /**
-     * if the &#x27;reloadDebounce&#x27; option was provided, create
+     * if the 'reloadDebounce' option was provided, create
      * a stream buffered/debounced stream of events
      */
 </span>    var initial = (function() {
-        if (options.get(&#x22;reloadDebounce&#x22;) &#x3e; 0) {
+        if (options.get("reloadDebounce") &gt; 0) {
             return getAggregatedDebouncedStream(subject, options, scheduler);
         }
         return subject;
@@ -3777,34 +3769,34 @@ var coreNamespacedWatchers = fromEvent(bs.events, &#x22;file:changed&#x22;)
             var items = [].concat(xs);
             var paths = items.map(function (x) { return x.path });
 
-            if (utils.willCauseReload(paths, options.get(&#x22;injectFileTypes&#x22;).toJS())) {
+            if (utils.willCauseReload(paths, options.get("injectFileTypes").toJS())) {
                 return {
-                    type: &#x22;reload&#x22;,
+                    type: "reload",
                     files: items
                 }
             }
             return {
-                type: &#x22;inject&#x22;,
+                type: "inject",
                 files: items
             }
         });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-        bs.events.emit(&#x22;browser:reload&#x22;);
+        bs.events.emit("browser:reload");
     });
 
-var coreNamespacedWatchers = fromEvent(bs.events, &#x22;file:changed&#x22;)
-    .filter(function() { return bs.options.get(&#x22;codeSync&#x22;) })
-    .filter(function(x) { return  x.namespace === &#x22;core&#x22; });
+var coreNamespacedWatchers = fromEvent(bs.events, "file:changed")
+    .filter(function() { return bs.options.get("codeSync") })
+    .filter(function(x) { return  x.namespace === "core" });
 
 var handler = fileHandler.<span class="apidocCodeKeywordSpan">fileChanges</span>(coreNamespacedWatchers, bs.options)
     .subscribe(function (x) {
-        if (x.type === &#x22;reload&#x22;) {
-            bs.events.emit(&#x22;browser:reload&#x22;);
+        if (x.type === "reload") {
+            bs.events.emit("browser:reload");
         }
-        if (x.type === &#x22;inject&#x22;) {
+        if (x.type === "inject") {
             x.files.forEach(function(data) {
-                if (!bs.paused &#x26;&#x26; data.namespace === &#x22;core&#x22;) {
+                if (!bs.paused &amp;&amp; data.namespace === "core") {
 ...</pre></li>
     </ul>
 
@@ -3824,20 +3816,20 @@ var handler = fileHandler.<span class="apidocCodeKeywordSpan">fileChanges</span>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">changedFile = function (bs, data) {
 <span class="apidocCodeCommentSpan">    /**
-     * If the event property is undefined, infer that it&#x27;s a &#x27;change&#x27;
-     * event due the fact this handler is for emitter.emit(&#x22;file:changed&#x22;)
+     * If the event property is undefined, infer that it's a 'change'
+     * event due the fact this handler is for emitter.emit("file:changed")
      */
 </span>    if (_.isUndefined(data.event)) {
-        data.event = &#x22;change&#x22;;
+        data.event = "change";
     }
     /**
-     * Chokidar always sends an &#x27;event&#x27; property - which could be
+     * Chokidar always sends an 'event' property - which could be
      * `add` `unlink` etc etc so we need to check for that and only
-     * respond to &#x27;change&#x27;, for now.
+     * respond to 'change', for now.
      */
-    if (bs.options.get(&#x22;watchEvents&#x22;).indexOf(data.event) &#x3e; -1) {
-        if (!bs.paused &#x26;&#x26; data.namespace === &#x22;core&#x22;) {
-            bs.events.emit(&#x22;file:reload&#x22;, fileUtils.getFileInfo(data, bs.options));
+    if (bs.options.get("watchEvents").indexOf(data.event) &gt; -1) {
+        if (!bs.paused &amp;&amp; data.namespace === "core") {
+            bs.events.emit("file:reload", fileUtils.getFileInfo(data, bs.options));
         }
     }
 }</pre></li>
@@ -3855,21 +3847,21 @@ var handler = fileHandler.<span class="apidocCodeKeywordSpan">fileChanges</span>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getFileInfo = function (data, options) {
 
-    data.ext      = require(&#x22;path&#x22;).extname(data.path).slice(1);
-    data.basename = require(&#x22;path&#x22;).basename(data.path);
+    data.ext      = require("path").extname(data.path).slice(1);
+    data.basename = require("path").basename(data.path);
 
     var obj = {
         ext:           data.ext,
         path:          data.path,
         basename:      data.basename,
         event:         data.event,
-        type:          &#x22;inject&#x22;
+        type:          "inject"
     };
 
     // RELOAD page
-    if (!_.includes(options.get(&#x22;injectFileTypes&#x22;).toJS(), obj.ext)) {
+    if (!_.includes(options.get("injectFileTypes").toJS(), obj.ext)) {
         obj.url  = obj.path;
-        obj.type = &#x22;reload&#x22;;
+        obj.type = "reload";
     }
 
     obj.path = data.path;
@@ -3879,13 +3871,13 @@ var handler = fileHandler.<span class="apidocCodeKeywordSpan">fileChanges</span>
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
     /**
-     * Chokidar always sends an &#x27;event&#x27; property - which could be
+     * Chokidar always sends an 'event' property - which could be
      * `add` `unlink` etc etc so we need to check for that and only
-     * respond to &#x27;change&#x27;, for now.
+     * respond to 'change', for now.
      */
-    if (bs.options.get(&#x22;watchEvents&#x22;).indexOf(data.event) &#x3e; -1) {
-        if (!bs.paused &#x26;&#x26; data.namespace === &#x22;core&#x22;) {
-            bs.events.emit(&#x22;file:reload&#x22;, fileUtils.<span class="apidocCodeKeywordSpan">getFileInfo</span>(data, bs.options
+    if (bs.options.get("watchEvents").indexOf(data.event) &gt; -1) {
+        if (!bs.paused &amp;&amp; data.namespace === "core") {
+            bs.events.emit("file:reload", fileUtils.<span class="apidocCodeKeywordSpan">getFileInfo</span>(data, bs.options
 ));
         }
     }
@@ -3916,9 +3908,9 @@ var handler = fileHandler.<span class="apidocCodeKeywordSpan">fileChanges</span>
     var options = bs.options;
     var emitter = bs.emitter;
 
-    var defaultWatchOptions = options.get(&#x22;watchOptions&#x22;).toJS();
+    var defaultWatchOptions = options.get("watchOptions").toJS();
 
-    return options.get(&#x22;files&#x22;).reduce(function (map, glob, namespace) {
+    return options.get("files").reduce(function (map, glob, namespace) {
 
 <span class="apidocCodeCommentSpan">        /**
          * Default CB when not given
@@ -3926,7 +3918,7 @@ var handler = fileHandler.<span class="apidocCodeKeywordSpan">fileChanges</span>
          * @param path
          */
 </span>        var fn = function (event, path) {
-            emitter.emit(&#x22;file:changed&#x22;, {
+            emitter.emit("file:changed", {
                 event: event,
                 path: path,
                 namespace: namespace
@@ -3976,32 +3968,32 @@ var handler = fileHandler.<span class="apidocCodeKeywordSpan">fileChanges</span>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function watch(patterns, opts, cb) {
 
-    if (typeof opts === &#x22;function&#x22;) {
+    if (typeof opts === "function") {
         cb = opts;
         opts = {};
     }
 
-    var watcher = require(&#x22;chokidar&#x22;)
+    var watcher = require("chokidar")
         .watch(patterns, opts);
 
     if (_.isFunction(cb)) {
-        watcher.on(&#x22;all&#x22;, cb);
+        watcher.on("all", cb);
     }
 
     return watcher;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-    if (typeof opts === &#x22;function&#x22;) {
+    if (typeof opts === "function") {
         cb = opts;
         opts = {};
     }
 
-    var watcher = require(&#x22;chokidar&#x22;)
+    var watcher = require("chokidar")
         .<span class="apidocCodeKeywordSpan">watch</span>(patterns, opts);
 
     if (_.isFunction(cb)) {
-        watcher.on(&#x22;all&#x22;, cb);
+        watcher.on("all", cb);
     }
 
     return watcher;
@@ -4031,27 +4023,27 @@ var handler = fileHandler.<span class="apidocCodeKeywordSpan">fileChanges</span>
     <li>description and source-code<pre class="apidocCodePre">getUrl = function (args, url) {
     return [
         url,
-        require(&#x22;./config&#x22;).httpProtocol.path,
-        &#x22;?&#x22;,
+        require("./config").httpProtocol.path,
+        "?",
         queryString.stringify(args)
-    ].join(&#x22;&#x22;);
+    ].join("");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-var scheme = options.get(&#x22;scheme&#x22;);
+var scheme = options.get("scheme");
 
-var port   = options.get(&#x22;port&#x22;);
+var port   = options.get("port");
 var urls   = {};
 
-if (options.get(&#x22;online&#x22;) === false) {
-    urls.local = utils.<span class="apidocCodeKeywordSpan">getUrl</span>(scheme + &#x22;://localhost:&#x22; + port, options);
+if (options.get("online") === false) {
+    urls.local = utils.<span class="apidocCodeKeywordSpan">getUrl</span>(scheme + "://localhost:" + port, options);
     return Immutable.fromJS(urls);
 }
 
 var external  = utils.xip(utils.getHostIp(options, devIp), options);
-var localhost = &#x22;localhost&#x22;;
+var localhost = "localhost";
 
-if (options.get(&#x22;xip&#x22;)) {
+if (options.get("xip")) {
 ...</pre></li>
     </ul>
 
@@ -4068,34 +4060,34 @@ if (options.get(&#x22;xip&#x22;)) {
 
     return function (req, res) {
 
-        var params = queryString.parse(req.url.replace(/^.*\?/, &#x22;&#x22;));
+        var params = queryString.parse(req.url.replace(/^.*\?/, ""));
         var output;
 
         if (!Object.keys(params).length) {
             output = [
-                &#x22;Error: No Parameters were provided.&#x22;,
-                &#x22;Example: http://localhost:3000/__browser_sync__?method=reload&#x26;args=core.css&#x22;
+                "Error: No Parameters were provided.",
+                "Example: http://localhost:3000/__browser_sync__?method=reload&amp;args=core.css"
             ];
-            res.writeHead(500, {&#x22;Content-Type&#x22;: &#x22;text/plain&#x22;});
-            res.end(output.join(&#x22;\n&#x22;));
+            res.writeHead(500, {"Content-Type": "text/plain"});
+            res.end(output.join("\n"));
             return;
         }
 
         try {
 
-            require(&#x22;./public/&#x22; + params.method)(bs.events).apply(null, [params.args]);
+            require("./public/" + params.method)(bs.events).apply(null, [params.args]);
 
             output = [
-                &#x22;Called public API method `.%s()`&#x22;.replace(&#x22;%s&#x22;, params.method),
-                &#x22;With args: &#x22; + JSON.stringify(params.args)
+                "Called public API method `.%s()`".replace("%s", params.method),
+                "With args: " + JSON.stringify(params.args)
             ];
 
-            res.end(output.join(&#x22;\n&#x22;));
+            res.end(output.join("\n"));
 
         } catch (e) {
 
-            res.writeHead(404, {&#x22;Content-Type&#x22;: &#x22;text/plain&#x22;});
-            res.write(&#x22;Public API method `&#x22; + params.method + &#x22;` not found.&#x22;);
+            res.writeHead(404, {"Content-Type": "text/plain"});
+            res.write("Public API method `" + params.method + "` not found.");
             res.end();
 
             return;
@@ -4131,7 +4123,7 @@ if (options.get(&#x22;xip&#x22;)) {
     /**
      * @returns {Array}
      */
-    &#x22;server:middleware&#x22;: function (hooks, initial) {
+    "server:middleware": function (hooks, initial) {
 
         initial = initial || [];
 
@@ -4156,24 +4148,24 @@ if (Array.isArray(result)) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function eq(value, other) {
-  return value === other || (value !== value &#x26;&#x26; other !== other);
+  return value === other || (value !== value &amp;&amp; other !== other);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 * @param {*} other The other value to compare.
 * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
 * @example
 *
-* var object = { &#x27;user&#x27;: &#x27;fred&#x27; };
-* var other = { &#x27;user&#x27;: &#x27;fred&#x27; };
+* var object = { 'user': 'fred' };
+* var other = { 'user': 'fred' };
 *
 * _.<span class="apidocCodeKeywordSpan">eq</span>(object, object);
-* // =&#x3e; true
+* // =&gt; true
 *
 * _.eq(object, other);
-* // =&#x3e; false
+* // =&gt; false
 *
-* _.eq(&#x27;a&#x27;, &#x27;a&#x27;);
-* // =&#x3e; true
+* _.eq('a', 'a');
+* // =&gt; true
 ...</pre></li>
     </ul>
 
@@ -4195,7 +4187,7 @@ if (Array.isArray(result)) {
         }
     }
     var args = Array.prototype.slice.call(arguments);
-    singleton = create(&#x22;singleton&#x22;, getSingletonEmitter());
+    singleton = create("singleton", getSingletonEmitter());
 
     if (singletonPlugins.length) {
         singletonPlugins.<span class="apidocCodeKeywordSpan">forEach</span>(function (obj) {
@@ -4230,14 +4222,14 @@ if (Array.isArray(result)) {
 /**
  * An extra port is not needed in snippet/server mode
  */
-if (bs.options.<span class="apidocCodeKeywordSpan">get</span>(&#x22;mode&#x22;) !== &#x22;proxy&#x22;) {
+if (bs.options.<span class="apidocCodeKeywordSpan">get</span>("mode") !== "proxy") {
     return done();
 }
 
 /**
  * Web socket support is disabled by default
  */
-if (!bs.options.getIn([&#x22;proxy&#x22;, &#x22;ws&#x22;])) {
+if (!bs.options.getIn(["proxy", "ws"])) {
 ...</pre></li>
     </ul>
 
@@ -4251,18 +4243,18 @@ if (!bs.options.getIn([&#x22;proxy&#x22;, &#x22;ws&#x22;])) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function hasIn(object, path) {
-  return object != null &#x26;&#x26; hasPath(object, path, baseHasIn);
+  return object != null &amp;&amp; hasPath(object, path, baseHasIn);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  * Use 1 higher than server port by default...
  */
-var socketPort = bs.options.get(&#x22;port&#x22;) + 1;
+var socketPort = bs.options.get("port") + 1;
 
 /**
  * Or use the user-defined socket.port option instead
  */
-if (bs.options.<span class="apidocCodeKeywordSpan">hasIn</span>([&#x22;socket&#x22;, &#x22;port&#x22;])) {
-    socketPort = bs.options.getIn([&#x22;socket&#x22;, &#x22;port&#x22;]);
+if (bs.options.<span class="apidocCodeKeywordSpan">hasIn</span>(["socket", "port"])) {
+    socketPort = bs.options.getIn(["socket", "port"]);
 }
 
 utils.getPort(socketPort, null, function (err, port) {
@@ -4290,10 +4282,10 @@ utils.getPort(socketPort, null, function (err, port) {
  * @returns {*} Returns `value`.
  * @example
  *
- * var object = { &#x27;user&#x27;: &#x27;fred&#x27; };
+ * var object = { 'user': 'fred' };
  *
  * console.log(_.<span class="apidocCodeKeywordSpan">identity</span>(object) === object);
- * // =&#x3e; true
+ * // =&gt; true
  */
 function identity(value) {
   return value;
@@ -4314,27 +4306,27 @@ function identity(value) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function includes(collection, value, fromIndex, guard) {
   collection = isArrayLike(collection) ? collection : values(collection);
-  fromIndex = (fromIndex &#x26;&#x26; !guard) ? toInteger(fromIndex) : 0;
+  fromIndex = (fromIndex &amp;&amp; !guard) ? toInteger(fromIndex) : 0;
 
   var length = collection.length;
-  if (fromIndex &#x3c; 0) {
+  if (fromIndex &lt; 0) {
     fromIndex = nativeMax(length + fromIndex, 0);
   }
   return isString(collection)
-    ? (fromIndex &#x3c;= length &#x26;&#x26; collection.indexOf(value, fromIndex) &#x3e; -1)
-    : (!!length &#x26;&#x26; baseIndexOf(collection, value, fromIndex) &#x3e; -1);
+    ? (fromIndex &lt;= length &amp;&amp; collection.indexOf(value, fromIndex) &gt; -1)
+    : (!!length &amp;&amp; baseIndexOf(collection, value, fromIndex) &gt; -1);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
     path:          data.path,
     basename:      data.basename,
     event:         data.event,
-    type:          &#x22;inject&#x22;
+    type:          "inject"
 };
 
 // RELOAD page
-if (!_.<span class="apidocCodeKeywordSpan">includes</span>(options.get(&#x22;injectFileTypes&#x22;).toJS(), obj.ext)) {
+if (!_.<span class="apidocCodeKeywordSpan">includes</span>(options.get("injectFileTypes").toJS(), obj.ext)) {
     obj.url  = obj.path;
-    obj.type = &#x22;reload&#x22;;
+    obj.type = "reload";
 }
 
 obj.path = data.path;
@@ -4353,8 +4345,8 @@ obj.log  = data.log;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function isArguments(value) {
   // Safari 8.1 incorrectly makes `arguments.callee` enumerable in strict mode.
-  return isArrayLikeObject(value) &#x26;&#x26; hasOwnProperty.call(value, &#x27;callee&#x27;) &#x26;&#x26;
-    (!propertyIsEnumerable.call(value, &#x27;callee&#x27;) || objectToString.call(value) == argsTag);
+  return isArrayLikeObject(value) &amp;&amp; hasOwnProperty.call(value, 'callee') &amp;&amp;
+    (!propertyIsEnumerable.call(value, 'callee') || objectToString.call(value) == argsTag);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  * @since 0.1.0
@@ -4365,10 +4357,10 @@ obj.log  = data.log;
  * @example
  *
  * _.<span class="apidocCodeKeywordSpan">isArguments</span>(function() { return arguments; }());
- * // =&#x3e; true
+ * // =&gt; true
  *
  * _.isArguments([1, 2, 3]);
- * // =&#x3e; false
+ * // =&gt; false
  */
 function isArguments(value) {
   // Safari 8.1 incorrectly makes `arguments.callee` enumerable in strict mode.
@@ -4393,7 +4385,7 @@ function isArguments(value) {
  * @returns {*|boolean}
  */
 function isFilesArg (arg) {
-    return Array.<span class="apidocCodeKeywordSpan">isArray</span>(arg) || typeof arg === &#x22;string&#x22;;
+    return Array.<span class="apidocCodeKeywordSpan">isArray</span>(arg) || typeof arg === "string";
 }
 ...</pre></li>
     </ul>
@@ -4408,7 +4400,7 @@ function isFilesArg (arg) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function isArrayLike(value) {
-  return value != null &#x26;&#x26; isLength(getLength(value)) &#x26;&#x26; !isFunction(value);
+  return value != null &amp;&amp; isLength(getLength(value)) &amp;&amp; !isFunction(value);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 * @memberOf _
@@ -4419,13 +4411,13 @@ function isFilesArg (arg) {
 * @example
 *
 * _.<span class="apidocCodeKeywordSpan">isArrayLike</span>([1, 2, 3]);
-* // =&#x3e; true
+* // =&gt; true
 *
 * _.isArrayLike(document.body.children);
-* // =&#x3e; true
+* // =&gt; true
 *
-* _.isArrayLike(&#x27;abc&#x27;);
-* // =&#x3e; true
+* _.isArrayLike('abc');
+* // =&gt; true
 ...</pre></li>
     </ul>
 
@@ -4439,7 +4431,7 @@ function isFilesArg (arg) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function isArrayLikeObject(value) {
-  return isObjectLike(value) &#x26;&#x26; isArrayLike(value);
+  return isObjectLike(value) &amp;&amp; isArrayLike(value);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 * @since 4.0.0
@@ -4450,13 +4442,13 @@ function isFilesArg (arg) {
 * @example
 *
 * _.<span class="apidocCodeKeywordSpan">isArrayLikeObject</span>([1, 2, 3]);
-* // =&#x3e; true
+* // =&gt; true
 *
 * _.isArrayLikeObject(document.body.children);
-* // =&#x3e; true
+* // =&gt; true
 *
-* _.isArrayLikeObject(&#x27;abc&#x27;);
-* // =&#x3e; false
+* _.isArrayLikeObject('abc');
+* // =&gt; false
 ...</pre></li>
     </ul>
 
@@ -4481,10 +4473,10 @@ function isFilesArg (arg) {
  * @example
  *
  * _.<span class="apidocCodeKeywordSpan">isBuffer</span>(new Buffer(2));
- * // =&#x3e; true
+ * // =&gt; true
  *
  * _.isBuffer(new Uint8Array(2));
- * // =&#x3e; false
+ * // =&gt; false
  */
 var isBuffer = !Buffer ? stubFalse : function(value) {
   return value instanceof Buffer;
@@ -4502,9 +4494,9 @@ var isBuffer = !Buffer ? stubFalse : function(value) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function isFunction(value) {
   // The use of `Object#toString` avoids issues with the `typeof` operator
-  // in Safari 8 which returns &#x27;object&#x27; for typed array and weak map constructors,
-  // and PhantomJS 1.9 which returns &#x27;function&#x27; for `NodeList` instances.
-  var tag = isObject(value) ? objectToString.call(value) : &#x27;&#x27;;
+  // in Safari 8 which returns 'object' for typed array and weak map constructors,
+  // and PhantomJS 1.9 which returns 'function' for `NodeList` instances.
+  var tag = isObject(value) ? objectToString.call(value) : '';
   return tag == funcTag || tag == genTag;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -4513,7 +4505,7 @@ var isBuffer = !Buffer ? stubFalse : function(value) {
 BrowserSync.prototype.callback = function (name) {
 
    var bs  = this;
-   var cb  = bs.options.getIn([&#x22;callbacks&#x22;, name]);
+   var cb  = bs.options.getIn(["callbacks", name]);
 
    if (_.<span class="apidocCodeKeywordSpan">isFunction</span>(cb)) {
        cb.apply(bs.publicInstance, _.toArray(arguments).slice(1));
@@ -4536,8 +4528,8 @@ BrowserSync.prototype.callback = function (name) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function isLength(value) {
-  return typeof value == &#x27;number&#x27; &#x26;&#x26;
-    value &#x3e; -1 &#x26;&#x26; value % 1 == 0 &#x26;&#x26; value &#x3c;= MAX_SAFE_INTEGER;
+  return typeof value == 'number' &amp;&amp;
+    value &gt; -1 &amp;&amp; value % 1 == 0 &amp;&amp; value &lt;= MAX_SAFE_INTEGER;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 * @since 4.0.0
@@ -4548,13 +4540,13 @@ BrowserSync.prototype.callback = function (name) {
 * @example
 *
 * _.<span class="apidocCodeKeywordSpan">isLength</span>(3);
-* // =&#x3e; true
+* // =&gt; true
 *
 * _.isLength(Number.MIN_VALUE);
-* // =&#x3e; false
+* // =&gt; false
 *
 * _.isLength(Infinity);
-* // =&#x3e; false
+* // =&gt; false
 ...</pre></li>
     </ul>
 
@@ -4569,7 +4561,7 @@ BrowserSync.prototype.callback = function (name) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function isObject(value) {
   var type = typeof value;
-  return !!value &#x26;&#x26; (type == &#x27;object&#x27; || type == &#x27;function&#x27;);
+  return !!value &amp;&amp; (type == 'object' || type == 'function');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 * @memberOf _
@@ -4580,13 +4572,13 @@ BrowserSync.prototype.callback = function (name) {
 * @example
 *
 * _.<span class="apidocCodeKeywordSpan">isObject</span>({});
-* // =&#x3e; true
+* // =&gt; true
 *
 * _.isObject([1, 2, 3]);
-* // =&#x3e; true
+* // =&gt; true
 *
 * _.isObject(_.noop);
-* // =&#x3e; true
+* // =&gt; true
 ...</pre></li>
     </ul>
 
@@ -4600,7 +4592,7 @@ BrowserSync.prototype.callback = function (name) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function isObjectLike(value) {
-  return !!value &#x26;&#x26; typeof value == &#x27;object&#x27;;
+  return !!value &amp;&amp; typeof value == 'object';
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 * @memberOf _
@@ -4611,13 +4603,13 @@ BrowserSync.prototype.callback = function (name) {
 * @example
 *
 * _.<span class="apidocCodeKeywordSpan">isObjectLike</span>({});
-* // =&#x3e; true
+* // =&gt; true
 *
 * _.isObjectLike([1, 2, 3]);
-* // =&#x3e; true
+* // =&gt; true
 *
 * _.isObjectLike(_.noop);
-* // =&#x3e; false
+* // =&gt; false
 ...</pre></li>
     </ul>
 
@@ -4639,9 +4631,9 @@ BrowserSync.prototype.callback = function (name) {
   if (proto === null) {
     return true;
   }
-  var Ctor = hasOwnProperty.call(proto, &#x27;constructor&#x27;) &#x26;&#x26; proto.constructor;
-  return (typeof Ctor == &#x27;function&#x27; &#x26;&#x26;
-    Ctor instanceof Ctor &#x26;&#x26; funcToString.call(Ctor) == objectCtorString);
+  var Ctor = hasOwnProperty.call(proto, 'constructor') &amp;&amp; proto.constructor;
+  return (typeof Ctor == 'function' &amp;&amp;
+    Ctor instanceof Ctor &amp;&amp; funcToString.call(Ctor) == objectCtorString);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 *  else `false`.
@@ -4652,13 +4644,13 @@ BrowserSync.prototype.callback = function (name) {
 * }
 *
 * _.<span class="apidocCodeKeywordSpan">isPlainObject</span>(new Foo);
-* // =&#x3e; false
+* // =&gt; false
 *
 * _.isPlainObject([1, 2, 3]);
-* // =&#x3e; false
+* // =&gt; false
 *
-* _.isPlainObject({ &#x27;x&#x27;: 0, &#x27;y&#x27;: 0 });
-* // =&#x3e; true
+* _.isPlainObject({ 'x': 0, 'y': 0 });
+* // =&gt; true
 ...</pre></li>
     </ul>
 
@@ -4672,8 +4664,8 @@ BrowserSync.prototype.callback = function (name) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function isString(value) {
-  return typeof value == &#x27;string&#x27; ||
-    (!isArray(value) &#x26;&#x26; isObjectLike(value) &#x26;&#x26; objectToString.call(value) == stringTag);
+  return typeof value == 'string' ||
+    (!isArray(value) &amp;&amp; isObjectLike(value) &amp;&amp; objectToString.call(value) == stringTag);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
          */
@@ -4687,7 +4679,7 @@ BrowserSync.prototype.callback = function (name) {
             return socketOpts.domain;
         }
     }
-    return &#x22;&#x22;;
+    return "";
 })();
 
 return string
@@ -4704,8 +4696,8 @@ return string
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function isSymbol(value) {
-  return typeof value == &#x27;symbol&#x27; ||
-    (isObjectLike(value) &#x26;&#x26; objectToString.call(value) == symbolTag);
+  return typeof value == 'symbol' ||
+    (isObjectLike(value) &amp;&amp; objectToString.call(value) == symbolTag);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  * @since 4.0.0
@@ -4716,13 +4708,13 @@ return string
  * @example
  *
  * _.<span class="apidocCodeKeywordSpan">isSymbol</span>(Symbol.iterator);
- * // =&#x3e; true
+ * // =&gt; true
  *
- * _.isSymbol(&#x27;abc&#x27;);
- * // =&#x3e; false
+ * _.isSymbol('abc');
+ * // =&gt; false
  */
 function isSymbol(value) {
-  return typeof value == &#x27;symbol&#x27; ||
+  return typeof value == 'symbol' ||
 ...</pre></li>
     </ul>
 
@@ -4736,8 +4728,8 @@ function isSymbol(value) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function isTypedArray(value) {
-  return isObjectLike(value) &#x26;&#x26;
-    isLength(value.length) &#x26;&#x26; !!typedArrayTags[objectToString.call(value)];
+  return isObjectLike(value) &amp;&amp;
+    isLength(value.length) &amp;&amp; !!typedArrayTags[objectToString.call(value)];
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  * @since 3.0.0
@@ -4748,13 +4740,13 @@ function isSymbol(value) {
  * @example
  *
  * _.<span class="apidocCodeKeywordSpan">isTypedArray</span>(new Uint8Array);
- * // =&#x3e; true
+ * // =&gt; true
  *
  * _.isTypedArray([]);
- * // =&#x3e; false
+ * // =&gt; false
  */
 function isTypedArray(value) {
-  return isObjectLike(value) &#x26;&#x26;
+  return isObjectLike(value) &amp;&amp;
 ...</pre></li>
     </ul>
 
@@ -4778,14 +4770,14 @@ function isTypedArray(value) {
  * @param {Function} done
  */
 getOnlineStatus: function (bs, done) {
-    if (_.<span class="apidocCodeKeywordSpan">isUndefined</span>(bs.options.get(&#x22;online&#x22;)) &#x26;&#x26; _.isUndefined(
+    if (_.<span class="apidocCodeKeywordSpan">isUndefined</span>(bs.options.get("online")) &amp;&amp; _.isUndefined(
 process.env.TESTING)) {
-        require(&#x22;dns&#x22;).resolve(&#x22;www.google.com&#x22;, function (err) {
+        require("dns").resolve("www.google.com", function (err) {
             var online = false;
             if (err) {
-                bs.debug(&#x22;Could not resolve www.google.com, setting {magenta:online: false}&#x22;);
+                bs.debug("Could not resolve www.google.com, setting {magenta:online: false}");
             } else {
-                bs.debug(&#x22;Resolved www.google.com, setting {magenta:online: true}&#x22;);
+                bs.debug("Resolved www.google.com, setting {magenta:online: true}");
                 online = true;
 ...</pre></li>
     </ul>
@@ -4800,23 +4792,23 @@ process.env.TESTING)) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function iteratee(func) {
-  return baseIteratee(typeof func == &#x27;function&#x27; ? func : baseClone(func, true));
+  return baseIteratee(typeof func == 'function' ? func : baseClone(func, true));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 *
 * var users = [
-*   { &#x27;user&#x27;: &#x27;barney&#x27;, &#x27;age&#x27;: 36, &#x27;active&#x27;: true },
-*   { &#x27;user&#x27;: &#x27;fred&#x27;,   &#x27;age&#x27;: 40, &#x27;active&#x27;: false }
+*   { 'user': 'barney', 'age': 36, 'active': true },
+*   { 'user': 'fred',   'age': 40, 'active': false }
 * ];
 *
 * // The `_.matches` iteratee shorthand.
-* _.filter(users, _.<span class="apidocCodeKeywordSpan">iteratee</span>({ &#x27;user&#x27;: &#x27;barney&#x27;, &#x27;active&#x27
+* _.filter(users, _.<span class="apidocCodeKeywordSpan">iteratee</span>({ 'user': 'barney', 'active'
 ;: true }));
-* // =&#x3e; [{ &#x27;user&#x27;: &#x27;barney&#x27;, &#x27;age&#x27;: 36, &#x27;active&#x27;: true }]
+* // =&gt; [{ 'user': 'barney', 'age': 36, 'active': true }]
 *
 * // The `_.matchesProperty` iteratee shorthand.
-* _.filter(users, _.iteratee([&#x27;user&#x27;, &#x27;fred&#x27;]));
-* // =&#x3e; [{ &#x27;user&#x27;: &#x27;fred&#x27;, &#x27;age&#x27;: 40 }]
+* _.filter(users, _.iteratee(['user', 'fred']));
+* // =&gt; [{ 'user': 'fred', 'age': 40 }]
 *
 * // The `_.property` iteratee shorthand.
 ...</pre></li>
@@ -4842,9 +4834,9 @@ process.env.TESTING)) {
       length = result.length;
 
   for (var key in object) {
-    if (baseHas(object, key) &#x26;&#x26;
-        !(skipIndexes &#x26;&#x26; (key == &#x27;length&#x27; || isIndex(key, length))) &#x26;&#x26;
-        !(isProto &#x26;&#x26; key == &#x27;constructor&#x27;)) {
+    if (baseHas(object, key) &amp;&amp;
+        !(skipIndexes &amp;&amp; (key == 'length' || isIndex(key, length))) &amp;&amp;
+        !(isProto &amp;&amp; key == 'constructor')) {
       result.push(key);
     }
   }
@@ -4888,10 +4880,10 @@ process.env.TESTING)) {
       result = indexes || [],
       length = result.length;
 
-  while (++index &#x3c; propsLength) {
+  while (++index &lt; propsLength) {
     var key = props[index];
-    if (!(skipIndexes &#x26;&#x26; (key == &#x27;length&#x27; || isIndex(key, length))) &#x26;&#x26;
-        !(key == &#x27;constructor&#x27; &#x26;&#x26; (isProto || !hasOwnProperty.call(object, key)))) {
+    if (!(skipIndexes &amp;&amp; (key == 'length' || isIndex(key, length))) &amp;&amp;
+        !(key == 'constructor' &amp;&amp; (isProto || !hasOwnProperty.call(object, key)))) {
       result.push(key);
     }
   }
@@ -4906,7 +4898,7 @@ process.env.TESTING)) {
  * Foo.prototype.c = 3;
  *
  * _.<span class="apidocCodeKeywordSpan">keysIn</span>(new Foo);
- * // =&#x3e; [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;] (iteration order is not guaranteed)
+ * // =&gt; ['a', 'b', 'c'] (iteration order is not guaranteed)
  */
 function keysIn(object) {
   var index = -1,
@@ -4926,7 +4918,7 @@ function keysIn(object) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function memoize(func, resolver) {
-  if (typeof func != &#x27;function&#x27; || (resolver &#x26;&#x26; typeof resolver != &#x27;function&#x27;)) {
+  if (typeof func != 'function' || (resolver &amp;&amp; typeof resolver != 'function')) {
     throw new TypeError(FUNC_ERROR_TEXT);
   }
   var memoized = function() {
@@ -4949,15 +4941,15 @@ function keysIn(object) {
 * @returns {Function} Returns the new memoized function.
 * @example
 *
-* var object = { &#x27;a&#x27;: 1, &#x27;b&#x27;: 2 };
-* var other = { &#x27;c&#x27;: 3, &#x27;d&#x27;: 4 };
+* var object = { 'a': 1, 'b': 2 };
+* var other = { 'c': 3, 'd': 4 };
 *
 * var values = _.<span class="apidocCodeKeywordSpan">memoize</span>(_.values);
 * values(object);
-* // =&#x3e; [1, 2]
+* // =&gt; [1, 2]
 *
 * values(other);
-* // =&#x3e; [3, 4]
+* // =&gt; [3, 4]
 *
 * object.a = 2;
 ...</pre></li>
@@ -4978,7 +4970,7 @@ function keysIn(object) {
       length = nativeMax(args.length - start, 0),
       array = Array(length);
 
-  while (++index &#x3c; length) {
+  while (++index &lt; length) {
     array[index] = args[start + index];
   }
   switch (start) {
@@ -4988,7 +4980,7 @@ function keysIn(object) {
   }
   var otherArgs = Array(start + 1);
   index = -1;
-  while (++index &#x3c; start) {
+  while (++index &lt; start) {
     otherArgs[index] = args[index];
   }
   otherArgs[start] = array;
@@ -5002,8 +4994,8 @@ function keysIn(object) {
 
     done(null, {
         options: {
-            urls: bs.options.get(&#x22;urls&#x22;).<span class="apidocCodeKeywordSpan">merge</span>(bs.ui.options.get(&#x22;urls
-&#x22;))
+            urls: bs.options.get("urls").<span class="apidocCodeKeywordSpan">merge</span>(bs.ui.options.get("urls
+"))
         }
     });
 },
@@ -5045,15 +5037,15 @@ function keysIn(object) {
  * @example
  *
  * var objects = [
- *   { &#x27;a&#x27;: { &#x27;b&#x27;: 2 } },
- *   { &#x27;a&#x27;: { &#x27;b&#x27;: 1 } }
+ *   { 'a': { 'b': 2 } },
+ *   { 'a': { 'b': 1 } }
  * ];
  *
- * _.map(objects, _.<span class="apidocCodeKeywordSpan">property</span>(&#x27;a.b&#x27;));
- * // =&#x3e; [2, 1]
+ * _.map(objects, _.<span class="apidocCodeKeywordSpan">property</span>('a.b'));
+ * // =&gt; [2, 1]
  *
- * _.map(_.sortBy(objects, _.property([&#x27;a&#x27;, &#x27;b&#x27;])), &#x27;a.b&#x27;);
- * // =&#x3e; [1, 2]
+ * _.map(_.sortBy(objects, _.property(['a', 'b'])), 'a.b');
+ * // =&gt; [1, 2]
  */
 function property(path) {
   return isKey(path) ? baseProperty(toKey(path)) : basePropertyDeep(path);
@@ -5070,7 +5062,7 @@ function property(path) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function rest(func, start) {
-  if (typeof func != &#x27;function&#x27;) {
+  if (typeof func != 'function') {
     throw new TypeError(FUNC_ERROR_TEXT);
   }
   start = nativeMax(start === undefined ? (func.length - 1) : toInteger(start), 0);
@@ -5080,7 +5072,7 @@ function property(path) {
         length = nativeMax(args.length - start, 0),
         array = Array(length);
 
-    while (++index &#x3c; length) {
+    while (++index &lt; length) {
       array[index] = args[start + index];
     }
     switch (start) {
@@ -5090,7 +5082,7 @@ function property(path) {
     }
     var otherArgs = Array(start + 1);
     index = -1;
-    while (++index &#x3c; start) {
+    while (++index &lt; start) {
       otherArgs[index] = args[index];
     }
     otherArgs[start] = array;
@@ -5106,12 +5098,12 @@ function property(path) {
 * @example
 *
 * var say = _.<span class="apidocCodeKeywordSpan">rest</span>(function(what, names) {
-*   return what + &#x27; &#x27; + _.initial(names).join(&#x27;, &#x27;) +
-*     (_.size(names) &#x3e; 1 ? &#x27;, &#x26; &#x27; : &#x27;&#x27;) + _.last(names);
+*   return what + ' ' + _.initial(names).join(', ') +
+*     (_.size(names) &gt; 1 ? ', &amp; ' : '') + _.last(names);
 * });
 *
-* say(&#x27;hello&#x27;, &#x27;fred&#x27;, &#x27;barney&#x27;, &#x27;pebbles&#x27;);
-* // =&#x3e; &#x27;hello fred, barney, &#x26; pebbles&#x27;
+* say('hello', 'fred', 'barney', 'pebbles');
+* // =&gt; 'hello fred, barney, &amp; pebbles'
 */
 ...</pre></li>
     </ul>
@@ -5133,7 +5125,7 @@ function property(path) {
  * If multiple options were set, act on the immutable map
  * in an efficient way
  */
-if (Object.keys(options).length &#x3e; 1) {
+if (Object.keys(options).length &gt; 1) {
     bs.setMany(function (item) {
         Object.keys(options).forEach(function (key) {
             item.<span class="apidocCodeKeywordSpan">set</span>(key, options[key]);
@@ -5193,7 +5185,7 @@ if (Object.keys(options).length &#x3e; 1) {
   if (isArrayLike(value)) {
     return isString(value) ? stringToArray(value) : copyArray(value);
   }
-  if (iteratorSymbol &#x26;&#x26; value[iteratorSymbol]) {
+  if (iteratorSymbol &amp;&amp; value[iteratorSymbol]) {
     return iteratorToArray(value[iteratorSymbol]());
   }
   var tag = getTag(value),
@@ -5206,7 +5198,7 @@ if (Object.keys(options).length &#x3e; 1) {
 BrowserSync.prototype.callback = function (name) {
 
    var bs  = this;
-   var cb  = bs.options.getIn([&#x22;callbacks&#x22;, name]);
+   var cb  = bs.options.getIn(["callbacks", name]);
 
    if (_.isFunction(cb)) {
        cb.apply(bs.publicInstance, _.<span class="apidocCodeKeywordSpan">toArray</span>(arguments).slice(1));
@@ -5235,7 +5227,7 @@ BrowserSync.prototype.callback = function (name) {
   }
   value = toNumber(value);
   if (value === INFINITY || value === -INFINITY) {
-    var sign = (value &#x3c; 0 ? -1 : 1);
+    var sign = (value &lt; 0 ? -1 : 1);
     return sign * MAX_INTEGER;
   }
   return value === value ? value : 0;
@@ -5249,13 +5241,13 @@ BrowserSync.prototype.callback = function (name) {
 * @example
 *
 * _.<span class="apidocCodeKeywordSpan">toFinite</span>(3.2);
-* // =&#x3e; 3.2
+* // =&gt; 3.2
 *
 * _.toFinite(Number.MIN_VALUE);
-* // =&#x3e; 5e-324
+* // =&gt; 5e-324
 *
 * _.toFinite(Infinity);
-* // =&#x3e; 1.7976931348623157e+308
+* // =&gt; 1.7976931348623157e+308
 ...</pre></li>
     </ul>
 
@@ -5283,13 +5275,13 @@ BrowserSync.prototype.callback = function (name) {
 * @example
 *
 * _.<span class="apidocCodeKeywordSpan">toInteger</span>(3.2);
-* // =&#x3e; 3
+* // =&gt; 3
 *
 * _.toInteger(Number.MIN_VALUE);
-* // =&#x3e; 0
+* // =&gt; 0
 *
 * _.toInteger(Infinity);
-* // =&#x3e; 1.7976931348623157e+308
+* // =&gt; 1.7976931348623157e+308
 ...</pre></li>
     </ul>
 
@@ -5303,7 +5295,7 @@ BrowserSync.prototype.callback = function (name) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toNumber(value) {
-  if (typeof value == &#x27;number&#x27;) {
+  if (typeof value == 'number') {
     return value;
   }
   if (isSymbol(value)) {
@@ -5311,12 +5303,12 @@ BrowserSync.prototype.callback = function (name) {
   }
   if (isObject(value)) {
     var other = isFunction(value.valueOf) ? value.valueOf() : value;
-    value = isObject(other) ? (other + &#x27;&#x27;) : other;
+    value = isObject(other) ? (other + '') : other;
   }
-  if (typeof value != &#x27;string&#x27;) {
+  if (typeof value != 'string') {
     return value === 0 ? value : +value;
   }
-  value = value.replace(reTrim, &#x27;&#x27;);
+  value = value.replace(reTrim, '');
   var isBinary = reIsBinary.test(value);
   return (isBinary || reIsOctal.test(value))
     ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
@@ -5331,13 +5323,13 @@ BrowserSync.prototype.callback = function (name) {
 * @example
 *
 * _.<span class="apidocCodeKeywordSpan">toNumber</span>(3.2);
-* // =&#x3e; 3.2
+* // =&gt; 3.2
 *
 * _.toNumber(Number.MIN_VALUE);
-* // =&#x3e; 5e-324
+* // =&gt; 5e-324
 *
 * _.toNumber(Infinity);
-* // =&#x3e; Infinity
+* // =&gt; Infinity
 ...</pre></li>
     </ul>
 
@@ -5358,11 +5350,11 @@ BrowserSync.prototype.callback = function (name) {
  *
  * Foo.prototype.c = 3;
  *
- * _.assign({ &#x27;a&#x27;: 1 }, new Foo);
- * // =&#x3e; { &#x27;a&#x27;: 1, &#x27;b&#x27;: 2 }
+ * _.assign({ 'a': 1 }, new Foo);
+ * // =&gt; { 'a': 1, 'b': 2 }
  *
- * _.assign({ &#x27;a&#x27;: 1 }, _.<span class="apidocCodeKeywordSpan">toPlainObject</span>(new Foo));
- * // =&#x3e; { &#x27;a&#x27;: 1, &#x27;b&#x27;: 2, &#x27;c&#x27;: 3 }
+ * _.assign({ 'a': 1 }, _.<span class="apidocCodeKeywordSpan">toPlainObject</span>(new Foo));
+ * // =&gt; { 'a': 1, 'b': 2, 'c': 3 }
  */
 function toPlainObject(value) {
   return copyObject(value, keysIn(value));
@@ -5382,7 +5374,7 @@ function toPlainObject(value) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toString(value) {
-  return value == null ? &#x27;&#x27; : baseToString(value);
+  return value == null ? '' : baseToString(value);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  */
@@ -5392,12 +5384,12 @@ var bs = this;
 
 opts = opts || {};
 
-bs.debug(&#x22;Setting Option: {cyan:%s} - {magenta:%s&#x22;, name, value.<span class="apidocCodeKeywordSpan">toString</span>());
+bs.debug("Setting Option: {cyan:%s} - {magenta:%s", name, value.<span class="apidocCodeKeywordSpan">toString</span>());
 
 bs.options = bs.options.set(name, value);
 
 if (!opts.silent) {
-    bs.events.emit(&#x22;options:set&#x22;, {path: name, value: value, options: bs.options});
+    bs.events.emit("options:set", {path: name, value: value, options: bs.options});
 }
 return this.options;
 ...</pre></li>
@@ -5418,7 +5410,7 @@ return this.options;
       length = nativeMax(args.length - start, 0),
       array = Array(length);
 
-  while (++index &#x3c; length) {
+  while (++index &lt; length) {
     array[index] = args[start + index];
   }
   switch (start) {
@@ -5428,14 +5420,14 @@ return this.options;
   }
   var otherArgs = Array(start + 1);
   index = -1;
-  while (++index &#x3c; start) {
+  while (++index &lt; start) {
     otherArgs[index] = args[index];
   }
   otherArgs[start] = array;
   return apply(func, this, otherArgs);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-&#x22;client:events&#x22;: function (hooks, clientEvents) {
+"client:events": function (hooks, clientEvents) {
 
     hooks.forEach(function (hook) {
 
@@ -5474,10 +5466,10 @@ return this.options;
  * Foo.prototype.c = 3;
  *
  * _.<span class="apidocCodeKeywordSpan">values</span>(new Foo);
- * // =&#x3e; [1, 2] (iteration order is not guaranteed)
+ * // =&gt; [1, 2] (iteration order is not guaranteed)
  *
- * _.values(&#x27;hi&#x27;);
- * // =&#x3e; [&#x27;h&#x27;, &#x27;i&#x27;]
+ * _.values('hi');
+ * // =&gt; ['h', 'i']
  */
 function values(object) {
   return object ? baseValues(object, keys(object)) : [];
@@ -5502,7 +5494,7 @@ function values(object) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getLogger = function (name) {
     return logger.clone(function (config) {
-        config.prefix = config.prefix + template.replace(&#x22;%s&#x22;, name);
+        config.prefix = config.prefix + template.replace("%s", name);
         return config;
     });
 }</pre></li>
@@ -5520,8 +5512,8 @@ function values(object) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">plugin = function (emitter, bs) {
 
-    var logPrefix = bs.options.get(&#x22;logPrefix&#x22;);
-    var logLevel  = bs.options.get(&#x22;logLevel&#x22;);
+    var logPrefix = bs.options.get("logPrefix");
+    var logLevel  = bs.options.get("logLevel");
 
     // Should set logger level here!
     logger.setLevel(logLevel);
@@ -5530,7 +5522,7 @@ function values(object) {
         if (_.isFunction(logPrefix)) {
             logger.setPrefix(logPrefix);
         } else {
-            logger.setPrefix(template.replace(&#x22;%s&#x22;, logPrefix));
+            logger.setPrefix(template.replace("%s", logPrefix));
         }
     }
 
@@ -5576,8 +5568,8 @@ function values(object) {
         setMiddleware(item);
         setOpen(item);
 
-        if (item.get(&#x22;uiPort&#x22;)) {
-            item.setIn([&#x22;ui&#x22;, &#x22;port&#x22;], item.get(&#x22;uiPort&#x22;));
+        if (item.get("uiPort")) {
+            item.setIn(["ui", "port"], item.get("uiPort"));
         }
     });
 }</pre></li>
@@ -5589,7 +5581,7 @@ bs._options = options;
  * user may of provided
  * @type {Map}
  */
-bs.options  = require(&#x22;./options&#x22;).<span class="apidocCodeKeywordSpan">update</span>(options);
+bs.options  = require("./options").<span class="apidocCodeKeywordSpan">update</span>(options);
 
 /**
  * Kick off default plugins.
@@ -5617,21 +5609,21 @@ bs.pluginManager.init();
     <li>description and source-code<pre class="apidocCodePre">function requirePlugin(item) {
 
 <span class="apidocCodeCommentSpan">    /**
-     * if the &#x22;module&#x22; property already exists and
-     * is not a string, then we bail and don&#x27;t bother looking
+     * if the "module" property already exists and
+     * is not a string, then we bail and don't bother looking
      * for the file
      */
-</span>    if (item.get(&#x22;module&#x22;) &#x26;&#x26; typeof item.get(&#x22;module&#x22;) !== &#x22;string&#x22;) {
+</span>    if (item.get("module") &amp;&amp; typeof item.get("module") !== "string") {
         return item;
     }
 
     try {
         /**
          * Try a raw node require() call - this will be how
-         * regular &#x22;npm installed&#x22; plugins wil work
+         * regular "npm installed" plugins wil work
          */
-        var maybe = path.resolve(process.cwd(), &#x22;node_modules&#x22;, item.get(&#x22;name&#x22;));
-        return item.set(&#x22;module&#x22;, require(maybe));
+        var maybe = path.resolve(process.cwd(), "node_modules", item.get("name"));
+        return item.set("module", require(maybe));
     } catch (e) {
         /**
          * If require threw an MODULE_NOT_FOUND error, try again
@@ -5639,16 +5631,16 @@ bs.pluginManager.init();
          * users will not add ./ to the front of a path (which
          * node requires to resolve from cwd)
          */
-        if (e.code === &#x22;MODULE_NOT_FOUND&#x22;) {
-            var maybe = path.resolve(process.cwd(), item.get(&#x22;name&#x22;));
+        if (e.code === "MODULE_NOT_FOUND") {
+            var maybe = path.resolve(process.cwd(), item.get("name"));
             if (fs.existsSync(maybe)) {
-                return item.set(&#x22;module&#x22;, require(maybe));
+                return item.set("module", require(maybe));
             } else {
                 /**
                  * Finally return a plugin that contains the error
                  * this will be picked up later and discarded
                  */
-                return item.update(&#x22;errors&#x22;, function (errors) {
+                return item.update("errors", function (errors) {
                     return errors.concat(e);
                 });
             }
@@ -5671,38 +5663,38 @@ bs.pluginManager.init();
     <li>description and source-code<pre class="apidocCodePre">function resolvePlugin(item) {
 
 <span class="apidocCodeCommentSpan">    /**
-     * Handle when string was given, such as plugins: [&#x27;bs-html-injector&#x27;]
+     * Handle when string was given, such as plugins: ['bs-html-injector']
      */
-</span>    if (typeof item === &#x22;string&#x22;) {
+</span>    if (typeof item === "string") {
         return getFromString(item);
     }
 
     if (!isMap(item)) {
-        return new Plugin().mergeDeep({errors: [new Error(&#x22;Plugin not supported in this format&#x22;)]});
+        return new Plugin().mergeDeep({errors: [new Error("Plugin not supported in this format")]});
     }
 
-    if (item.has(&#x22;module&#x22;)) {
+    if (item.has("module")) {
 
-        var nameOrObj = item.get(&#x22;module&#x22;);
-        var options = item.get(&#x22;options&#x22;);
+        var nameOrObj = item.get("module");
+        var options = item.get("options");
 
         /**
-         * The &#x27;module&#x27; key can be a string, this allows
+         * The 'module' key can be a string, this allows
          * inline plugin references, but with options
          * eg:
          *
          * bs.init({
          *     plugins: [
          *         {
-         *             module: &#x27;./myjs-file.js&#x27;
+         *             module: './myjs-file.js'
          *             options: {
-         *                 files: &#x22;*.html&#x22;
+         *                 files: "*.html"
          *             }
          *         }
          *     ]
          * });
          */
-        if (typeof nameOrObj === &#x22;string&#x22;) {
+        if (typeof nameOrObj === "string") {
             return getFromString(nameOrObj)
                 .mergeDeep({
                     options: options
@@ -5718,11 +5710,11 @@ bs.pluginManager.init();
          *         {
          *             module: {
          *                 plugin: function() {
-         *                     console.log(&#x27;My plugin code&#x27;)
+         *                     console.log('My plugin code')
          *                 }
          *             },
          *             options: {
-         *                 files: &#x22;*.html&#x22;
+         *                 files: "*.html"
          *             }
          *         }
          *     ]
@@ -5740,10 +5732,10 @@ bs.pluginManager.init();
      * If a module was given directly. For example, ater calling require.
      *
      * eg:
-     *    var myplugin = require(&#x27;./some-js&#x27;);
+     *    var myplugin = require('./some-js');
      *    bs.init({plugins: [myplugin]});
      */
-    if (item.has(&#x22;plugin&#x22;)) {
+    if (item.has("plugin")) {
         return new Plugin({
             module: item
         })
@@ -5752,7 +5744,7 @@ bs.pluginManager.init();
     /**
      * If we reach here, the plugin option was used incorrectly
      */
-    return new Plugin().mergeDeep({errors: [new Error(&#x22;Plugin was not configured correctly&#x22;)]})
+    return new Plugin().mergeDeep({errors: [new Error("Plugin was not configured correctly")]})
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5776,12 +5768,12 @@ bs.pluginManager.init();
     var emitter      = bs.events;
 
     var socketConfig = bs.options
-        .get(&#x22;socket&#x22;)
+        .get("socket")
         .toJS();
 
-    if (bs.options.get(&#x22;mode&#x22;) === &#x22;proxy&#x22; &#x26;&#x26; bs.options.getIn([&#x22;proxy&#x22;, &#x22;ws&#x22;])) {
+    if (bs.options.get("mode") === "proxy" &amp;&amp; bs.options.getIn(["proxy", "ws"])) {
         server = utils.getServer(null, bs.options).server;
-        server.listen(bs.options.getIn([&#x22;socket&#x22;, &#x22;port&#x22;]));
+        server.listen(bs.options.getIn(["socket", "port"]));
         bs.registerCleanupTask(function () {
             server.close();
         });
@@ -5795,7 +5787,7 @@ bs.pluginManager.init();
     // Override default namespace.
     io.sockets = io.of(socketConfig.namespace);
 
-    io.set(&#x22;heartbeat interval&#x22;, socketConfig.clients.heartbeatTimeout);
+    io.set("heartbeat interval", socketConfig.clients.heartbeatTimeout);
 
     var steward  = new Steward(emitter);
     bs.registerCleanupTask(steward.destroy.bind(steward));
@@ -5803,7 +5795,7 @@ bs.pluginManager.init();
 <span class="apidocCodeCommentSpan">    /**
      * Listen for new connections
      */
-</span>    io.sockets.on(&#x22;connection&#x22;, handleConnection);
+</span>    io.sockets.on("connection", handleConnection);
 
     /**
      * Handle each new connection
@@ -5812,15 +5804,15 @@ bs.pluginManager.init();
     function handleConnection (client) {
 
         // set ghostmode callbacks
-        if (bs.options.get(&#x22;ghostMode&#x22;)) {
+        if (bs.options.get("ghostMode")) {
 
             addGhostMode(client);
         }
 
-        client.emit(&#x22;connection&#x22;, bs.options.toJS()); //todo - trim the amount of options sent to clients
+        client.emit("connection", bs.options.toJS()); //todo - trim the amount of options sent to clients
 
-        emitter.emit(&#x22;client:connected&#x22;, {
-            ua: client.handshake.headers[&#x22;user-agent&#x22;]
+        emitter.emit("client:connected", {
+            ua: client.handshake.headers["user-agent"]
         });
     }
 
@@ -5857,16 +5849,16 @@ function initSingleton() {
 var instance;
 if (instances.length) {
     instance = instances.filter(function (item) {
-        return item.name === &#x22;singleton&#x22;;
+        return item.name === "singleton";
     });
     if (instance.length) {
-        logger.error(&#x22;{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.create
-().<span class="apidocCodeKeywordSpan">init</span>()&#x22;);
+        logger.error("{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.create
+().<span class="apidocCodeKeywordSpan">init</span>()");
         return instance;
     }
 }
 var args = Array.prototype.slice.call(arguments);
-singleton = create(&#x22;singleton&#x22;, getSingletonEmitter());
+singleton = create("singleton", getSingletonEmitter());
 
 if (singletonPlugins.length) {
 ...</pre></li>
@@ -5907,7 +5899,7 @@ if (singletonPlugins.length) {
         return new UAParser(uastring, extensions).getResult();
     }
 
-    var ua = uastring || ((window &#x26;&#x26; window.navigator &#x26;&#x26; window.navigator.userAgent) ? window.navigator.userAgent : EMPTY);
+    var ua = uastring || ((window &amp;&amp; window.navigator &amp;&amp; window.navigator.userAgent) ? window.navigator.userAgent : EMPTY);
     var rgxmap = extensions ? util.extend(regexes, extensions) : regexes;
 
     this.getBrowser = function () {
@@ -5959,7 +5951,7 @@ if (singletonPlugins.length) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_makeUrl = function (scheme, host, port) {
-    return scheme + &#x22;://&#x22; + host + &#x22;:&#x22; + port;
+    return scheme + "://" + host + ":" + port;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
      * @param {String} scheme
@@ -5969,12 +5961,12 @@ if (singletonPlugins.length) {
     getUrls: function (external, local, scheme, options) {
 
 var urls = {
-    local: utils.getUrl(utils.<span class="apidocCodeKeywordSpan">_makeUrl</span>(scheme, local, options.get(&#x22;port&#x22;)),
+    local: utils.getUrl(utils.<span class="apidocCodeKeywordSpan">_makeUrl</span>(scheme, local, options.get("port")),
 options)
 };
 
 if (external !== local) {
-    urls.external = utils.getUrl(utils._makeUrl(scheme, external, options.get(&#x22;port&#x22;)), options);
+    urls.external = utils.getUrl(utils._makeUrl(scheme, external, options.get("port")), options);
 }
 
 return urls;
@@ -6004,8 +5996,8 @@ return urls;
 
     return {
         rules: rules,
-        blacklist: utils.<span class="apidocCodeKeywordSpan">arrayify</span>(options.get(&#x22;blacklist&#x22;)),
-        whitelist: utils.arrayify(options.get(&#x22;whitelist&#x22;))
+        blacklist: utils.<span class="apidocCodeKeywordSpan">arrayify</span>(options.get("blacklist")),
+        whitelist: utils.arrayify(options.get("whitelist"))
     };
 },
 /**
@@ -6028,7 +6020,7 @@ return urls;
   function app(req, res, next){ app.handle(req, res, next); }
   merge(app, proto);
   merge(app, EventEmitter.prototype);
-  app.route = &#x27;/&#x27;;
+  app.route = '/';
   app.stack = [];
   return app;
 }</pre></li>
@@ -6045,7 +6037,7 @@ return urls;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">defaultCallback = function (err) {
-    if (err &#x26;&#x26; err.message) {
+    if (err &amp;&amp; err.message) {
         console.error(err.message);
     }
 }</pre></li>
@@ -6071,7 +6063,7 @@ return urls;
                 callback = function () {};
             } else {
                 ++completed;
-                if (completed &#x3e;= arr.length) {
+                if (completed &gt;= arr.length) {
                     callback();
                 } else {
                     iterate();
@@ -6138,7 +6130,7 @@ getEmptyPort: function (bs, done) {
         if (err) {
             return utils.<span class="apidocCodeKeywordSpan">fail</span>(true, err, bs.cb);
         }
-        bs.debug(&#x22;Found a free port: {magenta:%s&#x22;, port);
+        bs.debug("Found a free port: {magenta:%s", port);
         done(null, {
             options: {
                 port: port
@@ -6158,12 +6150,12 @@ getEmptyPort: function (bs, done) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getConfigErrors = function (options) {
 
-    var messages = require(&#x22;./config&#x22;).errors;
+    var messages = require("./config").errors;
 
     var errors = [];
 
-    if (options.get(&#x22;server&#x22;) &#x26;&#x26; options.get(&#x22;proxy&#x22;)) {
-        errors.push(messages[&#x22;server+proxy&#x22;]);
+    if (options.get("server") &amp;&amp; options.get("proxy")) {
+        errors.push(messages["server+proxy"]);
     }
 
     return errors;
@@ -6178,7 +6170,7 @@ getEmptyPort: function (bs, done) {
 verifyConfig: function (options, cb) {
     var errors = utils.<span class="apidocCodeKeywordSpan">getConfigErrors</span>(options);
     if (errors.length) {
-        utils.fail(true, errors.join(&#x22;\n&#x22;), cb);
+        utils.fail(true, errors.join("\n"), cb);
         return false;
     }
     return true;
@@ -6199,11 +6191,11 @@ verifyConfig: function (options, cb) {
     <li>description and source-code<pre class="apidocCodePre">getHostIp = function (options, devIp) {
 
     if (options) {
-        var host = options.get(&#x22;host&#x22;);
-        if (host &#x26;&#x26; host !== &#x22;localhost&#x22;) {
+        var host = options.get("host");
+        if (host &amp;&amp; host !== "localhost") {
             return host;
         }
-        if (options.get(&#x22;detect&#x22;) === false || !devIp.length) {
+        if (options.get("detect") === false || !devIp.length) {
             return false;
         }
     }
@@ -6213,16 +6205,16 @@ verifyConfig: function (options, cb) {
     <li>example usage<pre class="apidocCodePre">...
 var urls   = {};
 
-if (options.get(&#x22;online&#x22;) === false) {
-    urls.local = utils.getUrl(scheme + &#x22;://localhost:&#x22; + port, options);
+if (options.get("online") === false) {
+    urls.local = utils.getUrl(scheme + "://localhost:" + port, options);
     return Immutable.fromJS(urls);
 }
 
 var external  = utils.xip(utils.<span class="apidocCodeKeywordSpan">getHostIp</span>(options, devIp), options);
-var localhost = &#x22;localhost&#x22;;
+var localhost = "localhost";
 
-if (options.get(&#x22;xip&#x22;)) {
-    localhost = &#x22;127.0.0.1&#x22;;
+if (options.get("xip")) {
+    localhost = "127.0.0.1";
 }
 
 localhost = utils.xip(localhost, options);
@@ -6240,7 +6232,7 @@ localhost = utils.xip(localhost, options);
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getPort = function (port, max, cb) {
     portScanner.findAPortNotInUse(port, max, {
-        host: &#x22;localhost&#x22;,
+        host: "localhost",
         timeout: 1000
     }, cb);
 }</pre></li>
@@ -6248,8 +6240,8 @@ localhost = utils.xip(localhost, options);
 /**
  * Or use the user-defined socket.port option instead
  */
-if (bs.options.hasIn([&#x22;socket&#x22;, &#x22;port&#x22;])) {
-    socketPort = bs.options.getIn([&#x22;socket&#x22;, &#x22;port&#x22;]);
+if (bs.options.hasIn(["socket", "port"])) {
+    socketPort = bs.options.getIn(["socket", "port"]);
 }
 
 utils.<span class="apidocCodeKeywordSpan">getPort</span>(socketPort, null, function (err, port) {
@@ -6259,7 +6251,7 @@ utils.<span class="apidocCodeKeywordSpan">getPort</span>(socketPort, null, funct
     done(null, {
         optionsIn: [
             {
-                path: [&#x22;socket&#x22;, &#x22;port&#x22;],
+                path: ["socket", "port"],
 ...</pre></li>
     </ul>
 
@@ -6274,13 +6266,13 @@ utils.<span class="apidocCodeKeywordSpan">getPort</span>(socketPort, null, funct
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getPorts = function (options, cb) {
 
-    var port  = options.get(&#x22;port&#x22;);
-    var ports = options.get(&#x22;ports&#x22;); // backwards compatibility
+    var port  = options.get("port");
+    var ports = options.get("ports"); // backwards compatibility
     var max;
 
     if (ports) {
-        port = ports.get(&#x22;min&#x22;);
-        max  = ports.get(&#x22;max&#x22;) || null;
+        port = ports.get("min");
+        max  = ports.get("max") || null;
     }
 
     utils.getPort(port, max, cb);
@@ -6297,7 +6289,7 @@ getEmptyPort: function (bs, done) {
         if (err) {
             return utils.fail(true, err, bs.cb);
         }
-        bs.debug(&#x22;Found a free port: {magenta:%s&#x22;, port);
+        bs.debug("Found a free port: {magenta:%s", port);
         done(null, {
             options: {
                 port: port
@@ -6322,14 +6314,14 @@ getEmptyPort: function (bs, done) {
      * @param {BrowserSync} bs
      * @param data
      */
-    &#x22;client:connected&#x22;: function (bs, data) {
+    "client:connected": function (bs, data) {
 
 var uaString = utils.<span class="apidocCodeKeywordSpan">getUaString</span>(data.ua);
-var msg = &#x22;{cyan:Browser Connected: {magenta:%s, version: %s}&#x22;;
-var method = &#x22;info&#x22;;
+var msg = "{cyan:Browser Connected: {magenta:%s, version: %s}";
+var method = "info";
 
-if (!bs.options.get(&#x22;logConnections&#x22;)) {
-    method = &#x22;debug&#x22;;
+if (!bs.options.get("logConnections")) {
+    method = "debug";
 }
 ...</pre></li>
     </ul>
@@ -6345,12 +6337,12 @@ if (!bs.options.get(&#x22;logConnections&#x22;)) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getUrl = function (url, options) {
 
-    var prefix = &#x22;/&#x22;;
-    var startPath = options.get(&#x22;startPath&#x22;);
+    var prefix = "/";
+    var startPath = options.get("startPath");
 
     if (startPath) {
-        if (startPath.charAt(0) === &#x22;/&#x22;) {
-            prefix = &#x22;&#x22;;
+        if (startPath.charAt(0) === "/") {
+            prefix = "";
         }
         url = url + prefix + startPath;
     }
@@ -6359,20 +6351,20 @@ if (!bs.options.get(&#x22;logConnections&#x22;)) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-var scheme = options.get(&#x22;scheme&#x22;);
+var scheme = options.get("scheme");
 
-var port   = options.get(&#x22;port&#x22;);
+var port   = options.get("port");
 var urls   = {};
 
-if (options.get(&#x22;online&#x22;) === false) {
-    urls.local = utils.<span class="apidocCodeKeywordSpan">getUrl</span>(scheme + &#x22;://localhost:&#x22; + port, options);
+if (options.get("online") === false) {
+    urls.local = utils.<span class="apidocCodeKeywordSpan">getUrl</span>(scheme + "://localhost:" + port, options);
     return Immutable.fromJS(urls);
 }
 
 var external  = utils.xip(utils.getHostIp(options, devIp), options);
-var localhost = &#x22;localhost&#x22;;
+var localhost = "localhost";
 
-if (options.get(&#x22;xip&#x22;)) {
+if (options.get("xip")) {
 ...</pre></li>
     </ul>
 
@@ -6387,21 +6379,21 @@ if (options.get(&#x22;xip&#x22;)) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getUrlOptions = function (options) {
 
-    var scheme = options.get(&#x22;scheme&#x22;);
+    var scheme = options.get("scheme");
 
-    var port   = options.get(&#x22;port&#x22;);
+    var port   = options.get("port");
     var urls   = {};
 
-    if (options.get(&#x22;online&#x22;) === false) {
-        urls.local = utils.getUrl(scheme + &#x22;://localhost:&#x22; + port, options);
+    if (options.get("online") === false) {
+        urls.local = utils.getUrl(scheme + "://localhost:" + port, options);
         return Immutable.fromJS(urls);
     }
 
     var external  = utils.xip(utils.getHostIp(options, devIp), options);
-    var localhost = &#x22;localhost&#x22;;
+    var localhost = "localhost";
 
-    if (options.get(&#x22;xip&#x22;)) {
-        localhost = &#x22;127.0.0.1&#x22;;
+    if (options.get("xip")) {
+        localhost = "127.0.0.1";
     }
 
     localhost = utils.xip(localhost, options);
@@ -6420,8 +6412,8 @@ setOptions: function (bs, done) {
             snippet:     connectUtils.scriptTags(bs.options),
             scriptPaths: Immutable.fromJS(connectUtils.clientScript(bs.options, true)),
             files:       bs.pluginManager.hook(
-                &#x22;files:watch&#x22;,
-                bs.options.get(&#x22;files&#x22;),
+                "files:watch",
+                bs.options.get("files"),
                 bs.pluginManager.pluginOptions
             )
 ...</pre></li>
@@ -6439,19 +6431,19 @@ setOptions: function (bs, done) {
     <li>description and source-code<pre class="apidocCodePre">getUrls = function (external, local, scheme, options) {
 
     var urls = {
-        local: utils.getUrl(utils._makeUrl(scheme, local, options.get(&#x22;port&#x22;)), options)
+        local: utils.getUrl(utils._makeUrl(scheme, local, options.get("port")), options)
     };
 
     if (external !== local) {
-        urls.external = utils.getUrl(utils._makeUrl(scheme, external, options.get(&#x22;port&#x22;)), options);
+        urls.external = utils.getUrl(utils._makeUrl(scheme, external, options.get("port")), options);
     }
 
     return urls;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-    if (options.get(&#x22;xip&#x22;)) {
-        localhost = &#x22;127.0.0.1&#x22;;
+    if (options.get("xip")) {
+        localhost = "127.0.0.1";
     }
 
     localhost = utils.xip(localhost, options);
@@ -6477,14 +6469,14 @@ setOptions: function (bs, done) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function isList(maybeList) {
-  return !!(maybeList &#x26;&#x26; maybeList[IS_LIST_SENTINEL]);
+  return !!(maybeList &amp;&amp; maybeList[IS_LIST_SENTINEL]);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-if (type === &#x22;server&#x22;) {
+if (type === "server") {
 
-    var baseDir = bs.options.getIn([&#x22;server&#x22;, &#x22;baseDir&#x22;]);
+    var baseDir = bs.options.getIn(["server", "baseDir"]);
 
-    logUrls(bs.options.get(&#x22;urls&#x22;).toJS());
+    logUrls(bs.options.get("urls").toJS());
 
     if (baseDir) {
         if (utils.<span class="apidocCodeKeywordSpan">isList</span>(baseDir)) {
@@ -6516,9 +6508,9 @@ if (type === &#x22;server&#x22;) {
         }
         return {};
     })();
-    var opn = require(&#x22;opn&#x22;);
+    var opn = require("opn");
     opn(url, options).catch(function() {
-        bs.events.emit(&#x22;browser:error&#x22;);
+        bs.events.emit("browser:error");
     });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -6526,7 +6518,7 @@ if (type === &#x22;server&#x22;) {
 }
 
 if (open) {
-    if (browser !== &#x22;default&#x22;) {
+    if (browser !== "default") {
         if (utils.isList(browser)) {
             browser.forEach(function (browser) {
                 utils.<span class="apidocCodeKeywordSpan">open</span>(url, browser, bs);
@@ -6551,17 +6543,17 @@ if (open) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">openBrowser = function (url, options, bs) {
 
-    var open    = options.get(&#x22;open&#x22;);
-    var browser = options.get(&#x22;browser&#x22;);
+    var open    = options.get("open");
+    var browser = options.get("browser");
 
     if (_.isString(open)) {
-        if (options.getIn([&#x22;urls&#x22;, open])) {
-            url = options.getIn([&#x22;urls&#x22;, open]);
+        if (options.getIn(["urls", open])) {
+            url = options.getIn(["urls", open]);
         }
     }
 
     if (open) {
-        if (browser !== &#x22;default&#x22;) {
+        if (browser !== "default") {
             if (utils.isList(browser)) {
                 browser.forEach(function (browser) {
                     utils.open(url, browser, bs);
@@ -6576,18 +6568,18 @@ if (open) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  */
-&#x22;service:running&#x22;: function (data) {
+"service:running": function (data) {
 
-    var mode = bs.options.get(&#x22;mode&#x22;);
-    var open = bs.options.get(&#x22;open&#x22;);
+    var mode = bs.options.get("mode");
+    var open = bs.options.get("open");
 
-    if (mode === &#x22;proxy&#x22; || mode === &#x22;server&#x22; || open === &#x22;ui&#x22; || open === &#x22;ui-external&#x22;) {
+    if (mode === "proxy" || mode === "server" || open === "ui" || open === "ui-external") {
         utils.<span class="apidocCodeKeywordSpan">openBrowser</span>(data.url, bs.options, bs);
     }
 
     // log about any file watching
     if (bs.watchers) {
-        bs.events.emit(&#x22;file:watching&#x22;, bs.watchers);
+        bs.events.emit("file:watching", bs.watchers);
     }
 },
 ...</pre></li>
@@ -6604,11 +6596,11 @@ if (open) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function serveStatic(root, options) {
   if (!root) {
-    throw new TypeError(&#x27;root path required&#x27;)
+    throw new TypeError('root path required')
   }
 
-  if (typeof root !== &#x27;string&#x27;) {
-    throw new TypeError(&#x27;root path must be a string&#x27;)
+  if (typeof root !== 'string') {
+    throw new TypeError('root path must be a string')
   }
 
   // copy options object
@@ -6623,8 +6615,8 @@ if (open) {
   // headers listener
   var setHeaders = opts.setHeaders
 
-  if (setHeaders &#x26;&#x26; typeof setHeaders !== &#x27;function&#x27;) {
-    throw new TypeError(&#x27;option setHeaders must be function&#x27;)
+  if (setHeaders &amp;&amp; typeof setHeaders !== 'function') {
+    throw new TypeError('option setHeaders must be function')
   }
 
   // setup options for send
@@ -6637,15 +6629,15 @@ if (open) {
     : createNotFoundDirectoryListener()
 
   return function serveStatic (req, res, next) {
-    if (req.method !== &#x27;GET&#x27; &#x26;&#x26; req.method !== &#x27;HEAD&#x27;) {
+    if (req.method !== 'GET' &amp;&amp; req.method !== 'HEAD') {
       if (fallthrough) {
         return next()
       }
 
       // method not allowed
       res.statusCode = 405
-      res.setHeader(&#x27;Allow&#x27;, &#x27;GET, HEAD&#x27;)
-      res.setHeader(&#x27;Content-Length&#x27;, &#x27;0&#x27;)
+      res.setHeader('Allow', 'GET, HEAD')
+      res.setHeader('Content-Length', '0')
       res.end()
       return
     }
@@ -6655,32 +6647,32 @@ if (open) {
     var path = parseUrl(req).pathname
 
     // make sure redirect occurs at mount
-    if (path === &#x27;/&#x27; &#x26;&#x26; originalUrl.pathname.substr(-1) !== &#x27;/&#x27;) {
-      path = &#x27;&#x27;
+    if (path === '/' &amp;&amp; originalUrl.pathname.substr(-1) !== '/') {
+      path = ''
     }
 
     // create send stream
     var stream = send(req, path, opts)
 
     // add directory handler
-    stream.on(&#x27;directory&#x27;, onDirectory)
+    stream.on('directory', onDirectory)
 
     // add headers listener
     if (setHeaders) {
-      stream.on(&#x27;headers&#x27;, setHeaders)
+      stream.on('headers', setHeaders)
     }
 
     // add file listener for fallthrough
     if (fallthrough) {
-      stream.on(&#x27;file&#x27;, function onFile () {
+      stream.on('file', function onFile () {
         // once file is determined, always forward error
         forwardError = true
       })
     }
 
     // forward errors
-    stream.on(&#x27;error&#x27;, function error (err) {
-      if (forwardError || !(err.statusCode &#x3c; 500)) {
+    stream.on('error', function error (err) {
+      if (forwardError || !(err.statusCode &lt; 500)) {
         next(err)
         return
       }
@@ -6707,7 +6699,7 @@ if (open) {
     <li>description and source-code<pre class="apidocCodePre">verifyConfig = function (options, cb) {
     var errors = utils.getConfigErrors(options);
     if (errors.length) {
-        utils.fail(true, errors.join(&#x22;\n&#x22;), cb);
+        utils.fail(true, errors.join("\n"), cb);
         return false;
     }
     return true;
@@ -6742,7 +6734,7 @@ if (!utils.<span class="apidocCodeKeywordSpan">verifyConfig</span>(options, bs.c
     <ul>
     <li>description and source-code<pre class="apidocCodePre">willCauseReload = function (needles, haystack) {
     return needles.some(function (needle) {
-        return !_.includes(haystack, path.extname(needle).replace(&#x22;.&#x22;, &#x22;&#x22;));
+        return !_.includes(haystack, path.extname(needle).replace(".", ""));
     });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -6753,14 +6745,14 @@ if (!utils.<span class="apidocCodeKeywordSpan">verifyConfig</span>(options, bs.c
 var items = [].concat(xs);
 var paths = items.map(function (x) { return x.path });
 
-if (utils.<span class="apidocCodeKeywordSpan">willCauseReload</span>(paths, options.get(&#x22;injectFileTypes&#x22;).toJS())) {
+if (utils.<span class="apidocCodeKeywordSpan">willCauseReload</span>(paths, options.get("injectFileTypes").toJS())) {
     return {
-        type: &#x22;reload&#x22;,
+        type: "reload",
         files: items
     }
 }
 return {
-    type: &#x22;inject&#x22;,
+    type: "inject",
 ...</pre></li>
     </ul>
 
@@ -6774,9 +6766,9 @@ return {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">xip = function (host, options) {
-    var suffix = options.get(&#x22;hostnameSuffix&#x22;);
-    if (options.get(&#x22;xip&#x22;)) {
-        return host + &#x22;.xip.io&#x22;;
+    var suffix = options.get("hostnameSuffix");
+    if (options.get("xip")) {
+        return host + ".xip.io";
     }
     if (suffix) {
         return host + suffix;
@@ -6786,16 +6778,16 @@ return {
     <li>example usage<pre class="apidocCodePre">...
 var urls   = {};
 
-if (options.get(&#x22;online&#x22;) === false) {
-    urls.local = utils.getUrl(scheme + &#x22;://localhost:&#x22; + port, options);
+if (options.get("online") === false) {
+    urls.local = utils.getUrl(scheme + "://localhost:" + port, options);
     return Immutable.fromJS(urls);
 }
 
 var external  = utils.<span class="apidocCodeKeywordSpan">xip</span>(utils.getHostIp(options, devIp), options);
-var localhost = &#x22;localhost&#x22;;
+var localhost = "localhost";
 
-if (options.get(&#x22;xip&#x22;)) {
-    localhost = &#x22;127.0.0.1&#x22;;
+if (options.get("xip")) {
+    localhost = "127.0.0.1";
 }
 
 localhost = utils.xip(localhost, options);
@@ -6815,3 +6807,4 @@ localhost = utils.xip(localhost, options);
     ]
 </div>
 </div>
+</body></html>
