@@ -37,7 +37,7 @@
 <tspan x="10" y="554">  │ ├── is-glob@2.0.1 </tspan>
 <tspan x="10" y="570">  │ ├── path-is-absolute@1.0.1 </tspan>
 <tspan x="10" y="586">  │ └─┬ readdirp@2.1.0 </tspan>
-<tspan x="10" y="602">  │   ├─┬ readable-stream@2.2.8 </tspan>
+<tspan x="10" y="602">  │   ├─┬ readable-stream@2.2.9 </tspan>
 <tspan x="10" y="618">  │   │ ├── buffer-shims@1.0.0 </tspan>
 <tspan x="10" y="634">  │   │ ├── core-util-is@1.0.2 </tspan>
 <tspan x="10" y="650">  │   │ ├── isarray@1.0.0 </tspan>
@@ -85,7 +85,7 @@
 <tspan x="10" y="1322">  │ │ │ └── delayed-stream@1.0.0 </tspan>
 <tspan x="10" y="1338">  │ │ ├── extend@3.0.0 </tspan>
 <tspan x="10" y="1354">  │ │ ├── forever-agent@0.6.1 </tspan>
-<tspan x="10" y="1370">  │ │ ├─┬ form-data@2.1.2 </tspan>
+<tspan x="10" y="1370">  │ │ ├─┬ form-data@2.1.4 </tspan>
 <tspan x="10" y="1386">  │ │ │ └── asynckit@0.4.0 </tspan>
 <tspan x="10" y="1402">  │ │ ├─┬ har-validator@2.0.6 </tspan>
 <tspan x="10" y="1418">  │ │ │ └─┬ is-my-json-valid@2.16.0 </tspan>
@@ -106,7 +106,7 @@
 <tspan x="10" y="1658">  │ │ │ │ ├── extsprintf@1.0.2 </tspan>
 <tspan x="10" y="1674">  │ │ │ │ ├── json-schema@0.2.3 </tspan>
 <tspan x="10" y="1690">  │ │ │ │ └── verror@1.3.6 </tspan>
-<tspan x="10" y="1706">  │ │ │ └─┬ sshpk@1.11.0 </tspan>
+<tspan x="10" y="1706">  │ │ │ └─┬ sshpk@1.13.0 </tspan>
 <tspan x="10" y="1722">  │ │ │   ├── asn1@0.2.3 </tspan>
 <tspan x="10" y="1738">  │ │ │   ├── assert-plus@1.0.0 </tspan>
 <tspan x="10" y="1754">  │ │ │   ├── bcrypt-pbkdf@1.0.1 </tspan>
@@ -133,7 +133,7 @@
 <tspan x="10" y="2090">  │   └── window-size@0.1.4 </tspan>
 <tspan x="10" y="2106">  ├─┬ micromatch@2.3.11 </tspan>
 <tspan x="10" y="2122">  │ ├─┬ arr-diff@2.0.0 </tspan>
-<tspan x="10" y="2138">  │ │ └── arr-flatten@1.0.1 </tspan>
+<tspan x="10" y="2138">  │ │ └── arr-flatten@1.0.3 </tspan>
 <tspan x="10" y="2154">  │ ├── array-unique@0.2.1 </tspan>
 <tspan x="10" y="2170">  │ ├─┬ braces@1.8.5 </tspan>
 <tspan x="10" y="2186">  │ │ ├─┬ expand-range@1.8.2 </tspan>
@@ -176,7 +176,7 @@
 <tspan x="10" y="2778">  │   │   ├── acorn-jsx@3.0.1 </tspan>
 <tspan x="10" y="2794">  │   │   ├── acorn-object-spread@1.0.0 </tspan>
 <tspan x="10" y="2810">  │   │   ├─┬ magic-string@0.14.0 </tspan>
-<tspan x="10" y="2826">  │   │   │ └── vlq@0.2.1 </tspan>
+<tspan x="10" y="2826">  │   │   │ └── vlq@0.2.2 </tspan>
 <tspan x="10" y="2842">  │   │   ├── minimist@1.2.0 </tspan>
 <tspan x="10" y="2858">  │   │   └── os-homedir@1.0.2 </tspan>
 <tspan x="10" y="2874">  │   └── lodash.isfinite@3.3.2 </tspan>
@@ -280,7 +280,7 @@
 <tspan x="10" y="4442">    │   │ └─┬ strip-bom@2.0.0 </tspan>
 <tspan x="10" y="4458">    │   │   └── is-utf8@0.2.1 </tspan>
 <tspan x="10" y="4474">    │   ├─┬ normalize-package-data@2.3.6 </tspan>
-<tspan x="10" y="4490">    │   │ ├── hosted-git-info@2.4.1 </tspan>
+<tspan x="10" y="4490">    │   │ ├── hosted-git-info@2.4.2 </tspan>
 <tspan x="10" y="4506">    │   │ ├─┬ is-builtin-module@1.0.0 </tspan>
 <tspan x="10" y="4522">    │   │ │ └── builtin-modules@1.1.1 </tspan>
 <tspan x="10" y="4538">    │   │ ├── semver@5.3.0 </tspan>
