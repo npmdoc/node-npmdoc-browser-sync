@@ -1,0 +1,5185 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api-documentation for
+    <a
+        
+        href="http://www.browsersync.io/"
+        
+    >browser-sync (v2.18.8)</a>
+</h1>
+<h4>Live CSS Reload & Browser Syncing</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+    
+    <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync">module browser-sync</a><ol>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync">
+            function <span class="apidocSignatureSpan">browser-sync.</span>browser_sync
+            <span class="apidocSignatureSpan">(emitter)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.create">
+            function <span class="apidocSignatureSpan">browser-sync.</span>create
+            <span class="apidocSignatureSpan">(name, emitter)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.exit">
+            function <span class="apidocSignatureSpan">browser-sync.</span>exit
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.get">
+            function <span class="apidocSignatureSpan">browser-sync.</span>get
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.has">
+            function <span class="apidocSignatureSpan">browser-sync.</span>has
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.init">
+            function <span class="apidocSignatureSpan">browser-sync.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.notify">
+            function <span class="apidocSignatureSpan">browser-sync.</span>notify
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.pause">
+            function <span class="apidocSignatureSpan">browser-sync.</span>pause
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.reload">
+            function <span class="apidocSignatureSpan">browser-sync.</span>reload
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.reset">
+            function <span class="apidocSignatureSpan">browser-sync.</span>reset
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.resume">
+            function <span class="apidocSignatureSpan">browser-sync.</span>resume
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.stream">
+            function <span class="apidocSignatureSpan">browser-sync.</span>stream
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.use">
+            function <span class="apidocSignatureSpan">browser-sync.</span>use
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.watch">
+            function <span class="apidocSignatureSpan">browser-sync.</span>watch
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>async</span>
+            
+        </li>
+        
+        <li>
+            
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>browser_sync.prototype</span>
+            
+        </li>
+        
+        <li>
+            
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>connect_utils</span>
+            
+        </li>
+        
+        <li>
+            
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>file_event_handler</span>
+            
+        </li>
+        
+        <li>
+            
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>file_utils</span>
+            
+        </li>
+        
+        <li>
+            
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>file_watcher</span>
+            
+        </li>
+        
+        <li>
+            
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>hooks</span>
+            
+        </li>
+        
+        <li>
+            
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>http_protocol</span>
+            
+        </li>
+        
+        <li>
+            
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>instances</span>
+            
+        </li>
+        
+        <li>
+            
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>logger</span>
+            
+        </li>
+        
+        <li>
+            
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>options</span>
+            
+        </li>
+        
+        <li>
+            
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>plugins</span>
+            
+        </li>
+        
+        <li>
+            
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>server</span>
+            
+        </li>
+        
+        <li>
+            
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>sockets</span>
+            
+        </li>
+        
+        <li>
+            
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>utils</span>
+            
+        </li>
+        
+    </ol></li>
+    
+    <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.async">module browser-sync.async</a><ol>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.getEmptyPort">
+            function <span class="apidocSignatureSpan">browser-sync.async.</span>getEmptyPort
+            <span class="apidocSignatureSpan">(bs, done)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.getExtraPortForProxy">
+            function <span class="apidocSignatureSpan">browser-sync.async.</span>getExtraPortForProxy
+            <span class="apidocSignatureSpan">(bs, done)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.getOnlineStatus">
+            function <span class="apidocSignatureSpan">browser-sync.async.</span>getOnlineStatus
+            <span class="apidocSignatureSpan">(bs, done)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.initUserPlugins">
+            function <span class="apidocSignatureSpan">browser-sync.async.</span>initUserPlugins
+            <span class="apidocSignatureSpan">(bs, done)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.mergeMiddlewares">
+            function <span class="apidocSignatureSpan">browser-sync.async.</span>mergeMiddlewares
+            <span class="apidocSignatureSpan">(bs, done)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.mergeUiSettings">
+            function <span class="apidocSignatureSpan">browser-sync.async.</span>mergeUiSettings
+            <span class="apidocSignatureSpan">(bs, done)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.resolveInlineUserPlugins">
+            function <span class="apidocSignatureSpan">browser-sync.async.</span>resolveInlineUserPlugins
+            <span class="apidocSignatureSpan">(bs, done)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.setFileWatchers">
+            function <span class="apidocSignatureSpan">browser-sync.async.</span>setFileWatchers
+            <span class="apidocSignatureSpan">(bs, done)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.setInternalEvents">
+            function <span class="apidocSignatureSpan">browser-sync.async.</span>setInternalEvents
+            <span class="apidocSignatureSpan">(bs, done)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.setOptions">
+            function <span class="apidocSignatureSpan">browser-sync.async.</span>setOptions
+            <span class="apidocSignatureSpan">(bs, done)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.startServer">
+            function <span class="apidocSignatureSpan">browser-sync.async.</span>startServer
+            <span class="apidocSignatureSpan">(bs, done)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.startSockets">
+            function <span class="apidocSignatureSpan">browser-sync.async.</span>startSockets
+            <span class="apidocSignatureSpan">(bs, done)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.startTunnel">
+            function <span class="apidocSignatureSpan">browser-sync.async.</span>startTunnel
+            <span class="apidocSignatureSpan">(bs, done)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.async.startUi">
+            function <span class="apidocSignatureSpan">browser-sync.async.</span>startUi
+            <span class="apidocSignatureSpan">(bs, done)</span>
+            </a>
+            
+        </li>
+        
+    </ol></li>
+    
+    <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.browser_sync">module browser-sync.browser_sync</a><ol>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.browser_sync">
+            function <span class="apidocSignatureSpan">browser-sync.</span>browser_sync
+            <span class="apidocSignatureSpan">(emitter)</span>
+            </a>
+            
+        </li>
+        
+    </ol></li>
+    
+    <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.browser_sync.prototype">module browser-sync.browser_sync.prototype</a><ol>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype._addMiddlewareToStack">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>_addMiddlewareToStack
+            <span class="apidocSignatureSpan">(entry)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.addMiddleware">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>addMiddleware
+            <span class="apidocSignatureSpan">(route, handle, opts)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.addRewriteRule">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>addRewriteRule
+            <span class="apidocSignatureSpan">(rule)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.callback">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>callback
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.cleanup">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>cleanup
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.getExternalSocketConnector">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getExternalSocketConnector
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.getLogger">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getLogger
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.getMiddleware">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getMiddleware
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.getOption">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getOption
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.getOptionIn">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getOptionIn
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.getOptions">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getOptions
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.getSocketConnector">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getSocketConnector
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.getSocketIoScript">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getSocketIoScript
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.getUserPlugin">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getUserPlugin
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.getUserPlugins">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getUserPlugins
+            <span class="apidocSignatureSpan">(filter)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.init">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>init
+            <span class="apidocSignatureSpan">(options, cb)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.registerCleanupTask">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>registerCleanupTask
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.registerPlugin">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>registerPlugin
+            <span class="apidocSignatureSpan">(module, opts, cb)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.removeMiddleware">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>removeMiddleware
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.removeRewriteRule">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>removeRewriteRule
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.resetMiddlewareStack">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>resetMiddlewareStack
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.serveFile">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>serveFile
+            <span class="apidocSignatureSpan">(path, props)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.setMany">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>setMany
+            <span class="apidocSignatureSpan">(fn, opts)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.setOption">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>setOption
+            <span class="apidocSignatureSpan">(name, value, opts)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.setOptionIn">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>setOptionIn
+            <span class="apidocSignatureSpan">(path, value, opts)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.browser_sync.prototype.setRewriteRules">
+            function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>setRewriteRules
+            <span class="apidocSignatureSpan">(rules)</span>
+            </a>
+            
+        </li>
+        
+    </ol></li>
+    
+    <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.connect_utils">module browser-sync.connect_utils</a><ol>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.connect_utils.clientScript">
+            function <span class="apidocSignatureSpan">browser-sync.connect_utils.</span>clientScript
+            <span class="apidocSignatureSpan">(options, both)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.connect_utils.getConnectionUrl">
+            function <span class="apidocSignatureSpan">browser-sync.connect_utils.</span>getConnectionUrl
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.connect_utils.getNamespace">
+            function <span class="apidocSignatureSpan">browser-sync.connect_utils.</span>getNamespace
+            <span class="apidocSignatureSpan">(socketOpts, options)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.connect_utils.scriptTags">
+            function <span class="apidocSignatureSpan">browser-sync.connect_utils.</span>scriptTags
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.connect_utils.socketConnector">
+            function <span class="apidocSignatureSpan">browser-sync.connect_utils.</span>socketConnector
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+            
+        </li>
+        
+    </ol></li>
+    
+    <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.file_event_handler">module browser-sync.file_event_handler</a><ol>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.file_event_handler.applyReloadOperators">
+            function <span class="apidocSignatureSpan">browser-sync.file_event_handler.</span>applyReloadOperators
+            <span class="apidocSignatureSpan">(subject, options)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.file_event_handler.fileChanges">
+            function <span class="apidocSignatureSpan">browser-sync.file_event_handler.</span>fileChanges
+            <span class="apidocSignatureSpan">(subject, options)</span>
+            </a>
+            
+        </li>
+        
+    </ol></li>
+    
+    <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.file_utils">module browser-sync.file_utils</a><ol>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.file_utils.changedFile">
+            function <span class="apidocSignatureSpan">browser-sync.file_utils.</span>changedFile
+            <span class="apidocSignatureSpan">(bs, data)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.file_utils.getFileInfo">
+            function <span class="apidocSignatureSpan">browser-sync.file_utils.</span>getFileInfo
+            <span class="apidocSignatureSpan">(data, options)</span>
+            </a>
+            
+        </li>
+        
+    </ol></li>
+    
+    <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.file_watcher">module browser-sync.file_watcher</a><ol>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.file_watcher.plugin">
+            function <span class="apidocSignatureSpan">browser-sync.file_watcher.</span>plugin
+            <span class="apidocSignatureSpan">(bs)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.file_watcher.watch">
+            function <span class="apidocSignatureSpan">browser-sync.file_watcher.</span>watch
+            <span class="apidocSignatureSpan">(patterns, opts, cb)</span>
+            </a>
+            
+        </li>
+        
+    </ol></li>
+    
+    <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.hooks">module browser-sync.hooks</a><ol>
+        
+    </ol></li>
+    
+    <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.http_protocol">module browser-sync.http_protocol</a><ol>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.http_protocol.getUrl">
+            function <span class="apidocSignatureSpan">browser-sync.http_protocol.</span>getUrl
+            <span class="apidocSignatureSpan">(args, url)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.http_protocol.middleware">
+            function <span class="apidocSignatureSpan">browser-sync.http_protocol.</span>middleware
+            <span class="apidocSignatureSpan">(bs)</span>
+            </a>
+            
+        </li>
+        
+    </ol></li>
+    
+    <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.logger">module browser-sync.logger</a><ol>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.logger.getLogger">
+            function <span class="apidocSignatureSpan">browser-sync.logger.</span>getLogger
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.logger.plugin">
+            function <span class="apidocSignatureSpan">browser-sync.logger.</span>plugin
+            <span class="apidocSignatureSpan">(emitter, bs)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.</span>logger</span>
+            
+        </li>
+        
+        <li>
+            
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.logger.</span>callbacks</span>
+            
+        </li>
+        
+    </ol></li>
+    
+    <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.options">module browser-sync.options</a><ol>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.options.update">
+            function <span class="apidocSignatureSpan">browser-sync.options.</span>update
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+            
+        </li>
+        
+    </ol></li>
+    
+    <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.plugins">module browser-sync.plugins</a><ol>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.plugins.requirePlugin">
+            function <span class="apidocSignatureSpan">browser-sync.plugins.</span>requirePlugin
+            <span class="apidocSignatureSpan">(item)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.plugins.resolvePlugin">
+            function <span class="apidocSignatureSpan">browser-sync.plugins.</span>resolvePlugin
+            <span class="apidocSignatureSpan">(item)</span>
+            </a>
+            
+        </li>
+        
+    </ol></li>
+    
+    <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.server">module browser-sync.server</a><ol>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.server.createServer">
+            function <span class="apidocSignatureSpan">browser-sync.server.</span>createServer
+            <span class="apidocSignatureSpan">(bs)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.server.plugin">
+            function <span class="apidocSignatureSpan">browser-sync.server.</span>plugin
+            <span class="apidocSignatureSpan">(bs)</span>
+            </a>
+            
+        </li>
+        
+    </ol></li>
+    
+    <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.sockets">module browser-sync.sockets</a><ol>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.sockets.init">
+            function <span class="apidocSignatureSpan">browser-sync.sockets.</span>init
+            <span class="apidocSignatureSpan">(server, clientEvents, bs)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.sockets.plugin">
+            function <span class="apidocSignatureSpan">browser-sync.sockets.</span>plugin
+            <span class="apidocSignatureSpan">(server, clientEvents, bs)</span>
+            </a>
+            
+        </li>
+        
+    </ol></li>
+    
+    <li class="apidocModuleLi"><a href="#apidoc.module.browser-sync.utils">module browser-sync.utils</a><ol>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.UAParser">
+            function <span class="apidocSignatureSpan">browser-sync.utils.</span>UAParser
+            <span class="apidocSignatureSpan">(uastring, extensions)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils._makeUrl">
+            function <span class="apidocSignatureSpan">browser-sync.utils.</span>_makeUrl
+            <span class="apidocSignatureSpan">(scheme, host, port)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.arrayify">
+            function <span class="apidocSignatureSpan">browser-sync.utils.</span>arrayify
+            <span class="apidocSignatureSpan">(incoming)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.connect">
+            function <span class="apidocSignatureSpan">browser-sync.utils.</span>connect
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.defaultCallback">
+            function <span class="apidocSignatureSpan">browser-sync.utils.</span>defaultCallback
+            <span class="apidocSignatureSpan">(err)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.eachSeries">
+            function <span class="apidocSignatureSpan">browser-sync.utils.</span>eachSeries
+            <span class="apidocSignatureSpan">(arr, iterator, callback)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.easyExtender">
+            function <span class="apidocSignatureSpan">browser-sync.utils.</span>easyExtender
+            <span class="apidocSignatureSpan">(plugins, hooks)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.fail">
+            function <span class="apidocSignatureSpan">browser-sync.utils.</span>fail
+            <span class="apidocSignatureSpan">(kill, errMessage, cb)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.getConfigErrors">
+            function <span class="apidocSignatureSpan">browser-sync.utils.</span>getConfigErrors
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.getHostIp">
+            function <span class="apidocSignatureSpan">browser-sync.utils.</span>getHostIp
+            <span class="apidocSignatureSpan">(options, devIp)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.getPort">
+            function <span class="apidocSignatureSpan">browser-sync.utils.</span>getPort
+            <span class="apidocSignatureSpan">(port, max, cb)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.getPorts">
+            function <span class="apidocSignatureSpan">browser-sync.utils.</span>getPorts
+            <span class="apidocSignatureSpan">(options, cb)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.getUaString">
+            function <span class="apidocSignatureSpan">browser-sync.utils.</span>getUaString
+            <span class="apidocSignatureSpan">(ua)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.getUrl">
+            function <span class="apidocSignatureSpan">browser-sync.utils.</span>getUrl
+            <span class="apidocSignatureSpan">(url, options)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.getUrlOptions">
+            function <span class="apidocSignatureSpan">browser-sync.utils.</span>getUrlOptions
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.getUrls">
+            function <span class="apidocSignatureSpan">browser-sync.utils.</span>getUrls
+            <span class="apidocSignatureSpan">(external, local, scheme, options)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.isList">
+            function <span class="apidocSignatureSpan">browser-sync.utils.</span>isList
+            <span class="apidocSignatureSpan">(maybeList)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.open">
+            function <span class="apidocSignatureSpan">browser-sync.utils.</span>open
+            <span class="apidocSignatureSpan">(url, name, bs)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.openBrowser">
+            function <span class="apidocSignatureSpan">browser-sync.utils.</span>openBrowser
+            <span class="apidocSignatureSpan">(url, options, bs)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.serveStatic">
+            function <span class="apidocSignatureSpan">browser-sync.utils.</span>serveStatic
+            <span class="apidocSignatureSpan">(root, options)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.verifyConfig">
+            function <span class="apidocSignatureSpan">browser-sync.utils.</span>verifyConfig
+            <span class="apidocSignatureSpan">(options, cb)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.willCauseReload">
+            function <span class="apidocSignatureSpan">browser-sync.utils.</span>willCauseReload
+            <span class="apidocSignatureSpan">(needles, haystack)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="apidocElementLiA" href="#apidoc.element.browser-sync.utils.xip">
+            function <span class="apidocSignatureSpan">browser-sync.utils.</span>xip
+            <span class="apidocSignatureSpan">(host, options)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.utils.</span>devIp</span>
+            
+        </li>
+        
+        <li>
+            
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">browser-sync.utils.</span>portscanner</span>
+            
+        </li>
+        
+    </ol></li>
+    
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.browser-sync" id="apidoc.module.browser-sync">module browser-sync</a></h1>
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync" id="apidoc.element.browser-sync.browser_sync">
+        function <span class="apidocSignatureSpan">browser-sync.</span>browser_sync
+        <span class="apidocSignatureSpan">(emitter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">browser_sync = function (emitter) {
+
+    var bs      = this;
+
+    bs.cwd      = process.cwd();
+    bs.active   = false;
+    bs.paused   = false;
+    bs.config   = config;
+    bs.utils    = utils;
+    bs.events   = bs.emitter = emitter;
+
+    bs._userPlugins   = [];
+    bs._reloadQueue   = [];
+    bs._cleanupTasks  = [];
+    bs._browserReload = false;
+
+    // Plugin management
+    bs.pluginManager = new EE(defaultPlugins, hooks);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.create" id="apidoc.element.browser-sync.create">
+        function <span class="apidocSignatureSpan">browser-sync.</span>create
+        <span class="apidocSignatureSpan">(name, emitter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function create(name, emitter) {
+
+    name    = name    || new Date().getTime();
+    emitter = emitter || newEmitter();
+
+    var browserSync = new BrowserSync(emitter);
+
+    var instance = {
+        name:      name,
+        instance:  browserSync,
+        exit:      require(&#x22;./lib/public/exit&#x22;)(browserSync),
+        notify:    require(&#x22;./lib/public/notify&#x22;)(browserSync),
+        pause:     require(&#x22;./lib/public/pause&#x22;)(browserSync),
+        resume:    require(&#x22;./lib/public/resume&#x22;)(browserSync),
+        reload:    require(&#x22;./lib/public/reload&#x22;)(emitter),
+        stream:    require(&#x22;./lib/public/stream&#x22;)(emitter),
+        cleanup:   browserSync.cleanup.bind(browserSync),
+        use:       browserSync.registerPlugin.bind(browserSync),
+        getOption: browserSync.getOption.bind(browserSync),
+        emitter:   browserSync.events,
+        watch:     require(&#x22;./lib/file-watcher&#x22;).watch
+    };
+
+    browserSync.publicInstance = instance;
+    instance.init = require(&#x22;./lib/public/init&#x22;)(browserSync, name, pjson);
+
+    Object.defineProperty(instance, &#x22;active&#x22;, {
+        get: function () {
+            return browserSync.active;
+        }
+    });
+
+    Object.defineProperty(instance, &#x22;paused&#x22;, {
+        get: function () {
+            return browserSync.paused;
+        }
+    });
+
+<span class="apidocCodeCommentSpan">    /**
+     * Access to client-side socket for emitting events
+     *
+     * @property sockets
+     */
+</span>    Object.defineProperty(instance, &#x22;sockets&#x22;, {
+        get: function () {
+            if (!browserSync.active) {
+                return {
+                    emit: function () {},
+                    on: function () {}
+                };
+            } else {
+                return browserSync.io.sockets;
+            }
+        }
+    });
+
+    instances.push(instance);
+
+    return instance;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function initSingleton() {
+var instance;
+if (instances.length) {
+    instance = instances.filter(function (item) {
+        return item.name === &#x22;singleton&#x22;;
+    });
+    if (instance.length) {
+        logger.error(&#x22;{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.<s\
+pan class="apidocCodeKeywordSpan">create</span>().init()&#x22;);
+        return instance;
+    }
+}
+var args = Array.prototype.slice.call(arguments);
+singleton = create(&#x22;singleton&#x22;, getSingletonEmitter());
+
+if (singletonPlugins.length) {
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.exit" id="apidoc.element.browser-sync.exit">
+        function <span class="apidocSignatureSpan">browser-sync.</span>exit
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exit = function () {
+    var args = Array.prototype.slice.call(arguments);
+    if (singleton) {
+        return singleton[name].apply(singleton, args);
+    } else {
+        if (publicUtils.isStreamArg(name, args)) {
+            return new PassThrough({objectMode: true});
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        if (_.isFunction(cb)) {
+            if (errMessage.message) { // Is this an error object?
+                cb(errMessage);
+            } else {
+                cb(new Error(errMessage));
+            }
+        }
+        process.<span class="apidocCodeKeywordSpan">exit</span>(1);
+    }
+},
+/**
+ * Add support for xip.io urls
+ * @param {String} host
+ * @param {Object} options
+ * @returns {String}
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.get" id="apidoc.element.browser-sync.get">
+        function <span class="apidocSignatureSpan">browser-sync.</span>get
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (name) {
+    var instance = getSingle(name);
+    if (instance) {
+        return instance;
+    }
+    throw new Error(&#x22;An instance with the name `%s` was not found.&#x22;.replace(&#x22;%s&#x22;, name));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+     * @param bs
+     * @param done
+     */
+    getExtraPortForProxy: function (bs, done) {
+/**
+ * An extra port is not needed in snippet/server mode
+ */
+if (bs.options.<span class="apidocCodeKeywordSpan">get</span>(&#x22;mode&#x22;) !== &#x22;proxy&#x22;) {
+    return done();
+}
+
+/**
+ * Web socket support is disabled by default
+ */
+if (!bs.options.getIn([&#x22;proxy&#x22;, &#x22;ws&#x22;])) {
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.has" id="apidoc.element.browser-sync.has">
+        function <span class="apidocSignatureSpan">browser-sync.</span>has
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">has = function (name) {
+    var instance = getSingle(name);
+    if (instance) {
+        return true;
+    }
+    return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+return getFromString(item);
+    }
+
+    if (!isMap(item)) {
+return new Plugin().mergeDeep({errors: [new Error(&#x22;Plugin not supported in this format&#x22;)]});
+    }
+
+    if (item.<span class="apidocCodeKeywordSpan">has</span>(&#x22;module&#x22;)) {
+
+var nameOrObj = item.get(&#x22;module&#x22;);
+var options = item.get(&#x22;options&#x22;);
+
+/**
+ * The &#x27;module&#x27; key can be a string, this allows
+ * inline plugin references, but with options
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.init" id="apidoc.element.browser-sync.init">
+        function <span class="apidocSignatureSpan">browser-sync.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initSingleton() {
+    var instance;
+    if (instances.length) {
+        instance = instances.filter(function (item) {
+            return item.name === &#x22;singleton&#x22;;
+        });
+        if (instance.length) {
+            logger.error(&#x22;{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.cre\
+ate().init()&#x22;);
+            return instance;
+        }
+    }
+    var args = Array.prototype.slice.call(arguments);
+    singleton = create(&#x22;singleton&#x22;, getSingletonEmitter());
+
+    if (singletonPlugins.length) {
+        singletonPlugins.forEach(function (obj) {
+            singleton.instance.registerPlugin.apply(singleton.instance, obj.args);
+        });
+    }
+
+    singleton.init.apply(null, args);
+    return singleton;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function initSingleton() {
+var instance;
+if (instances.length) {
+    instance = instances.filter(function (item) {
+        return item.name === &#x22;singleton&#x22;;
+    });
+    if (instance.length) {
+        logger.error(&#x22;{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.cr\
+eate().<span class="apidocCodeKeywordSpan">init</span>()&#x22;);
+        return instance;
+    }
+}
+var args = Array.prototype.slice.call(arguments);
+singleton = create(&#x22;singleton&#x22;, getSingletonEmitter());
+
+if (singletonPlugins.length) {
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.notify" id="apidoc.element.browser-sync.notify">
+        function <span class="apidocSignatureSpan">browser-sync.</span>notify
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">notify = function () {
+    var args = Array.prototype.slice.call(arguments);
+    if (singleton) {
+        return singleton[name].apply(singleton, args);
+    } else {
+        if (publicUtils.isStreamArg(name, args)) {
+            return new PassThrough({objectMode: true});
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.pause" id="apidoc.element.browser-sync.pause">
+        function <span class="apidocSignatureSpan">browser-sync.</span>pause
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pause = function () {
+    var args = Array.prototype.slice.call(arguments);
+    if (singleton) {
+        return singleton[name].apply(singleton, args);
+    } else {
+        if (publicUtils.isStreamArg(name, args)) {
+            return new PassThrough({objectMode: true});
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.reload" id="apidoc.element.browser-sync.reload">
+        function <span class="apidocSignatureSpan">browser-sync.</span>reload
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reload = function () {
+    var args = Array.prototype.slice.call(arguments);
+    if (singleton) {
+        return singleton[name].apply(singleton, args);
+    } else {
+        if (publicUtils.isStreamArg(name, args)) {
+            return new PassThrough({objectMode: true});
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.reset" id="apidoc.element.browser-sync.reset">
+        function <span class="apidocSignatureSpan">browser-sync.</span>reset
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reset = function () {
+    instances.forEach(function (item) {
+        item.cleanup();
+    });
+    instances        = [];
+    singletonPlugins = [];
+    singletonEmitter = false;
+    singleton        = false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.resume" id="apidoc.element.browser-sync.resume">
+        function <span class="apidocSignatureSpan">browser-sync.</span>resume
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resume = function () {
+    var args = Array.prototype.slice.call(arguments);
+    if (singleton) {
+        return singleton[name].apply(singleton, args);
+    } else {
+        if (publicUtils.isStreamArg(name, args)) {
+            return new PassThrough({objectMode: true});
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.stream" id="apidoc.element.browser-sync.stream">
+        function <span class="apidocSignatureSpan">browser-sync.</span>stream
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stream = function () {
+    var args = Array.prototype.slice.call(arguments);
+    if (singleton) {
+        return singleton[name].apply(singleton, args);
+    } else {
+        if (publicUtils.isStreamArg(name, args)) {
+            return new PassThrough({objectMode: true});
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.use" id="apidoc.element.browser-sync.use">
+        function <span class="apidocSignatureSpan">browser-sync.</span>use
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">use = function () {
+    var args = Array.prototype.slice.call(arguments);
+    singletonPlugins.push({
+        args: args
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.watch" id="apidoc.element.browser-sync.watch">
+        function <span class="apidocSignatureSpan">browser-sync.</span>watch
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">watch = function () {
+    var args = Array.prototype.slice.call(arguments);
+    if (singleton) {
+        return singleton[name].apply(singleton, args);
+    } else {
+        if (publicUtils.isStreamArg(name, args)) {
+            return new PassThrough({objectMode: true});
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    if (typeof opts === &#x22;function&#x22;) {
+        cb = opts;
+        opts = {};
+    }
+
+    var watcher = require(&#x22;chokidar&#x22;)
+        .<span class="apidocCodeKeywordSpan">watch</span>(patterns, opts);
+
+    if (_.isFunction(cb)) {
+        watcher.on(&#x22;all&#x22;, cb);
+    }
+
+    return watcher;
+}
+...</pre></li>
+    </ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.browser-sync.async" id="apidoc.module.browser-sync.async">module browser-sync.async</a></h1>
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.async.getEmptyPort" id="apidoc.element.browser-sync.async.getEmptyPort">
+        function <span class="apidocSignatureSpan">browser-sync.async.</span>getEmptyPort
+        <span class="apidocSignatureSpan">(bs, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getEmptyPort = function (bs, done) {
+    utils.getPorts(bs.options, function (err, port) {
+        if (err) {
+            return utils.fail(true, err, bs.cb);
+        }
+        bs.debug(&#x22;Found a free port: {magenta:%s&#x22;, port);
+        done(null, {
+            options: {
+                port: port
+            }
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.async.getExtraPortForProxy" id="apidoc.element.browser-sync.async.getExtraPortForProxy">
+        function <span class="apidocSignatureSpan">browser-sync.async.</span>getExtraPortForProxy
+        <span class="apidocSignatureSpan">(bs, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getExtraPortForProxy = function (bs, done) {
+<span class="apidocCodeCommentSpan">    /**
+     * An extra port is not needed in snippet/server mode
+     */
+</span>    if (bs.options.get(&#x22;mode&#x22;) !== &#x22;proxy&#x22;) {
+        return done();
+    }
+
+    /**
+     * Web socket support is disabled by default
+     */
+    if (!bs.options.getIn([&#x22;proxy&#x22;, &#x22;ws&#x22;])) {
+        return done();
+    }
+
+    /**
+     * Use 1 higher than server port by default...
+     */
+    var socketPort = bs.options.get(&#x22;port&#x22;) + 1;
+
+    /**
+     * Or use the user-defined socket.port option instead
+     */
+    if (bs.options.hasIn([&#x22;socket&#x22;, &#x22;port&#x22;])) {
+        socketPort = bs.options.getIn([&#x22;socket&#x22;, &#x22;port&#x22;]);
+    }
+
+    utils.getPort(socketPort, null, function (err, port) {
+        if (err) {
+            return utils.fail(true, err, bs.cb);
+        }
+        done(null, {
+            optionsIn: [
+                {
+                    path: [&#x22;socket&#x22;, &#x22;port&#x22;],
+                    value: port
+                }
+            ]
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.async.getOnlineStatus" id="apidoc.element.browser-sync.async.getOnlineStatus">
+        function <span class="apidocSignatureSpan">browser-sync.async.</span>getOnlineStatus
+        <span class="apidocSignatureSpan">(bs, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOnlineStatus = function (bs, done) {
+    if (_.isUndefined(bs.options.get(&#x22;online&#x22;)) &#x26;&#x26; _.isUndefined(process.env.TESTING)) {
+        require(&#x22;dns&#x22;).resolve(&#x22;www.google.com&#x22;, function (err) {
+            var online = false;
+            if (err) {
+                bs.debug(&#x22;Could not resolve www.google.com, setting {magenta:online: false}&#x22;);
+            } else {
+                bs.debug(&#x22;Resolved www.google.com, setting {magenta:online: true}&#x22;);
+                online = true;
+            }
+            done(null, {
+                options: {
+                    online: online
+                }
+            });
+        });
+    } else {
+        done();
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.async.initUserPlugins" id="apidoc.element.browser-sync.async.initUserPlugins">
+        function <span class="apidocSignatureSpan">browser-sync.async.</span>initUserPlugins
+        <span class="apidocSignatureSpan">(bs, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initUserPlugins = function (bs, done) {
+
+    bs.pluginManager.initUserPlugins(bs);
+
+    done(null, {
+        options: {
+            userPlugins: bs.getUserPlugins()
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+},
+/**
+ * @param {BrowserSync} bs
+ * @param {Function} done
+ */
+initUserPlugins: function (bs, done) {
+
+    bs.pluginManager.<span class="apidocCodeKeywordSpan">initUserPlugins</span>(bs);
+
+    done(null, {
+        options: {
+            userPlugins: bs.getUserPlugins()
+        }
+    });
+}
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.async.mergeMiddlewares" id="apidoc.element.browser-sync.async.mergeMiddlewares">
+        function <span class="apidocSignatureSpan">browser-sync.async.</span>mergeMiddlewares
+        <span class="apidocSignatureSpan">(bs, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mergeMiddlewares = function (bs, done) {
+
+    done(null, {
+        options: {
+            middleware: bs.pluginManager.hook(
+                &#x22;server:middleware&#x22;,
+                bs.options.get(&#x22;middleware&#x22;)
+            )
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.async.mergeUiSettings" id="apidoc.element.browser-sync.async.mergeUiSettings">
+        function <span class="apidocSignatureSpan">browser-sync.async.</span>mergeUiSettings
+        <span class="apidocSignatureSpan">(bs, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mergeUiSettings = function (bs, done) {
+
+    if (!bs.ui) {
+        return done();
+    }
+
+    done(null, {
+        options: {
+            urls: bs.options.get(&#x22;urls&#x22;).merge(bs.ui.options.get(&#x22;urls&#x22;))
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.async.resolveInlineUserPlugins" id="apidoc.element.browser-sync.async.resolveInlineUserPlugins">
+        function <span class="apidocSignatureSpan">browser-sync.async.</span>resolveInlineUserPlugins
+        <span class="apidocSignatureSpan">(bs, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resolveInlineUserPlugins = function (bs, done) {
+
+    var plugins = bs.options
+        .get(&#x22;plugins&#x22;)
+        .map(pluginUtils.resolvePlugin)
+        .map(pluginUtils.requirePlugin);
+
+    plugins
+        .forEach(function (plugin) {
+            if (plugin.get(&#x22;errors&#x22;).size) {
+                return logPluginError(plugin);
+            }
+            var jsPlugin = plugin.toJS();
+            jsPlugin.options = jsPlugin.options || {};
+            jsPlugin.options.moduleName = jsPlugin.moduleName;
+            bs.registerPlugin(jsPlugin.module, jsPlugin.options);
+        });
+
+    function logPluginError (plugin) {
+        utils.fail(true, plugin.getIn([&#x22;errors&#x22;, 0]), bs.cb);
+    }
+
+    done();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.async.setFileWatchers" id="apidoc.element.browser-sync.async.setFileWatchers">
+        function <span class="apidocSignatureSpan">browser-sync.async.</span>setFileWatchers
+        <span class="apidocSignatureSpan">(bs, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setFileWatchers = function (bs, done) {
+    done(null, {
+        instance: {
+            watchers: bs.pluginManager.get(&#x22;file:watcher&#x22;)(bs)
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.async.setInternalEvents" id="apidoc.element.browser-sync.async.setInternalEvents">
+        function <span class="apidocSignatureSpan">browser-sync.async.</span>setInternalEvents
+        <span class="apidocSignatureSpan">(bs, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setInternalEvents = function (bs, done) {
+    require(&#x22;./internal-events&#x22;)(bs);
+    done();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.async.setOptions" id="apidoc.element.browser-sync.async.setOptions">
+        function <span class="apidocSignatureSpan">browser-sync.async.</span>setOptions
+        <span class="apidocSignatureSpan">(bs, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setOptions = function (bs, done) {
+    done(null, {
+        options: {
+            urls:        utils.getUrlOptions(bs.options),
+            snippet:     connectUtils.scriptTags(bs.options),
+            scriptPaths: Immutable.fromJS(connectUtils.clientScript(bs.options, true)),
+            files:       bs.pluginManager.hook(
+                &#x22;files:watch&#x22;,
+                bs.options.get(&#x22;files&#x22;),
+                bs.pluginManager.pluginOptions
+            )
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.async.startServer" id="apidoc.element.browser-sync.async.startServer">
+        function <span class="apidocSignatureSpan">browser-sync.async.</span>startServer
+        <span class="apidocSignatureSpan">(bs, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startServer = function (bs, done) {
+
+    var server = bs.pluginManager.get(&#x22;server&#x22;)(bs);
+
+    done(null, {
+        instance: {
+            server: server.server,
+            app: server.app
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.async.startSockets" id="apidoc.element.browser-sync.async.startSockets">
+        function <span class="apidocSignatureSpan">browser-sync.async.</span>startSockets
+        <span class="apidocSignatureSpan">(bs, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startSockets = function (bs, done) {
+
+    var clientEvents = bs.pluginManager.hook(
+        &#x22;client:events&#x22;,
+        bs.options.get(&#x22;clientEvents&#x22;).toJS()
+    );
+
+    // Start the socket, needs an existing server.
+    var io = bs.pluginManager.get(&#x22;socket&#x22;)(
+        bs.server,
+        clientEvents,
+        bs
+    );
+
+    done(null, {
+        instance: {
+            io: io
+        },
+        options: {
+            clientEvents: Immutable.fromJS(clientEvents)
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.async.startTunnel" id="apidoc.element.browser-sync.async.startTunnel">
+        function <span class="apidocSignatureSpan">browser-sync.async.</span>startTunnel
+        <span class="apidocSignatureSpan">(bs, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startTunnel = function (bs, done) {
+    if (bs.options.get(&#x22;tunnel&#x22;) &#x26;&#x26; bs.options.get(&#x22;online&#x22;)) {
+        var localTunnel = require(&#x22;./tunnel&#x22;);
+        localTunnel(bs, function (err, tunnel) {
+            if (err) {
+                return done(err);
+            } else {
+                return done(null, {
+                    optionsIn: [
+                        {
+                            path:  [&#x22;urls&#x22;, &#x22;tunnel&#x22;],
+                            value: tunnel.url
+                        }
+                    ],
+                    instance: {
+                        tunnel: tunnel
+                    }
+                });
+            }
+        });
+    } else {
+        done();
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.async.startUi" id="apidoc.element.browser-sync.async.startUi">
+        function <span class="apidocSignatureSpan">browser-sync.async.</span>startUi
+        <span class="apidocSignatureSpan">(bs, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startUi = function (bs, done) {
+
+    var PLUGIN_NAME = &#x22;UI&#x22;;
+    var userPlugins   = bs.getUserPlugins();
+    var ui            = bs.pluginManager.get(PLUGIN_NAME);
+    var uiOpts        = bs.options.get(&#x22;ui&#x22;);
+
+    if (!uiOpts || uiOpts.get(&#x22;enabled&#x22;) === false) {
+        return done();
+    }
+
+    // if user provided a UI, use it instead
+    if (userPlugins.some(function (item) {
+        return item.name === PLUGIN_NAME;
+    })) {
+        uiOpts = bs.options.get(&#x22;ui&#x22;).mergeDeep(Immutable.fromJS(bs.pluginManager.pluginOptions[PLUGIN_NAME]));
+    }
+
+    return ui(uiOpts.toJS(), bs, function (err, ui) {
+        if (err) {
+            return done(err);
+        }
+        done(null, {
+            instance: {
+                ui: ui
+            }
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.browser-sync.browser_sync" id="apidoc.module.browser-sync.browser_sync">module browser-sync.browser_sync</a></h1>
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.browser_sync" id="apidoc.element.browser-sync.browser_sync.browser_sync">
+        function <span class="apidocSignatureSpan">browser-sync.</span>browser_sync
+        <span class="apidocSignatureSpan">(emitter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">browser_sync = function (emitter) {
+
+    var bs      = this;
+
+    bs.cwd      = process.cwd();
+    bs.active   = false;
+    bs.paused   = false;
+    bs.config   = config;
+    bs.utils    = utils;
+    bs.events   = bs.emitter = emitter;
+
+    bs._userPlugins   = [];
+    bs._reloadQueue   = [];
+    bs._cleanupTasks  = [];
+    bs._browserReload = false;
+
+    // Plugin management
+    bs.pluginManager = new EE(defaultPlugins, hooks);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.browser-sync.browser_sync.prototype" id="apidoc.module.browser-sync.browser_sync.prototype">module browser-sync.browser_sync.prototype</a></h1>
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype._addMiddlewareToStack" id="apidoc.element.browser-sync.browser_sync.prototype._addMiddlewareToStack">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>_addMiddlewareToStack
+        <span class="apidocSignatureSpan">(entry)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_addMiddlewareToStack = function (entry) {
+    var bs = this;
+    if (bs.options.get(&#x22;mode&#x22;) === &#x22;proxy&#x22;) {
+        bs.app.stack.splice(bs.app.stack.length-1, 0, entry);
+    } else {
+        bs.app.stack.push(entry);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            res.setHeader(&#x22;Content-Type&#x22;, props.type);
+            res.end(props.content);
+        },
+        id: &#x22;Browsersync - &#x22; + _serveFileCount++,
+        route: path
+    };
+
+    bs.<span class="apidocCodeKeywordSpan">_addMiddlewareToStack</span>(entry);
+};
+
+/**
+ * Add middlewares on the fly
+ * @param {{route: string, handle: function, id?: string}}
+ */
+BrowserSync.prototype._addMiddlewareToStack = function (entry) {
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.addMiddleware" id="apidoc.element.browser-sync.browser_sync.prototype.addMiddleware">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>addMiddleware
+        <span class="apidocSignatureSpan">(route, handle, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addMiddleware = function (route, handle, opts) {
+
+    var bs   = this;
+
+    if (!bs.app) {
+        return;
+    }
+
+    opts = opts || {};
+
+    if (!opts.id) {
+        opts.id = &#x22;bs-mw-&#x22; + _addMiddlewareCount++;
+    }
+
+    if (route === &#x22;*&#x22;) {
+        route = &#x22;&#x22;;
+    }
+
+    var entry = {
+        id: opts.id,
+        route: route,
+        handle: handle
+    };
+
+    if (opts.override) {
+        entry.override = true;
+    }
+
+    bs.options = bs.options.update(&#x22;middleware&#x22;, function (mw) {
+        if (bs.options.get(&#x22;mode&#x22;) === &#x22;proxy&#x22;) {
+            return mw.insert(mw.size-1, entry);
+        }
+        return mw.concat(entry);
+    });
+
+    bs.resetMiddlewareStack();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.addRewriteRule" id="apidoc.element.browser-sync.browser_sync.prototype.addRewriteRule">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>addRewriteRule
+        <span class="apidocSignatureSpan">(rule)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addRewriteRule = function (rule) {
+    var bs = this;
+
+    bs.options = bs.options.update(&#x22;rewriteRules&#x22;, function (rules) {
+        return rules.concat(rule);
+    });
+
+    bs.resetMiddlewareStack();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.callback" id="apidoc.element.browser-sync.browser_sync.prototype.callback">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>callback
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">callback = function (name) {
+
+    var bs  = this;
+    var cb  = bs.options.getIn([&#x22;callbacks&#x22;, name]);
+
+    if (_.isFunction(cb)) {
+        cb.apply(bs.publicInstance, _.toArray(arguments).slice(1));
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            urls:    bs.options.get(&#x22;urls&#x22;).toJS(),
+            tunnel:  bs.options.getIn([&#x22;urls&#x22;, &#x22;tunnel&#x22;])
+        });
+
+        /**
+         * Call any option-provided callbacks
+         */
+        bs.<span class="apidocCodeKeywordSpan">callback</span>(&#x22;ready&#x22;, null, bs);
+
+        /**
+         * Finally, call the user-provided callback given as last arg
+         */
+        bs.cb(null, bs);
+    };
+}
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.cleanup" id="apidoc.element.browser-sync.browser_sync.prototype.cleanup">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>cleanup
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cleanup = function (cb) {
+
+    var bs = this;
+    if (!bs.active) {
+        return;
+    }
+
+    // Remove all event listeners
+    if (bs.events) {
+        bs.debug(&#x22;Removing event listeners...&#x22;);
+        bs.events.removeAllListeners();
+    }
+
+    // Close any core file watchers
+    if (bs.watchers) {
+        Object.keys(bs.watchers).forEach(function (key) {
+            bs.watchers[key].watchers.forEach(function (watcher) {
+                watcher.close();
+            });
+        });
+    }
+
+    // Run any additional clean up tasks
+    bs._cleanupTasks.forEach(function (fn) {
+        if (_.isFunction(fn)) {
+            fn(bs);
+        }
+    });
+
+    // Reset the flag
+    bs.debug(&#x22;Setting {magenta:active: false&#x22;);
+    bs.active = false;
+    bs.paused = false;
+
+    bs.pluginManager.plugins        = {};
+    bs.pluginManager.pluginOptions  = {};
+    bs.pluginManager.defaultPlugins = defaultPlugins;
+
+    bs._userPlugins                = [];
+    bs.userPlugins                 = [];
+    bs._reloadTimer                = undefined;
+    bs._reloadQueue                = [];
+    bs._cleanupTasks               = [];
+
+    if (_.isFunction(cb)) {
+        cb(null, bs);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+ * Reset the state of the module.
+ * (should only be needed for test environments)
+ */
+module.exports.reset = function () {
+    instances.forEach(function (item) {
+        item.<span class="apidocCodeKeywordSpan">cleanup</span>();
+    });
+    instances        = [];
+    singletonPlugins = [];
+    singletonEmitter = false;
+    singleton        = false;
+};
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.getExternalSocketConnector" id="apidoc.element.browser-sync.browser_sync.prototype.getExternalSocketConnector">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getExternalSocketConnector
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getExternalSocketConnector = function (opts) {
+
+    var bs = this;
+
+    return connectUtils.socketConnector(
+        bs.options.withMutations(function (item) {
+            item.set(&#x22;socket&#x22;, item.get(&#x22;socket&#x22;).merge(opts));
+            if (!bs.options.getIn([&#x22;proxy&#x22;, &#x22;ws&#x22;])) {
+                item.set(&#x22;mode&#x22;, &#x22;snippet&#x22;);
+            }
+        })
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*/
+BrowserSync.prototype.getSocketConnector = function (opts) {
+
+   var bs = this;
+
+   return function (req, res) {
+       res.setHeader(&#x22;Content-Type&#x22;, &#x22;text/javascript&#x22;);
+       res.end(bs.<span class="apidocCodeKeywordSpan">getExternalSocketConnector</span>(opts));
+   };
+};
+
+/**
+* Socket connector as a string
+* @param {Object} opts
+* @returns {*}
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.getLogger" id="apidoc.element.browser-sync.browser_sync.prototype.getLogger">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getLogger
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getLogger = function (name) {
+    return logger.clone(function (config) {
+        config.prefix = config.prefix + template.replace(&#x22;%s&#x22;, name);
+        return config;
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.getMiddleware" id="apidoc.element.browser-sync.browser_sync.prototype.getMiddleware">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getMiddleware
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getMiddleware = function (type) {
+
+    var types = {
+        &#x22;connector&#x22;: connectUtils.socketConnector(this.options),
+        &#x22;socket-js&#x22;: require(&#x22;./snippet&#x22;).utils.getSocketScript()
+    };
+
+    if (type in types) {
+        return function (req, res) {
+            res.setHeader(&#x22;Content-Type&#x22;, &#x22;text/javascript&#x22;);
+            res.end(types[type]);
+        };
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.getOption" id="apidoc.element.browser-sync.browser_sync.prototype.getOption">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getOption
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOption = function (name) {
+
+    this.debug(&#x22;Getting option: {magenta:%s&#x22;, name);
+    return this.options.get(name);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.getOptionIn" id="apidoc.element.browser-sync.browser_sync.prototype.getOptionIn">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getOptionIn
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOptionIn = function (path) {
+
+    this.debug(&#x22;Getting option via path: {magenta:%s&#x22;, path);
+    return this.options.getIn(path);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.getOptions" id="apidoc.element.browser-sync.browser_sync.prototype.getOptions">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getOptions
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOptions = function () {
+    return this.options;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.getSocketConnector" id="apidoc.element.browser-sync.browser_sync.prototype.getSocketConnector">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getSocketConnector
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSocketConnector = function (opts) {
+
+    var bs = this;
+
+    return function (req, res) {
+        res.setHeader(&#x22;Content-Type&#x22;, &#x22;text/javascript&#x22;);
+        res.end(bs.getExternalSocketConnector(opts));
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.getSocketIoScript" id="apidoc.element.browser-sync.browser_sync.prototype.getSocketIoScript">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getSocketIoScript
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSocketIoScript = function () {
+
+    return require(&#x22;./snippet&#x22;).utils.getSocketScript();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.getUserPlugin" id="apidoc.element.browser-sync.browser_sync.prototype.getUserPlugin">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getUserPlugin
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getUserPlugin = function (name) {
+
+    var bs = this;
+
+    var items = bs.getUserPlugins(function (item) {
+        return item[&#x22;plugin:name&#x22;] === name;
+    });
+
+    if (items &#x26;&#x26; items.length) {
+        return items[0];
+    }
+
+    return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.getUserPlugins" id="apidoc.element.browser-sync.browser_sync.prototype.getUserPlugins">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>getUserPlugins
+        <span class="apidocSignatureSpan">(filter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getUserPlugins = function (filter) {
+
+    var bs = this;
+
+    filter = filter || function () {
+        return true;
+    };
+
+<span class="apidocCodeCommentSpan">    /**
+     * Transform Plugins option
+     */
+</span>    bs.userPlugins = bs._userPlugins.filter(filter).map(function (plugin) {
+        return {
+            name: plugin[&#x22;plugin:name&#x22;],
+            active: plugin._enabled,
+            opts: bs.pluginManager.pluginOptions[plugin[&#x22;plugin:name&#x22;]]
+        };
+    });
+
+    return bs.userPlugins;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+     *
+     * @param {BrowserSync} bs
+     * @param {Function} done
+     */
+    startUi: function (bs, done) {
+
+var PLUGIN_NAME = &#x22;UI&#x22;;
+var userPlugins   = bs.<span class="apidocCodeKeywordSpan">getUserPlugins</span>();
+var ui            = bs.pluginManager.get(PLUGIN_NAME);
+var uiOpts        = bs.options.get(&#x22;ui&#x22;);
+
+if (!uiOpts || uiOpts.get(&#x22;enabled&#x22;) === false) {
+    return done();
+}
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.init" id="apidoc.element.browser-sync.browser_sync.prototype.init">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>init
+        <span class="apidocSignatureSpan">(options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (options, cb) {
+
+<span class="apidocCodeCommentSpan">    /**
+     * Safer access to `this`
+     * @type {BrowserSync}
+     */
+</span>    var bs = this;
+
+    /**
+     * Set user-provided callback, or assign a noop
+     * @type {Function}
+     */
+    bs.cb  = cb || utils.defaultCallback;
+
+    /**
+     * Verify provided config.
+     * Some options are not compatible and will cause us to
+     * end the process.
+     */
+    if (!utils.verifyConfig(options, bs.cb)) {
+        return;
+    }
+
+    /**
+     * Save a reference to the original options
+     * @type {Map}
+     * @private
+     */
+    bs._options = options;
+
+    /**
+     * Set additional options that depend on what the
+     * user may of provided
+     * @type {Map}
+     */
+    bs.options  = require(&#x22;./options&#x22;).update(options);
+
+    /**
+     * Kick off default plugins.
+     */
+    bs.pluginManager.init();
+
+    /**
+     * Create a base logger &#x26; debugger.
+     */
+    bs.logger   = bs.pluginManager.get(&#x22;logger&#x22;)(bs.events, bs);
+    bs.debugger = bs.logger.clone({useLevelPrefixes: true});
+    bs.debug    = bs.debugger.debug;
+
+    /**
+     * Run each setup task in sequence
+     */
+    eachSeries(
+        asyncTasks,
+        taskRunner(bs),
+        tasksComplete(bs)
+    );
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function initSingleton() {
+var instance;
+if (instances.length) {
+    instance = instances.filter(function (item) {
+        return item.name === &#x22;singleton&#x22;;
+    });
+    if (instance.length) {
+        logger.error(&#x22;{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.cr\
+eate().<span class="apidocCodeKeywordSpan">init</span>()&#x22;);
+        return instance;
+    }
+}
+var args = Array.prototype.slice.call(arguments);
+singleton = create(&#x22;singleton&#x22;, getSingletonEmitter());
+
+if (singletonPlugins.length) {
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.registerCleanupTask" id="apidoc.element.browser-sync.browser_sync.prototype.registerCleanupTask">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>registerCleanupTask
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">registerCleanupTask = function (fn) {
+
+    this._cleanupTasks.push(fn);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+                    if (!bs.paused &#x26;&#x26; data.namespace === &#x22;core&#x22;) {
+                        bs.events.emit(&#x22;file:reload&#x22;, fileUtils.getFileInfo(data, bs.options));
+                    }
+                });
+            }
+        });
+
+    bs.<span class="apidocCodeKeywordSpan">registerCleanupTask</span>(function() {
+        handler.dispose();
+        reloader.dispose();
+    });
+};
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.registerPlugin" id="apidoc.element.browser-sync.browser_sync.prototype.registerPlugin">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>registerPlugin
+        <span class="apidocSignatureSpan">(module, opts, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">registerPlugin = function (module, opts, cb) {
+
+    var bs = this;
+
+    bs.pluginManager.registerPlugin(module, opts, cb);
+
+    if (module[&#x22;plugin:name&#x22;]) {
+        bs._userPlugins.push(module);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    .forEach(function (plugin) {
+        if (plugin.get(&#x22;errors&#x22;).size) {
+            return logPluginError(plugin);
+        }
+        var jsPlugin = plugin.toJS();
+        jsPlugin.options = jsPlugin.options || {};
+        jsPlugin.options.moduleName = jsPlugin.moduleName;
+        bs.<span class="apidocCodeKeywordSpan">registerPlugin</span>(jsPlugin.module, jsPlugin.options);
+    });
+
+function logPluginError (plugin) {
+    utils.fail(true, plugin.getIn([&#x22;errors&#x22;, 0]), bs.cb);
+}
+
+done();
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.removeMiddleware" id="apidoc.element.browser-sync.browser_sync.prototype.removeMiddleware">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>removeMiddleware
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeMiddleware = function (id) {
+
+    var bs = this;
+
+    if (!bs.app) {
+        return;
+    }
+
+    bs.options = bs.options.update(&#x22;middleware&#x22;, function (mw) {
+        return mw.filter(function (mw) {
+            return mw.id !== id;
+        });
+    });
+
+    bs.resetMiddlewareStack();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.removeRewriteRule" id="apidoc.element.browser-sync.browser_sync.prototype.removeRewriteRule">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>removeRewriteRule
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeRewriteRule = function (id) {
+    var bs = this;
+    bs.options = bs.options.update(&#x22;rewriteRules&#x22;, function (rules) {
+        return rules.filter(function (rule) {
+            return rule.id !== id;
+        });
+    });
+
+    bs.resetMiddlewareStack();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.resetMiddlewareStack" id="apidoc.element.browser-sync.browser_sync.prototype.resetMiddlewareStack">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>resetMiddlewareStack
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resetMiddlewareStack = function () {
+
+    var bs = this;
+    var middlewares = require(&#x22;./server/utils&#x22;).getMiddlewares(bs, bs.options);
+
+    bs.app.stack = middlewares;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   bs.options = bs.options.update(&#x22;middleware&#x22;, function (mw) {
+       if (bs.options.get(&#x22;mode&#x22;) === &#x22;proxy&#x22;) {
+           return mw.insert(mw.size-1, entry);
+       }
+       return mw.concat(entry);
+   });
+
+   bs.<span class="apidocCodeKeywordSpan">resetMiddlewareStack</span>();
+};
+
+/**
+* Remove middlewares on the fly
+* @param {String} id
+* @returns {Server}
+*/
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.serveFile" id="apidoc.element.browser-sync.browser_sync.prototype.serveFile">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>serveFile
+        <span class="apidocSignatureSpan">(path, props)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">serveFile = function (path, props) {
+
+    var bs = this;
+    var mode = bs.options.get(&#x22;mode&#x22;);
+    var entry = {
+        handle: function (req, res) {
+            res.setHeader(&#x22;Content-Type&#x22;, props.type);
+            res.end(props.content);
+        },
+        id: &#x22;Browsersync - &#x22; + _serveFileCount++,
+        route: path
+    };
+
+    bs._addMiddlewareToStack(entry);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.setMany" id="apidoc.element.browser-sync.browser_sync.prototype.setMany">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>setMany
+        <span class="apidocSignatureSpan">(fn, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setMany = function (fn, opts) {
+
+    var bs = this;
+
+    opts = opts || {};
+
+    bs.debug(&#x22;Setting multiple Options&#x22;);
+    bs.options = bs.options.withMutations(fn);
+    if (!opts.silent) {
+        bs.events.emit(&#x22;options:set&#x22;, {options: bs.options.toJS()});
+    }
+    return this.options;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function setOptions (bs, options) {
+
+/**
+ * If multiple options were set, act on the immutable map
+ * in an efficient way
+ */
+if (Object.keys(options).length &#x3e; 1) {
+    bs.<span class="apidocCodeKeywordSpan">setMany</span>(function (item) {
+        Object.keys(options).forEach(function (key) {
+            item.set(key, options[key]);
+            return item;
+        });
+    });
+} else {
+    Object.keys(options).forEach(function (key) {
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.setOption" id="apidoc.element.browser-sync.browser_sync.prototype.setOption">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>setOption
+        <span class="apidocSignatureSpan">(name, value, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setOption = function (name, value, opts) {
+
+    var bs = this;
+
+    opts = opts || {};
+
+    bs.debug(&#x22;Setting Option: {cyan:%s} - {magenta:%s&#x22;, name, value.toString());
+
+    bs.options = bs.options.set(name, value);
+
+    if (!opts.silent) {
+        bs.events.emit(&#x22;options:set&#x22;, {path: name, value: value, options: bs.options});
+    }
+    return this.options;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+           Object.keys(options).forEach(function (key) {
+               item.set(key, options[key]);
+               return item;
+           });
+       });
+   } else {
+       Object.keys(options).forEach(function (key) {
+           bs.<span class="apidocCodeKeywordSpan">setOption</span>(key, options[key]);
+       });
+   }
+}
+
+/**
+* At this point, ALL async tasks have completed
+* @param {BrowserSync} bs
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.setOptionIn" id="apidoc.element.browser-sync.browser_sync.prototype.setOptionIn">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>setOptionIn
+        <span class="apidocSignatureSpan">(path, value, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setOptionIn = function (path, value, opts) {
+
+    var bs = this;
+
+    opts = opts || {};
+
+    bs.debug(&#x22;Setting Option: {cyan:%s} - {magenta:%s&#x22;, path.join(&#x22;.&#x22;), value.toString());
+    bs.options = bs.options.setIn(path, value);
+    if (!opts.silent) {
+        bs.events.emit(&#x22;options:set&#x22;, {path: path, value: value, options: bs.options});
+    }
+    return bs.options;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+/**
+ * Any options returned that require path access?
+ */
+if (out.optionsIn) {
+    out.optionsIn.forEach(function (item) {
+        bs.<span class="apidocCodeKeywordSpan">setOptionIn</span>(item.path, item.value);
+    });
+}
+
+/**
+ * Any instance properties returned?
+ */
+if (out.instance) {
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.browser_sync.prototype.setRewriteRules" id="apidoc.element.browser-sync.browser_sync.prototype.setRewriteRules">
+        function <span class="apidocSignatureSpan">browser-sync.browser_sync.prototype.</span>setRewriteRules
+        <span class="apidocSignatureSpan">(rules)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setRewriteRules = function (rules) {
+    var bs = this;
+    bs.options = bs.options.update(&#x22;rewriteRules&#x22;, function (_) {
+        return rules;
+    });
+
+    bs.resetMiddlewareStack();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.browser-sync.connect_utils" id="apidoc.module.browser-sync.connect_utils">module browser-sync.connect_utils</a></h1>
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.connect_utils.clientScript" id="apidoc.element.browser-sync.connect_utils.clientScript">
+        function <span class="apidocSignatureSpan">browser-sync.connect_utils.</span>clientScript
+        <span class="apidocSignatureSpan">(options, both)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clientScript = function (options, both) {
+
+    var prefix    = options.getIn([&#x22;socket&#x22;, &#x22;clientPath&#x22;]);
+    var script    = prefix + &#x22;/browser-sync-client.js&#x22;;
+    var versioned = prefix + &#x22;/browser-sync-client.js?v=&#x22; + options.get(&#x22;version&#x22;);
+
+    if (both) {
+        return {
+            path: script,
+            versioned: versioned
+        };
+    }
+
+    return versioned;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {Function} done
+ */
+setOptions: function (bs, done) {
+    done(null, {
+        options: {
+            urls:        utils.getUrlOptions(bs.options),
+            snippet:     connectUtils.scriptTags(bs.options),
+            scriptPaths: Immutable.fromJS(connectUtils.<span class="apidocCodeKeywordSpan">clientScript</span>(bs.options, true)\
+),
+            files:       bs.pluginManager.hook(
+                &#x22;files:watch&#x22;,
+                bs.options.get(&#x22;files&#x22;),
+                bs.pluginManager.pluginOptions
+            )
+        }
+    });
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.connect_utils.getConnectionUrl" id="apidoc.element.browser-sync.connect_utils.getConnectionUrl">
+        function <span class="apidocSignatureSpan">browser-sync.connect_utils.</span>getConnectionUrl
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getConnectionUrl = function (options) {
+
+    var socketOpts       = options.get(&#x22;socket&#x22;).toJS();
+    var namespace        = connectUtils.getNamespace(socketOpts, options);
+
+    var protocol         = &#x22;&#x22;;
+    var withHostnamePort = &#x22;&#x27;{protocol}&#x27; + location.hostname + &#x27;:{port}{ns}&#x27;&#x22;;
+    var withHost         = &#x22;&#x27;{protocol}&#x27; + location.host + &#x27;{ns}&#x27;&#x22;;
+    var withDomain       = &#x22;&#x27;{domain}{ns}&#x27;&#x22;;
+    var port             = options.get(&#x22;port&#x22;);
+
+    // default use-case is server/proxy
+    var string           = withHost;
+
+    if (options.get(&#x22;mode&#x22;) !== &#x22;server&#x22;) {
+        protocol = options.get(&#x22;scheme&#x22;) + &#x22;://&#x22;;
+        string   = withHostnamePort;
+    }
+
+    if (options.get(&#x22;mode&#x22;) === &#x22;proxy&#x22; &#x26;&#x26; options.getIn([&#x22;proxy&#x22;, &#x22;ws&#x22;])) {
+        port = options.getIn([&#x22;socket&#x22;, &#x22;port&#x22;]);
+    }
+
+<span class="apidocCodeCommentSpan">    /**
+     * Ensure socket.domain is always a string (for noop replacements later)
+     */
+</span>    socketOpts.domain = (function () {
+        if (options.get(&#x22;localOnly&#x22;)) {
+            string = withDomain;
+            return [
+                options.get(&#x22;scheme&#x22;),
+                &#x22;://localhost:&#x22;,
+                options.get(&#x22;port&#x22;)
+            ].join(&#x22;&#x22;);
+        }
+        if (socketOpts.domain) {
+            string = withDomain;
+            /**
+             * User provided a function
+             */
+            if (_.isFunction(socketOpts.domain)) {
+                return socketOpts.domain.call(null, options);
+            }
+            /**
+             * User provided a string
+             */
+            if (_.isString(socketOpts.domain)) {
+                return socketOpts.domain;
+            }
+        }
+        return &#x22;&#x22;;
+    })();
+
+    return string
+        .replace(&#x22;{protocol}&#x22;, protocol)
+        .replace(&#x22;{port}&#x22;,     port)
+        .replace(&#x22;{domain}&#x22;,   socketOpts.domain.replace(&#x22;{port}&#x22;, port))
+        .replace(&#x22;{ns}&#x22;,       namespace);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+     * @param {Map} options
+     * @returns {String}
+     */
+    socketConnector: function (options) {
+
+var socket        = options.get(&#x22;socket&#x22;);
+var template      = fs.readFileSync(config.templates.connector, &#x22;utf-8&#x22;);
+var url           = connectUtils.<span class="apidocCodeKeywordSpan">getConnectionUrl</span>(options);
+
+/**
+ * ***Backwards compatibility***. While `socket.path` is technically a
+ * socketIoClientConfig property, it&#x27;s been documented previously
+ * as a top-level option, so must stay.
+ */
+var clientConfig  = socket
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.connect_utils.getNamespace" id="apidoc.element.browser-sync.connect_utils.getNamespace">
+        function <span class="apidocSignatureSpan">browser-sync.connect_utils.</span>getNamespace
+        <span class="apidocSignatureSpan">(socketOpts, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getNamespace = function (socketOpts, options) {
+
+    var namespace = socketOpts.namespace;
+
+    if (typeof namespace === &#x22;function&#x22;) {
+        return namespace(options);
+    }
+
+    if (!namespace.match(/^\//)) {
+        namespace = &#x22;/&#x22; + namespace;
+    }
+
+    return namespace;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    /**
+     * @param {Map} options
+     * @returns {string}
+     */
+    getConnectionUrl: function (options) {
+
+var socketOpts       = options.get(&#x22;socket&#x22;).toJS();
+var namespace        = connectUtils.<span class="apidocCodeKeywordSpan">getNamespace</span>(socketOpts, options);
+
+var protocol         = &#x22;&#x22;;
+var withHostnamePort = &#x22;&#x27;{protocol}&#x27; + location.hostname + &#x27;:{port}{ns}&#x27;&#x22;;
+var withHost         = &#x22;&#x27;{protocol}&#x27; + location.host + &#x27;{ns}&#x27;&#x22;;
+var withDomain       = &#x22;&#x27;{domain}{ns}&#x27;&#x22;;
+var port             = options.get(&#x22;port&#x22;);
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.connect_utils.scriptTags" id="apidoc.element.browser-sync.connect_utils.scriptTags">
+        function <span class="apidocSignatureSpan">browser-sync.connect_utils.</span>scriptTags
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">scriptTags = function (options) {
+
+    var scriptPath     = this.clientScript(options);
+    var async          = options.getIn([&#x22;snippetOptions&#x22;, &#x22;async&#x22;]);
+    var scriptDomain   = options.getIn([&#x22;script&#x22;, &#x22;domain&#x22;]);
+
+<span class="apidocCodeCommentSpan">    /**
+     * Generate the [src] attribute based on user options
+     */
+</span>    var scriptSrc = (function () {
+
+        if (options.get(&#x22;localOnly&#x22;)) {
+            return [
+                options.get(&#x22;scheme&#x22;),
+                &#x22;://localhost:&#x22;,
+                options.get(&#x22;port&#x22;),
+                scriptPath
+            ].join(&#x22;&#x22;);
+        }
+
+        /**
+         * First, was &#x22;scriptPath&#x22; set? if so the user wanted full control over the
+         * script tag output
+         *
+         */
+        if (_.isFunction(options.get(&#x22;scriptPath&#x22;))) {
+            return options.get(&#x22;scriptPath&#x22;).apply(null, getScriptArgs(options, scriptPath));
+        }
+
+        /**
+         * Next, if &#x22;script.domain&#x22; was given, allow that + the path to the JS file
+         * eg:
+         *  script.domain=localhost:3000
+         * -&#x3e; localhost:3000/browser-sync/browser-sync-client.js
+         */
+        if (scriptDomain) {
+            if (_.isFunction(scriptDomain)) {
+                return scriptDomain.call(null, options) + scriptPath;
+            }
+            if (scriptDomain.match(/\{port\}/)) {
+                return scriptDomain.replace(&#x22;{port}&#x22;, options.get(&#x22;port&#x22;)) + scriptPath;
+            }
+            return scriptDomain + scriptPath;
+        }
+
+        /**
+         * Now if server or proxy, use dynamic script
+         * eg:
+         *  browser-sync start --server
+         * -&#x3e;
+         *  &#x22;HOST:3000/browser-sync/browser-sync-client.js&#x22;.replace(&#x22;HOST&#x22;, location.hostname)
+         */
+        if (options.get(&#x22;server&#x22;) || options.get(&#x22;proxy&#x22;)) {
+            return scriptPath;
+        }
+
+        /**
+         * Final use case is snippet mode
+         * -&#x3e; &#x22;http://HOST:3000/browser-sync/browser-sync-client.js&#x22;.replace(&#x22;HOST&#x22;, location.hostname)
+         * -&#x3e; &#x22;//HOST:3000/browser-sync/browser-sync-client.js&#x22;.replace(&#x22;HOST&#x22;, location.hostname)&#x22;
+         */
+        return getPath(options, scriptPath, options.get(&#x22;port&#x22;));
+    })();
+
+    /**
+     * Decide which template shall be used to generate the script tags
+     */
+    var template = (function () {
+        if (scriptDomain || options.get(&#x22;localOnly&#x22;)) {
+            return config.templates.scriptTagSimple;
+        }
+        return config.templates.scriptTag;
+    })();
+
+    /**
+     * Finally read the template file from disk and replace
+     * the dynamic values.
+     */
+    return fs.readFileSync(template, &#x22;utf8&#x22;)
+        .replace(&#x22;%script%&#x22;, scriptSrc)
+        .replace(&#x22;%async%&#x22;, async ? &#x22;async&#x22; : &#x22;&#x22;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param {BrowserSync} bs
+ * @param {Function} done
+ */
+setOptions: function (bs, done) {
+    done(null, {
+        options: {
+            urls:        utils.getUrlOptions(bs.options),
+            snippet:     connectUtils.<span class="apidocCodeKeywordSpan">scriptTags</span>(bs.options),
+            scriptPaths: Immutable.fromJS(connectUtils.clientScript(bs.options, true)),
+            files:       bs.pluginManager.hook(
+                &#x22;files:watch&#x22;,
+                bs.options.get(&#x22;files&#x22;),
+                bs.pluginManager.pluginOptions
+            )
+        }
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.connect_utils.socketConnector" id="apidoc.element.browser-sync.connect_utils.socketConnector">
+        function <span class="apidocSignatureSpan">browser-sync.connect_utils.</span>socketConnector
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">socketConnector = function (options) {
+
+    var socket        = options.get(&#x22;socket&#x22;);
+    var template      = fs.readFileSync(config.templates.connector, &#x22;utf-8&#x22;);
+    var url           = connectUtils.getConnectionUrl(options);
+
+<span class="apidocCodeCommentSpan">    /**
+     * ***Backwards compatibility***. While `socket.path` is technically a
+     * socketIoClientConfig property, it&#x27;s been documented previously
+     * as a top-level option, so must stay.
+     */
+</span>    var clientConfig  = socket
+        .get(&#x22;socketIoClientConfig&#x22;)
+        .merge({
+            path: socket.get(&#x22;path&#x22;)
+        });
+
+    template = template
+        .replace(&#x22;%config%&#x22;, JSON.stringify(clientConfig.toJS()))
+        .replace(&#x22;%url%&#x22;,  url);
+
+    return template;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Get middleware
+ * @returns {*}
+ */
+BrowserSync.prototype.getMiddleware = function (type) {
+
+var types = {
+    &#x22;connector&#x22;: connectUtils.<span class="apidocCodeKeywordSpan">socketConnector</span>(this.options),
+    &#x22;socket-js&#x22;: require(&#x22;./snippet&#x22;).utils.getSocketScript()
+};
+
+if (type in types) {
+    return function (req, res) {
+        res.setHeader(&#x22;Content-Type&#x22;, &#x22;text/javascript&#x22;);
+        res.end(types[type]);
+...</pre></li>
+    </ul>
+    
+    
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.browser-sync.file_event_handler" id="apidoc.module.browser-sync.file_event_handler">module browser-sync.file_event_handler</a></h1>
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.file_event_handler.applyReloadOperators" id="apidoc.element.browser-sync.file_event_handler.applyReloadOperators">
+        function <span class="apidocSignatureSpan">browser-sync.file_event_handler.</span>applyReloadOperators
+        <span class="apidocSignatureSpan">(subject, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function applyReloadOperators(subject, options) {
+    var operators = [
+        {
+            option: &#x22;reloadDebounce&#x22;,
+            fnName: &#x22;debounce&#x22;
+        },
+        {
+            option: &#x22;reloadThrottle&#x22;,
+            fnName: &#x22;throttle&#x22;
+        },
+        {
+            option: &#x22;reloadDelay&#x22;,
+            fnName: &#x22;delay&#x22;
+        }
+    ];
+
+    return applyOperators(operators, subject, options, options.getIn([&#x22;debug&#x22;, &#x22;scheduler&#x22;]));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+};
+
+Object.keys(events).forEach(function (event) {
+    bs.events.on(event, events[event]);
+});
+
+var reloader = fileHandler.<span class="apidocCodeKeywordSpan">applyReloadOperators</span>(fromEvent(bs.events, &#x22;_browser:r\
+eload&#x22;), bs.options)
+    .subscribe(function() {
+        bs.events.emit(&#x22;browser:reload&#x22;);
+    });
+
+var coreNamespacedWatchers = fromEvent(bs.events, &#x22;file:changed&#x22;)
+    .filter(function() { return bs.options.get(&#x22;codeSync&#x22;) })
+    .filter(function(x) { return  x.namespace === &#x22;core&#x22; });
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.file_event_handler.fileChanges" id="apidoc.element.browser-sync.file_event_handler.fileChanges">
+        function <span class="apidocSignatureSpan">browser-sync.file_event_handler.</span>fileChanges
+        <span class="apidocSignatureSpan">(subject, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fileChanges(subject, options) {
+    var operators = [
+        {
+            option: &#x22;reloadThrottle&#x22;,
+            fnName: &#x22;throttle&#x22;
+        },
+        {
+            option: &#x22;reloadDelay&#x22;,
+            fnName: &#x22;delay&#x22;
+        }
+    ];
+
+    var scheduler = options.getIn([&#x22;debug&#x22;, &#x22;scheduler&#x22;]);
+
+<span class="apidocCodeCommentSpan">    /**
+     * if the &#x27;reloadDebounce&#x27; option was provided, create
+     * a stream buffered/debounced stream of events
+     */
+</span>    var initial = (function() {
+        if (options.get(&#x22;reloadDebounce&#x22;) &#x3e; 0) {
+            return getAggregatedDebouncedStream(subject, options, scheduler);
+        }
+        return subject;
+    })();
+
+    return applyOperators(operators, initial, options, scheduler)
+        .map(function(xs) {
+
+            var items = [].concat(xs);
+            var paths = items.map(function (x) { return x.path });
+
+            if (utils.willCauseReload(paths, options.get(&#x22;injectFileTypes&#x22;).toJS())) {
+                return {
+                    type: &#x22;reload&#x22;,
+                    files: items
+                }
+            }
+            return {
+                type: &#x22;inject&#x22;,
+                files: items
+            }
+        });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        bs.events.emit(&#x22;browser:reload&#x22;);
+    });
+
+var coreNamespacedWatchers = fromEvent(bs.events, &#x22;file:changed&#x22;)
+    .filter(function() { return bs.options.get(&#x22;codeSync&#x22;) })
+    .filter(function(x) { return  x.namespace === &#x22;core&#x22; });
+
+var handler = fileHandler.<span class="apidocCodeKeywordSpan">fileChanges</span>(coreNamespacedWatchers, bs.options)
+    .subscribe(function (x) {
+        if (x.type === &#x22;reload&#x22;) {
+            bs.events.emit(&#x22;browser:reload&#x22;);
+        }
+        if (x.type === &#x22;inject&#x22;) {
+            x.files.forEach(function(data) {
+                if (!bs.paused &#x26;&#x26; data.namespace === &#x22;core&#x22;) {
+...</pre></li>
+    </ul>
+    
+    
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.browser-sync.file_utils" id="apidoc.module.browser-sync.file_utils">module browser-sync.file_utils</a></h1>
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.file_utils.changedFile" id="apidoc.element.browser-sync.file_utils.changedFile">
+        function <span class="apidocSignatureSpan">browser-sync.file_utils.</span>changedFile
+        <span class="apidocSignatureSpan">(bs, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">changedFile = function (bs, data) {
+<span class="apidocCodeCommentSpan">    /**
+     * If the event property is undefined, infer that it&#x27;s a &#x27;change&#x27;
+     * event due the fact this handler is for emitter.emit(&#x22;file:changed&#x22;)
+     */
+</span>    if (_.isUndefined(data.event)) {
+        data.event = &#x22;change&#x22;;
+    }
+    /**
+     * Chokidar always sends an &#x27;event&#x27; property - which could be
+     * `add` `unlink` etc etc so we need to check for that and only
+     * respond to &#x27;change&#x27;, for now.
+     */
+    if (bs.options.get(&#x22;watchEvents&#x22;).indexOf(data.event) &#x3e; -1) {
+        if (!bs.paused &#x26;&#x26; data.namespace === &#x22;core&#x22;) {
+            bs.events.emit(&#x22;file:reload&#x22;, fileUtils.getFileInfo(data, bs.options));
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.file_utils.getFileInfo" id="apidoc.element.browser-sync.file_utils.getFileInfo">
+        function <span class="apidocSignatureSpan">browser-sync.file_utils.</span>getFileInfo
+        <span class="apidocSignatureSpan">(data, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFileInfo = function (data, options) {
+
+    data.ext      = require(&#x22;path&#x22;).extname(data.path).slice(1);
+    data.basename = require(&#x22;path&#x22;).basename(data.path);
+
+    var obj = {
+        ext:           data.ext,
+        path:          data.path,
+        basename:      data.basename,
+        event:         data.event,
+        type:          &#x22;inject&#x22;
+    };
+
+    // RELOAD page
+    if (!_.includes(options.get(&#x22;injectFileTypes&#x22;).toJS(), obj.ext)) {
+        obj.url  = obj.path;
+        obj.type = &#x22;reload&#x22;;
+    }
+
+    obj.path = data.path;
+    obj.log  = data.log;
+
+    return obj;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    /**
+     * Chokidar always sends an &#x27;event&#x27; property - which could be
+     * `add` `unlink` etc etc so we need to check for that and only
+     * respond to &#x27;change&#x27;, for now.
+     */
+    if (bs.options.get(&#x22;watchEvents&#x22;).indexOf(data.event) &#x3e; -1) {
+        if (!bs.paused &#x26;&#x26; data.namespace === &#x22;core&#x22;) {
+            bs.events.emit(&#x22;file:reload&#x22;, fileUtils.<span class="apidocCodeKeywordSpan">getFileInfo</span>(data, bs.op\
+tions));
+        }
+    }
+},
+/**
+ * @param data
+ * @param options
+ * @returns {{assetFileName: *, fileExtension: String}}
+...</pre></li>
+    </ul>
+    
+    
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.browser-sync.file_watcher" id="apidoc.module.browser-sync.file_watcher">module browser-sync.file_watcher</a></h1>
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.file_watcher.plugin" id="apidoc.element.browser-sync.file_watcher.plugin">
+        function <span class="apidocSignatureSpan">browser-sync.file_watcher.</span>plugin
+        <span class="apidocSignatureSpan">(bs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">plugin = function (bs) {
+
+    var options = bs.options;
+    var emitter = bs.emitter;
+
+    var defaultWatchOptions = options.get(&#x22;watchOptions&#x22;).toJS();
+
+    return options.get(&#x22;files&#x22;).reduce(function (map, glob, namespace) {
+
+<span class="apidocCodeCommentSpan">        /**
+         * Default CB when not given
+         * @param event
+         * @param path
+         */
+</span>        var fn = function (event, path) {
+            emitter.emit(&#x22;file:changed&#x22;, {
+                event: event,
+                path: path,
+                namespace: namespace
+            });
+        };
+
+        var jsItem = glob.toJS();
+
+        if (jsItem.globs.length) {
+            var watcher = watch(jsItem.globs, defaultWatchOptions, fn);
+            map[namespace] = {
+                watchers: [watcher]
+            };
+        }
+
+        if (jsItem.objs.length) {
+            jsItem.objs.forEach(function (item) {
+                if (!_.isFunction(item.fn)) {
+                    item.fn = fn;
+                }
+                var watcher = watch(item.match, item.options || defaultWatchOptions, item.fn.bind(bs.publicInstance));
+                if (!map[namespace]) {
+                    map[namespace] = {
+                        watchers: [watcher]
+                    };
+                } else {
+                    map[namespace].watchers.push(watcher);
+                }
+            });
+        }
+
+        return map;
+
+    }, {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.file_watcher.watch" id="apidoc.element.browser-sync.file_watcher.watch">
+        function <span class="apidocSignatureSpan">browser-sync.file_watcher.</span>watch
+        <span class="apidocSignatureSpan">(patterns, opts, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function watch(patterns, opts, cb) {
+
+    if (typeof opts === &#x22;function&#x22;) {
+        cb = opts;
+        opts = {};
+    }
+
+    var watcher = require(&#x22;chokidar&#x22;)
+        .watch(patterns, opts);
+
+    if (_.isFunction(cb)) {
+        watcher.on(&#x22;all&#x22;, cb);
+    }
+
+    return watcher;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    if (typeof opts === &#x22;function&#x22;) {
+        cb = opts;
+        opts = {};
+    }
+
+    var watcher = require(&#x22;chokidar&#x22;)
+        .<span class="apidocCodeKeywordSpan">watch</span>(patterns, opts);
+
+    if (_.isFunction(cb)) {
+        watcher.on(&#x22;all&#x22;, cb);
+    }
+
+    return watcher;
+}
+...</pre></li>
+    </ul>
+    
+    
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.browser-sync.hooks" id="apidoc.module.browser-sync.hooks">module browser-sync.hooks</a></h1>
+    
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.browser-sync.http_protocol" id="apidoc.module.browser-sync.http_protocol">module browser-sync.http_protocol</a></h1>
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.http_protocol.getUrl" id="apidoc.element.browser-sync.http_protocol.getUrl">
+        function <span class="apidocSignatureSpan">browser-sync.http_protocol.</span>getUrl
+        <span class="apidocSignatureSpan">(args, url)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getUrl = function (args, url) {
+    return [
+        url,
+        require(&#x22;./config&#x22;).httpProtocol.path,
+        &#x22;?&#x22;,
+        queryString.stringify(args)
+    ].join(&#x22;&#x22;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var scheme = options.get(&#x22;scheme&#x22;);
+
+var port   = options.get(&#x22;port&#x22;);
+var urls   = {};
+
+if (options.get(&#x22;online&#x22;) === false) {
+    urls.local = utils.<span class="apidocCodeKeywordSpan">getUrl</span>(scheme + &#x22;://localhost:&#x22; + port, options);
+    return Immutable.fromJS(urls);
+}
+
+var external  = utils.xip(utils.getHostIp(options, devIp), options);
+var localhost = &#x22;localhost&#x22;;
+
+if (options.get(&#x22;xip&#x22;)) {
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.http_protocol.middleware" id="apidoc.element.browser-sync.http_protocol.middleware">
+        function <span class="apidocSignatureSpan">browser-sync.http_protocol.</span>middleware
+        <span class="apidocSignatureSpan">(bs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">middleware = function (bs) {
+
+    return function (req, res) {
+
+        var params = queryString.parse(req.url.replace(/^.*\?/, &#x22;&#x22;));
+        var output;
+
+        if (!Object.keys(params).length) {
+            output = [
+                &#x22;Error: No Parameters were provided.&#x22;,
+                &#x22;Example: http://localhost:3000/__browser_sync__?method=reload&#x26;args=core.css&#x22;
+            ];
+            res.writeHead(500, {&#x22;Content-Type&#x22;: &#x22;text/plain&#x22;});
+            res.end(output.join(&#x22;\n&#x22;));
+            return;
+        }
+
+        try {
+
+            require(&#x22;./public/&#x22; + params.method)(bs.events).apply(null, [params.args]);
+
+            output = [
+                &#x22;Called public API method `.%s()`&#x22;.replace(&#x22;%s&#x22;, params.method),
+                &#x22;With args: &#x22; + JSON.stringify(params.args)
+            ];
+
+            res.end(output.join(&#x22;\n&#x22;));
+
+        } catch (e) {
+
+            res.writeHead(404, {&#x22;Content-Type&#x22;: &#x22;text/plain&#x22;});
+            res.write(&#x22;Public API method `&#x22; + params.method + &#x22;` not found.&#x22;);
+            res.end();
+
+            return;
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.browser-sync.logger" id="apidoc.module.browser-sync.logger">module browser-sync.logger</a></h1>
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.logger.getLogger" id="apidoc.element.browser-sync.logger.getLogger">
+        function <span class="apidocSignatureSpan">browser-sync.logger.</span>getLogger
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getLogger = function (name) {
+    return logger.clone(function (config) {
+        config.prefix = config.prefix + template.replace(&#x22;%s&#x22;, name);
+        return config;
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.logger.plugin" id="apidoc.element.browser-sync.logger.plugin">
+        function <span class="apidocSignatureSpan">browser-sync.logger.</span>plugin
+        <span class="apidocSignatureSpan">(emitter, bs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">plugin = function (emitter, bs) {
+
+    var logPrefix = bs.options.get(&#x22;logPrefix&#x22;);
+    var logLevel  = bs.options.get(&#x22;logLevel&#x22;);
+
+    // Should set logger level here!
+    logger.setLevel(logLevel);
+
+    if (logPrefix) {
+        if (_.isFunction(logPrefix)) {
+            logger.setPrefix(logPrefix);
+        } else {
+            logger.setPrefix(template.replace(&#x22;%s&#x22;, logPrefix));
+        }
+    }
+
+    _.each(exports.callbacks, function (func, event) {
+        emitter.on(event, func.bind(this, bs));
+    });
+
+    return logger;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    
+    
+    
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.browser-sync.options" id="apidoc.module.browser-sync.options">module browser-sync.options</a></h1>
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.options.update" id="apidoc.element.browser-sync.options.update">
+        function <span class="apidocSignatureSpan">browser-sync.options.</span>update
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (options) {
+
+    return options.withMutations(function (item) {
+
+        setMode(item);
+        setScheme(item);
+        setStartPath(item);
+        setProxyWs(item);
+        setServerOpts(item);
+        setNamespace(item);
+        fixSnippetOptions(item);
+        fixRewriteRules(item);
+        setMiddleware(item);
+        setOpen(item);
+
+        if (item.get(&#x22;uiPort&#x22;)) {
+            item.setIn([&#x22;ui&#x22;, &#x22;port&#x22;], item.get(&#x22;uiPort&#x22;));
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+bs._options = options;
+
+/**
+ * Set additional options that depend on what the
+ * user may of provided
+ * @type {Map}
+ */
+bs.options  = require(&#x22;./options&#x22;).<span class="apidocCodeKeywordSpan">update</span>(options);
+
+/**
+ * Kick off default plugins.
+ */
+bs.pluginManager.init();
+
+/**
+...</pre></li>
+    </ul>
+    
+    
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.browser-sync.plugins" id="apidoc.module.browser-sync.plugins">module browser-sync.plugins</a></h1>
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.plugins.requirePlugin" id="apidoc.element.browser-sync.plugins.requirePlugin">
+        function <span class="apidocSignatureSpan">browser-sync.plugins.</span>requirePlugin
+        <span class="apidocSignatureSpan">(item)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function requirePlugin(item) {
+
+<span class="apidocCodeCommentSpan">    /**
+     * if the &#x22;module&#x22; property already exists and
+     * is not a string, then we bail and don&#x27;t bother looking
+     * for the file
+     */
+</span>    if (item.get(&#x22;module&#x22;) &#x26;&#x26; typeof item.get(&#x22;module&#x22;) !== &#x22;string&#x22;) {
+        return item;
+    }
+
+    try {
+        /**
+         * Try a raw node require() call - this will be how
+         * regular &#x22;npm installed&#x22; plugins wil work
+         */
+        var maybe = path.resolve(process.cwd(), &#x22;node_modules&#x22;, item.get(&#x22;name&#x22;));
+        return item.set(&#x22;module&#x22;, require(maybe));
+    } catch (e) {
+        /**
+         * If require threw an MODULE_NOT_FOUND error, try again
+         * by resolving from cwd. This is needed since cli
+         * users will not add ./ to the front of a path (which
+         * node requires to resolve from cwd)
+         */
+        if (e.code === &#x22;MODULE_NOT_FOUND&#x22;) {
+            var maybe = path.resolve(process.cwd(), item.get(&#x22;name&#x22;));
+            if (fs.existsSync(maybe)) {
+                return item.set(&#x22;module&#x22;, require(maybe));
+            } else {
+                /**
+                 * Finally return a plugin that contains the error
+                 * this will be picked up later and discarded
+                 */
+                return item.update(&#x22;errors&#x22;, function (errors) {
+                    return errors.concat(e);
+                });
+            }
+        }
+        throw e;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.plugins.resolvePlugin" id="apidoc.element.browser-sync.plugins.resolvePlugin">
+        function <span class="apidocSignatureSpan">browser-sync.plugins.</span>resolvePlugin
+        <span class="apidocSignatureSpan">(item)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function resolvePlugin(item) {
+
+<span class="apidocCodeCommentSpan">    /**
+     * Handle when string was given, such as plugins: [&#x27;bs-html-injector&#x27;]
+     */
+</span>    if (typeof item === &#x22;string&#x22;) {
+        return getFromString(item);
+    }
+
+    if (!isMap(item)) {
+        return new Plugin().mergeDeep({errors: [new Error(&#x22;Plugin not supported in this format&#x22;)]});
+    }
+
+    if (item.has(&#x22;module&#x22;)) {
+
+        var nameOrObj = item.get(&#x22;module&#x22;);
+        var options = item.get(&#x22;options&#x22;);
+
+        /**
+         * The &#x27;module&#x27; key can be a string, this allows
+         * inline plugin references, but with options
+         * eg:
+         *
+         * bs.init({
+         *     plugins: [
+         *         {
+         *             module: &#x27;./myjs-file.js&#x27;
+         *             options: {
+         *                 files: &#x22;*.html&#x22;
+         *             }
+         *         }
+         *     ]
+         * });
+         */
+        if (typeof nameOrObj === &#x22;string&#x22;) {
+            return getFromString(nameOrObj)
+                .mergeDeep({
+                    options: options
+                });
+        }
+
+        /**
+         * If the plugin was given completely inline (because it needs options)
+         * eg:
+         *
+         * bs.init({
+         *     plugins: [
+         *         {
+         *             module: {
+         *                 plugin: function() {
+         *                     console.log(&#x27;My plugin code&#x27;)
+         *                 }
+         *             },
+         *             options: {
+         *                 files: &#x22;*.html&#x22;
+         *             }
+         *         }
+         *     ]
+         * })
+         */
+        if (Immutable.Map.isMap(nameOrObj)) {
+            return new Plugin({
+                module: nameOrObj,
+                options: options
+            });
+        }
+    }
+
+    /**
+     * If a module was given directly. For example, ater calling require.
+     *
+     * eg:
+     *    var myplugin = require(&#x27;./some-js&#x27;);
+     *    bs.init({plugins: [myplugin]});
+     */
+    if (item.has(&#x22;plugin&#x22;)) {
+        return new Plugin({
+            module: item
+        })
+    }
+
+    /**
+     * If we reach here, the plugin option was used incorrectly
+     */
+    return new Plugin().mergeDeep({errors: [new Error(&#x22;Plugin was not configured correctly&#x22;)]})
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.browser-sync.server" id="apidoc.module.browser-sync.server">module browser-sync.server</a></h1>
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.server.createServer" id="apidoc.element.browser-sync.server.createServer">
+        function <span class="apidocSignatureSpan">browser-sync.server.</span>createServer
+        <span class="apidocSignatureSpan">(bs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createServer(bs) {
+
+    var proxy   = bs.options.get(&#x22;proxy&#x22;);
+    var server  = bs.options.get(&#x22;server&#x22;);
+
+    if (!proxy &#x26;&#x26; !server) {
+        return require(&#x22;./snippet-server&#x22;)(bs);
+    }
+
+    if (proxy) {
+        return require(&#x22;./proxy-server&#x22;)(bs);
+    }
+
+    if (server) {
+        return require(&#x22;./static-server&#x22;)(bs);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.server.plugin" id="apidoc.element.browser-sync.server.plugin">
+        function <span class="apidocSignatureSpan">browser-sync.server.</span>plugin
+        <span class="apidocSignatureSpan">(bs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">plugin = function (bs) {
+
+    var debug   = bs.debug;
+    var proxy   = bs.options.get(&#x22;proxy&#x22;);
+    var type    = bs.options.get(&#x22;mode&#x22;);
+
+    var bsServer = createServer(bs);
+
+    if (type === &#x22;server&#x22; || type === &#x22;snippet&#x22;) {
+        debug(&#x22;Static Server running ({magenta:%s}) ...&#x22;, bs.options.get(&#x22;scheme&#x22;));
+    }
+
+    if (proxy) {
+        debug(&#x22;Proxy running, proxing: {magenta:%s}&#x22;, proxy.get(&#x22;target&#x22;));
+    }
+
+    if (bsServer) {
+
+<span class="apidocCodeCommentSpan">        /**
+         * Allow server to be destroyed gracefully
+         */
+</span>        enableDestroy(bsServer.server);
+
+        /**
+         * Listen on the available port
+         */
+        bsServer.server.listen(bs.options.get(&#x22;port&#x22;));
+
+        /**
+         * Hack to deal with https://github.com/socketio/socket.io/issues/1602#issuecomment-224270022
+         */
+        bs.registerCleanupTask(function () {
+            if (bs.io &#x26;&#x26; bs.io.sockets) {
+                setCloseReceived(bs.io.sockets);
+            }
+            if (bs.ui &#x26;&#x26; bs.ui.socket) {
+                setCloseReceived(bs.ui.socket);
+            }
+        });
+
+        /**
+         * Destroy the server on cleanup
+         */
+        bs.registerCleanupTask(function () {
+            bsServer.server.destroy();
+        });
+    }
+
+    function setCloseReceived(io) {
+        Object.keys(io.sockets).forEach(function (key) {
+            _.set(io.sockets[key], &#x22;conn.transport.socket._closeReceived&#x22;, true);
+        });
+    }
+
+    debug(&#x22;Running mode: %s&#x22;, type.toUpperCase());
+
+    return {
+        server: bsServer.server,
+        app:    bsServer.app
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.browser-sync.sockets" id="apidoc.module.browser-sync.sockets">module browser-sync.sockets</a></h1>
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.sockets.init" id="apidoc.element.browser-sync.sockets.init">
+        function <span class="apidocSignatureSpan">browser-sync.sockets.</span>init
+        <span class="apidocSignatureSpan">(server, clientEvents, bs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (server, clientEvents, bs) {
+
+    var emitter      = bs.events;
+
+    var socketConfig = bs.options
+        .get(&#x22;socket&#x22;)
+        .toJS();
+
+    if (bs.options.get(&#x22;mode&#x22;) === &#x22;proxy&#x22; &#x26;&#x26; bs.options.getIn([&#x22;proxy&#x22;, &#x22;ws&#x22;])) {
+        server = utils.getServer(null, bs.options).server;
+        server.listen(bs.options.getIn([&#x22;socket&#x22;, &#x22;port&#x22;]));
+        bs.registerCleanupTask(function () {
+            server.close();
+        });
+    }
+
+    var socketIoConfig  = socketConfig.socketIoOptions;
+    socketIoConfig.path = socketConfig.path;
+
+    var io = socket(server, socketIoConfig);
+
+    // Override default namespace.
+    io.sockets = io.of(socketConfig.namespace);
+
+    io.set(&#x22;heartbeat interval&#x22;, socketConfig.clients.heartbeatTimeout);
+
+    var steward  = new Steward(emitter);
+    bs.registerCleanupTask(steward.destroy.bind(steward));
+
+<span class="apidocCodeCommentSpan">    /**
+     * Listen for new connections
+     */
+</span>    io.sockets.on(&#x22;connection&#x22;, handleConnection);
+
+    /**
+     * Handle each new connection
+     * @param {Object} client
+     */
+    function handleConnection (client) {
+
+        // set ghostmode callbacks
+        if (bs.options.get(&#x22;ghostMode&#x22;)) {
+
+            addGhostMode(client);
+        }
+
+        client.emit(&#x22;connection&#x22;, bs.options.toJS()); //todo - trim the amount of options sent to clients
+
+        emitter.emit(&#x22;client:connected&#x22;, {
+            ua: client.handshake.headers[&#x22;user-agent&#x22;]
+        });
+    }
+
+    /**
+     * @param {string} event
+     * @param {Socket.client} client
+     * @param {Object} data
+     */
+    function handleClientEvent(event, client, data) {
+
+        if (steward.valid(client.id)) {
+
+            client.broadcast.emit(event, data);
+        }
+    }
+
+    /**
+     * @param client
+     */
+    function addGhostMode (client) {
+
+        clientEvents.forEach(addEvent);
+
+        function addEvent(event) {
+
+            client.on(event, handleClientEvent.bind(null, event, client));
+        }
+    }
+
+    return io;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function initSingleton() {
+var instance;
+if (instances.length) {
+    instance = instances.filter(function (item) {
+        return item.name === &#x22;singleton&#x22;;
+    });
+    if (instance.length) {
+        logger.error(&#x22;{yellow:You tried to start Browsersync twice!} To create multiple instances, use {cyan:browserSync.cr\
+eate().<span class="apidocCodeKeywordSpan">init</span>()&#x22;);
+        return instance;
+    }
+}
+var args = Array.prototype.slice.call(arguments);
+singleton = create(&#x22;singleton&#x22;, getSingletonEmitter());
+
+if (singletonPlugins.length) {
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.sockets.plugin" id="apidoc.element.browser-sync.sockets.plugin">
+        function <span class="apidocSignatureSpan">browser-sync.sockets.</span>plugin
+        <span class="apidocSignatureSpan">(server, clientEvents, bs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">plugin = function (server, clientEvents, bs) {
+    return exports.init(server, clientEvents, bs);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.browser-sync.utils" id="apidoc.module.browser-sync.utils">module browser-sync.utils</a></h1>
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.utils.UAParser" id="apidoc.element.browser-sync.utils.UAParser">
+        function <span class="apidocSignatureSpan">browser-sync.utils.</span>UAParser
+        <span class="apidocSignatureSpan">(uastring, extensions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">UAParser = function (uastring, extensions) {
+
+    if (!(this instanceof UAParser)) {
+        return new UAParser(uastring, extensions).getResult();
+    }
+
+    var ua = uastring || ((window &#x26;&#x26; window.navigator &#x26;&#x26; window.navigator.userAgent) ? window.navigator.userAgent : EMPTY);
+    var rgxmap = extensions ? util.extend(regexes, extensions) : regexes;
+
+    this.getBrowser = function () {
+        var browser = mapper.rgx.apply(this, rgxmap.browser);
+        browser.major = util.major(browser.version);
+        return browser;
+    };
+    this.getCPU = function () {
+        return mapper.rgx.apply(this, rgxmap.cpu);
+    };
+    this.getDevice = function () {
+        return mapper.rgx.apply(this, rgxmap.device);
+    };
+    this.getEngine = function () {
+        return mapper.rgx.apply(this, rgxmap.engine);
+    };
+    this.getOS = function () {
+        return mapper.rgx.apply(this, rgxmap.os);
+    };
+    this.getResult = function() {
+        return {
+            ua      : this.getUA(),
+            browser : this.getBrowser(),
+            engine  : this.getEngine(),
+            os      : this.getOS(),
+            device  : this.getDevice(),
+            cpu     : this.getCPU()
+        };
+    };
+    this.getUA = function () {
+        return ua;
+    };
+    this.setUA = function (uastring) {
+        ua = uastring;
+        return this;
+    };
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.utils._makeUrl" id="apidoc.element.browser-sync.utils._makeUrl">
+        function <span class="apidocSignatureSpan">browser-sync.utils.</span>_makeUrl
+        <span class="apidocSignatureSpan">(scheme, host, port)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_makeUrl = function (scheme, host, port) {
+    return scheme + &#x22;://&#x22; + host + &#x22;:&#x22; + port;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+     * @param {String} scheme
+     * @param {Object} options
+     * @returns {{local: string, external: string}}
+     */
+    getUrls: function (external, local, scheme, options) {
+
+var urls = {
+    local: utils.getUrl(utils.<span class="apidocCodeKeywordSpan">_makeUrl</span>(scheme, local, options.get(&#x22;port&#x22;)),\
+ options)
+};
+
+if (external !== local) {
+    urls.external = utils.getUrl(utils._makeUrl(scheme, external, options.get(&#x22;port&#x22;)), options);
+}
+
+return urls;
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.utils.arrayify" id="apidoc.element.browser-sync.utils.arrayify">
+        function <span class="apidocSignatureSpan">browser-sync.utils.</span>arrayify
+        <span class="apidocSignatureSpan">(incoming)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">arrayify = function (incoming) {
+    if (List.isList(incoming)) {
+        return incoming.toArray();
+    }
+    return [].concat(incoming).filter(Boolean);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    if (rewriteRules) {
+        rules = rules.concat(rewriteRules);
+    }
+
+    return {
+        rules: rules,
+        blacklist: utils.<span class="apidocCodeKeywordSpan">arrayify</span>(options.get(&#x22;blacklist&#x22;)),
+        whitelist: utils.arrayify(options.get(&#x22;whitelist&#x22;))
+    };
+},
+/**
+ * @param {Object} req
+ * @param {Array} [excludeList]
+ * @returns {Object}
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.utils.connect" id="apidoc.element.browser-sync.utils.connect">
+        function <span class="apidocSignatureSpan">browser-sync.utils.</span>connect
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createServer() {
+  function app(req, res, next){ app.handle(req, res, next); }
+  merge(app, proto);
+  merge(app, EventEmitter.prototype);
+  app.route = &#x27;/&#x27;;
+  app.stack = [];
+  return app;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.utils.defaultCallback" id="apidoc.element.browser-sync.utils.defaultCallback">
+        function <span class="apidocSignatureSpan">browser-sync.utils.</span>defaultCallback
+        <span class="apidocSignatureSpan">(err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defaultCallback = function (err) {
+    if (err &#x26;&#x26; err.message) {
+        console.error(err.message);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.utils.eachSeries" id="apidoc.element.browser-sync.utils.eachSeries">
+        function <span class="apidocSignatureSpan">browser-sync.utils.</span>eachSeries
+        <span class="apidocSignatureSpan">(arr, iterator, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">eachSeries = function (arr, iterator, callback) {
+    callback = callback || function () {};
+    var completed = 0;
+    var iterate = function () {
+        iterator(arr[completed], function (err) {
+            if (err) {
+                callback(err);
+                callback = function () {};
+            } else {
+                ++completed;
+                if (completed &#x3e;= arr.length) {
+                    callback();
+                } else {
+                    iterate();
+                }
+            }
+        });
+    };
+    iterate();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.utils.easyExtender" id="apidoc.element.browser-sync.utils.easyExtender">
+        function <span class="apidocSignatureSpan">browser-sync.utils.</span>easyExtender
+        <span class="apidocSignatureSpan">(plugins, hooks)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">easyExtender = function (plugins, hooks) {
+
+    this.plugins        = {};
+    this.pluginOptions  = {};
+    this.returnValues   = {};
+
+    this.hooks          = hooks;
+    this.defaultPlugins = plugins;
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.utils.fail" id="apidoc.element.browser-sync.utils.fail">
+        function <span class="apidocSignatureSpan">browser-sync.utils.</span>fail
+        <span class="apidocSignatureSpan">(kill, errMessage, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fail = function (kill, errMessage, cb) {
+    if (kill) {
+        if (_.isFunction(cb)) {
+            if (errMessage.message) { // Is this an error object?
+                cb(errMessage);
+            } else {
+                cb(new Error(errMessage));
+            }
+        }
+        process.exit(1);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * and keep incrementing until an available one is found.
+ * @param {BrowserSync} bs
+ * @param {Function} done
+ */
+getEmptyPort: function (bs, done) {
+    utils.getPorts(bs.options, function (err, port) {
+        if (err) {
+            return utils.<span class="apidocCodeKeywordSpan">fail</span>(true, err, bs.cb);
+        }
+        bs.debug(&#x22;Found a free port: {magenta:%s&#x22;, port);
+        done(null, {
+            options: {
+                port: port
+            }
+        });
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.utils.getConfigErrors" id="apidoc.element.browser-sync.utils.getConfigErrors">
+        function <span class="apidocSignatureSpan">browser-sync.utils.</span>getConfigErrors
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getConfigErrors = function (options) {
+
+    var messages = require(&#x22;./config&#x22;).errors;
+
+    var errors = [];
+
+    if (options.get(&#x22;server&#x22;) &#x26;&#x26; options.get(&#x22;proxy&#x22;)) {
+        errors.push(messages[&#x22;server+proxy&#x22;]);
+    }
+
+    return errors;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return errors;
+},
+/**
+ * @param {Map} options
+ * @param {Function} [cb]
+ */
+verifyConfig: function (options, cb) {
+    var errors = utils.<span class="apidocCodeKeywordSpan">getConfigErrors</span>(options);
+    if (errors.length) {
+        utils.fail(true, errors.join(&#x22;\n&#x22;), cb);
+        return false;
+    }
+    return true;
+},
+/**
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.utils.getHostIp" id="apidoc.element.browser-sync.utils.getHostIp">
+        function <span class="apidocSignatureSpan">browser-sync.utils.</span>getHostIp
+        <span class="apidocSignatureSpan">(options, devIp)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getHostIp = function (options, devIp) {
+
+    if (options) {
+        var host = options.get(&#x22;host&#x22;);
+        if (host &#x26;&#x26; host !== &#x22;localhost&#x22;) {
+            return host;
+        }
+        if (options.get(&#x22;detect&#x22;) === false || !devIp.length) {
+            return false;
+        }
+    }
+
+    return devIp.length ? devIp[0] : false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var urls   = {};
+
+if (options.get(&#x22;online&#x22;) === false) {
+    urls.local = utils.getUrl(scheme + &#x22;://localhost:&#x22; + port, options);
+    return Immutable.fromJS(urls);
+}
+
+var external  = utils.xip(utils.<span class="apidocCodeKeywordSpan">getHostIp</span>(options, devIp), options);
+var localhost = &#x22;localhost&#x22;;
+
+if (options.get(&#x22;xip&#x22;)) {
+    localhost = &#x22;127.0.0.1&#x22;;
+}
+
+localhost = utils.xip(localhost, options);
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.utils.getPort" id="apidoc.element.browser-sync.utils.getPort">
+        function <span class="apidocSignatureSpan">browser-sync.utils.</span>getPort
+        <span class="apidocSignatureSpan">(port, max, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPort = function (port, max, cb) {
+    portScanner.findAPortNotInUse(port, max, {
+        host: &#x22;localhost&#x22;,
+        timeout: 1000
+    }, cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Or use the user-defined socket.port option instead
+ */
+if (bs.options.hasIn([&#x22;socket&#x22;, &#x22;port&#x22;])) {
+    socketPort = bs.options.getIn([&#x22;socket&#x22;, &#x22;port&#x22;]);
+}
+
+utils.<span class="apidocCodeKeywordSpan">getPort</span>(socketPort, null, function (err, port) {
+    if (err) {
+        return utils.fail(true, err, bs.cb);
+    }
+    done(null, {
+        optionsIn: [
+            {
+                path: [&#x22;socket&#x22;, &#x22;port&#x22;],
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.utils.getPorts" id="apidoc.element.browser-sync.utils.getPorts">
+        function <span class="apidocSignatureSpan">browser-sync.utils.</span>getPorts
+        <span class="apidocSignatureSpan">(options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPorts = function (options, cb) {
+
+    var port  = options.get(&#x22;port&#x22;);
+    var ports = options.get(&#x22;ports&#x22;); // backwards compatibility
+    var max;
+
+    if (ports) {
+        port = ports.get(&#x22;min&#x22;);
+        max  = ports.get(&#x22;max&#x22;) || null;
+    }
+
+    utils.getPort(port, max, cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * BrowserSync needs at least 1 free port.
+ * It will check the one provided in config
+ * and keep incrementing until an available one is found.
+ * @param {BrowserSync} bs
+ * @param {Function} done
+ */
+getEmptyPort: function (bs, done) {
+    utils.<span class="apidocCodeKeywordSpan">getPorts</span>(bs.options, function (err, port) {
+        if (err) {
+            return utils.fail(true, err, bs.cb);
+        }
+        bs.debug(&#x22;Found a free port: {magenta:%s&#x22;, port);
+        done(null, {
+            options: {
+                port: port
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.utils.getUaString" id="apidoc.element.browser-sync.utils.getUaString">
+        function <span class="apidocSignatureSpan">browser-sync.utils.</span>getUaString
+        <span class="apidocSignatureSpan">(ua)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getUaString = function (ua) {
+    return parser.setUA(ua).getBrowser();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    /**
+     * Client connected logging
+     * @param {BrowserSync} bs
+     * @param data
+     */
+    &#x22;client:connected&#x22;: function (bs, data) {
+
+var uaString = utils.<span class="apidocCodeKeywordSpan">getUaString</span>(data.ua);
+var msg = &#x22;{cyan:Browser Connected: {magenta:%s, version: %s}&#x22;;
+var method = &#x22;info&#x22;;
+
+if (!bs.options.get(&#x22;logConnections&#x22;)) {
+    method = &#x22;debug&#x22;;
+}
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.utils.getUrl" id="apidoc.element.browser-sync.utils.getUrl">
+        function <span class="apidocSignatureSpan">browser-sync.utils.</span>getUrl
+        <span class="apidocSignatureSpan">(url, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getUrl = function (url, options) {
+
+    var prefix = &#x22;/&#x22;;
+    var startPath = options.get(&#x22;startPath&#x22;);
+
+    if (startPath) {
+        if (startPath.charAt(0) === &#x22;/&#x22;) {
+            prefix = &#x22;&#x22;;
+        }
+        url = url + prefix + startPath;
+    }
+
+    return url;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var scheme = options.get(&#x22;scheme&#x22;);
+
+var port   = options.get(&#x22;port&#x22;);
+var urls   = {};
+
+if (options.get(&#x22;online&#x22;) === false) {
+    urls.local = utils.<span class="apidocCodeKeywordSpan">getUrl</span>(scheme + &#x22;://localhost:&#x22; + port, options);
+    return Immutable.fromJS(urls);
+}
+
+var external  = utils.xip(utils.getHostIp(options, devIp), options);
+var localhost = &#x22;localhost&#x22;;
+
+if (options.get(&#x22;xip&#x22;)) {
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.utils.getUrlOptions" id="apidoc.element.browser-sync.utils.getUrlOptions">
+        function <span class="apidocSignatureSpan">browser-sync.utils.</span>getUrlOptions
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getUrlOptions = function (options) {
+
+    var scheme = options.get(&#x22;scheme&#x22;);
+
+    var port   = options.get(&#x22;port&#x22;);
+    var urls   = {};
+
+    if (options.get(&#x22;online&#x22;) === false) {
+        urls.local = utils.getUrl(scheme + &#x22;://localhost:&#x22; + port, options);
+        return Immutable.fromJS(urls);
+    }
+
+    var external  = utils.xip(utils.getHostIp(options, devIp), options);
+    var localhost = &#x22;localhost&#x22;;
+
+    if (options.get(&#x22;xip&#x22;)) {
+        localhost = &#x22;127.0.0.1&#x22;;
+    }
+
+    localhost = utils.xip(localhost, options);
+
+    return Immutable.fromJS(utils.getUrls(external, localhost, scheme, options));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *
+ * @param {BrowserSync} bs
+ * @param {Function} done
+ */
+setOptions: function (bs, done) {
+    done(null, {
+        options: {
+            urls:        utils.<span class="apidocCodeKeywordSpan">getUrlOptions</span>(bs.options),
+            snippet:     connectUtils.scriptTags(bs.options),
+            scriptPaths: Immutable.fromJS(connectUtils.clientScript(bs.options, true)),
+            files:       bs.pluginManager.hook(
+                &#x22;files:watch&#x22;,
+                bs.options.get(&#x22;files&#x22;),
+                bs.pluginManager.pluginOptions
+            )
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.utils.getUrls" id="apidoc.element.browser-sync.utils.getUrls">
+        function <span class="apidocSignatureSpan">browser-sync.utils.</span>getUrls
+        <span class="apidocSignatureSpan">(external, local, scheme, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getUrls = function (external, local, scheme, options) {
+
+    var urls = {
+        local: utils.getUrl(utils._makeUrl(scheme, local, options.get(&#x22;port&#x22;)), options)
+    };
+
+    if (external !== local) {
+        urls.external = utils.getUrl(utils._makeUrl(scheme, external, options.get(&#x22;port&#x22;)), options);
+    }
+
+    return urls;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    if (options.get(&#x22;xip&#x22;)) {
+        localhost = &#x22;127.0.0.1&#x22;;
+    }
+
+    localhost = utils.xip(localhost, options);
+
+    return Immutable.fromJS(utils.<span class="apidocCodeKeywordSpan">getUrls</span>(external, localhost, scheme, options));
+},
+/**
+ * Append a start path if given in options
+ * @param {String} url
+ * @param {Object} options
+ * @returns {String}
+ */
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.utils.isList" id="apidoc.element.browser-sync.utils.isList">
+        function <span class="apidocSignatureSpan">browser-sync.utils.</span>isList
+        <span class="apidocSignatureSpan">(maybeList)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isList(maybeList) {
+  return !!(maybeList &#x26;&#x26; maybeList[IS_LIST_SENTINEL]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (type === &#x22;server&#x22;) {
+
+    var baseDir = bs.options.getIn([&#x22;server&#x22;, &#x22;baseDir&#x22;]);
+
+    logUrls(bs.options.get(&#x22;urls&#x22;).toJS());
+
+    if (baseDir) {
+        if (utils.<span class="apidocCodeKeywordSpan">isList</span>(baseDir)) {
+            baseDir.forEach(serveFiles);
+        } else {
+            serveFiles(baseDir);
+        }
+    }
+}
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.utils.open" id="apidoc.element.browser-sync.utils.open">
+        function <span class="apidocSignatureSpan">browser-sync.utils.</span>open
+        <span class="apidocSignatureSpan">(url, name, bs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">open = function (url, name, bs) {
+    var options = (function () {
+        if (_.isString(name)) {
+            return {app: name};
+        }
+        if (Immutable.Map.isMap(name)) {
+            return name.toJS();
+        }
+        return {};
+    })();
+    var opn = require(&#x22;opn&#x22;);
+    opn(url, options).catch(function() {
+        bs.events.emit(&#x22;browser:error&#x22;);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+}
+
+if (open) {
+    if (browser !== &#x22;default&#x22;) {
+        if (utils.isList(browser)) {
+            browser.forEach(function (browser) {
+                utils.<span class="apidocCodeKeywordSpan">open</span>(url, browser, bs);
+            });
+        } else {
+            utils.open(url, browser, bs); // single
+        }
+    } else {
+        utils.open(url, null, bs);
+    }
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.utils.openBrowser" id="apidoc.element.browser-sync.utils.openBrowser">
+        function <span class="apidocSignatureSpan">browser-sync.utils.</span>openBrowser
+        <span class="apidocSignatureSpan">(url, options, bs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">openBrowser = function (url, options, bs) {
+
+    var open    = options.get(&#x22;open&#x22;);
+    var browser = options.get(&#x22;browser&#x22;);
+
+    if (_.isString(open)) {
+        if (options.getIn([&#x22;urls&#x22;, open])) {
+            url = options.getIn([&#x22;urls&#x22;, open]);
+        }
+    }
+
+    if (open) {
+        if (browser !== &#x22;default&#x22;) {
+            if (utils.isList(browser)) {
+                browser.forEach(function (browser) {
+                    utils.open(url, browser, bs);
+                });
+            } else {
+                utils.open(url, browser, bs); // single
+            }
+        } else {
+            utils.open(url, null, bs);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ */
+&#x22;service:running&#x22;: function (data) {
+
+    var mode = bs.options.get(&#x22;mode&#x22;);
+    var open = bs.options.get(&#x22;open&#x22;);
+
+    if (mode === &#x22;proxy&#x22; || mode === &#x22;server&#x22; || open === &#x22;ui&#x22; || open === &#x22;ui-external&#x22;\
+) {
+        utils.<span class="apidocCodeKeywordSpan">openBrowser</span>(data.url, bs.options, bs);
+    }
+
+    // log about any file watching
+    if (bs.watchers) {
+        bs.events.emit(&#x22;file:watching&#x22;, bs.watchers);
+    }
+},
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.utils.serveStatic" id="apidoc.element.browser-sync.utils.serveStatic">
+        function <span class="apidocSignatureSpan">browser-sync.utils.</span>serveStatic
+        <span class="apidocSignatureSpan">(root, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function serveStatic(root, options) {
+  if (!root) {
+    throw new TypeError(&#x27;root path required&#x27;)
+  }
+
+  if (typeof root !== &#x27;string&#x27;) {
+    throw new TypeError(&#x27;root path must be a string&#x27;)
+  }
+
+  // copy options object
+  var opts = Object.create(options || null)
+
+  // fall-though
+  var fallthrough = opts.fallthrough !== false
+
+  // default redirect
+  var redirect = opts.redirect !== false
+
+  // headers listener
+  var setHeaders = opts.setHeaders
+
+  if (setHeaders &#x26;&#x26; typeof setHeaders !== &#x27;function&#x27;) {
+    throw new TypeError(&#x27;option setHeaders must be function&#x27;)
+  }
+
+  // setup options for send
+  opts.maxage = opts.maxage || opts.maxAge || 0
+  opts.root = resolve(root)
+
+  // construct directory listener
+  var onDirectory = redirect
+    ? createRedirectDirectoryListener()
+    : createNotFoundDirectoryListener()
+
+  return function serveStatic (req, res, next) {
+    if (req.method !== &#x27;GET&#x27; &#x26;&#x26; req.method !== &#x27;HEAD&#x27;) {
+      if (fallthrough) {
+        return next()
+      }
+
+      // method not allowed
+      res.statusCode = 405
+      res.setHeader(&#x27;Allow&#x27;, &#x27;GET, HEAD&#x27;)
+      res.setHeader(&#x27;Content-Length&#x27;, &#x27;0&#x27;)
+      res.end()
+      return
+    }
+
+    var forwardError = !fallthrough
+    var originalUrl = parseUrl.original(req)
+    var path = parseUrl(req).pathname
+
+    // make sure redirect occurs at mount
+    if (path === &#x27;/&#x27; &#x26;&#x26; originalUrl.pathname.substr(-1) !== &#x27;/&#x27;) {
+      path = &#x27;&#x27;
+    }
+
+    // create send stream
+    var stream = send(req, path, opts)
+
+    // add directory handler
+    stream.on(&#x27;directory&#x27;, onDirectory)
+
+    // add headers listener
+    if (setHeaders) {
+      stream.on(&#x27;headers&#x27;, setHeaders)
+    }
+
+    // add file listener for fallthrough
+    if (fallthrough) {
+      stream.on(&#x27;file&#x27;, function onFile () {
+        // once file is determined, always forward error
+        forwardError = true
+      })
+    }
+
+    // forward errors
+    stream.on(&#x27;error&#x27;, function error (err) {
+      if (forwardError || !(err.statusCode &#x3c; 500)) {
+        next(err)
+        return
+      }
+
+      next()
+    })
+
+    // pipe
+    stream.pipe(res)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.utils.verifyConfig" id="apidoc.element.browser-sync.utils.verifyConfig">
+        function <span class="apidocSignatureSpan">browser-sync.utils.</span>verifyConfig
+        <span class="apidocSignatureSpan">(options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">verifyConfig = function (options, cb) {
+    var errors = utils.getConfigErrors(options);
+    if (errors.length) {
+        utils.fail(true, errors.join(&#x22;\n&#x22;), cb);
+        return false;
+    }
+    return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+bs.cb  = cb || utils.defaultCallback;
+
+/**
+ * Verify provided config.
+ * Some options are not compatible and will cause us to
+ * end the process.
+ */
+if (!utils.<span class="apidocCodeKeywordSpan">verifyConfig</span>(options, bs.cb)) {
+    return;
+}
+
+/**
+ * Save a reference to the original options
+ * @type {Map}
+ * @private
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.utils.willCauseReload" id="apidoc.element.browser-sync.utils.willCauseReload">
+        function <span class="apidocSignatureSpan">browser-sync.utils.</span>willCauseReload
+        <span class="apidocSignatureSpan">(needles, haystack)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">willCauseReload = function (needles, haystack) {
+    return needles.some(function (needle) {
+        return !_.includes(haystack, path.extname(needle).replace(&#x22;.&#x22;, &#x22;&#x22;));
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    return applyOperators(operators, initial, options, scheduler)
+        .map(function(xs) {
+
+var items = [].concat(xs);
+var paths = items.map(function (x) { return x.path });
+
+if (utils.<span class="apidocCodeKeywordSpan">willCauseReload</span>(paths, options.get(&#x22;injectFileTypes&#x22;).toJS())) {
+    return {
+        type: &#x22;reload&#x22;,
+        files: items
+    }
+}
+return {
+    type: &#x22;inject&#x22;,
+...</pre></li>
+    </ul>
+    
+    
+    
+    <h2>
+        <a href="#apidoc.element.browser-sync.utils.xip" id="apidoc.element.browser-sync.utils.xip">
+        function <span class="apidocSignatureSpan">browser-sync.utils.</span>xip
+        <span class="apidocSignatureSpan">(host, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">xip = function (host, options) {
+    var suffix = options.get(&#x22;hostnameSuffix&#x22;);
+    if (options.get(&#x22;xip&#x22;)) {
+        return host + &#x22;.xip.io&#x22;;
+    }
+    if (suffix) {
+        return host + suffix;
+    }
+    return host;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var urls   = {};
+
+if (options.get(&#x22;online&#x22;) === false) {
+    urls.local = utils.getUrl(scheme + &#x22;://localhost:&#x22; + port, options);
+    return Immutable.fromJS(urls);
+}
+
+var external  = utils.<span class="apidocCodeKeywordSpan">xip</span>(utils.getHostIp(options, devIp), options);
+var localhost = &#x22;localhost&#x22;;
+
+if (options.get(&#x22;xip&#x22;)) {
+    localhost = &#x22;127.0.0.1&#x22;;
+}
+
+localhost = utils.xip(localhost, options);
+...</pre></li>
+    </ul>
+    
+    
+    
+    
+    
+    
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
