@@ -1,6 +1,6 @@
 # npmdoc-browser-sync
 
-#### api documentation for  [browser-sync (v2.18.8)](http://www.browsersync.io/)  [![npm package](https://img.shields.io/npm/v/npmdoc-browser-sync.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-browser-sync) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-browser-sync.svg)](https://travis-ci.org/npmdoc/node-npmdoc-browser-sync)
+#### basic api documentation for  [browser-sync (v2.18.8)](http://www.browsersync.io/)  [![npm package](https://img.shields.io/npm/v/npmdoc-browser-sync.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-browser-sync) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-browser-sync.svg)](https://travis-ci.org/npmdoc/node-npmdoc-browser-sync)
 
 #### Live CSS Reload & Browser Syncing
 
