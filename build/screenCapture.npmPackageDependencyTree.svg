@@ -113,7 +113,7 @@
 <tspan x="10" y="1770">  │ │ │   ├─┬ dashdash@1.14.1 </tspan>
 <tspan x="10" y="1786">  │ │ │   │ └── assert-plus@1.0.0 </tspan>
 <tspan x="10" y="1802">  │ │ │   ├── ecc-jsbn@0.1.1 </tspan>
-<tspan x="10" y="1818">  │ │ │   ├─┬ getpass@0.1.6 </tspan>
+<tspan x="10" y="1818">  │ │ │   ├─┬ getpass@0.1.7 </tspan>
 <tspan x="10" y="1834">  │ │ │   │ └── assert-plus@1.0.0 </tspan>
 <tspan x="10" y="1850">  │ │ │   ├── jodid25519@1.0.2 </tspan>
 <tspan x="10" y="1866">  │ │ │   ├── jsbn@0.1.1 </tspan>
@@ -149,7 +149,7 @@
 <tspan x="10" y="2346">  │ ├── extglob@0.3.2 </tspan>
 <tspan x="10" y="2362">  │ ├── filename-regex@2.0.0 </tspan>
 <tspan x="10" y="2378">  │ ├── is-extglob@1.0.0 </tspan>
-<tspan x="10" y="2394">  │ ├─┬ kind-of@3.1.0 </tspan>
+<tspan x="10" y="2394">  │ ├─┬ kind-of@3.2.0 </tspan>
 <tspan x="10" y="2410">  │ │ └── is-buffer@1.1.5 </tspan>
 <tspan x="10" y="2426">  │ ├─┬ normalize-path@2.1.1 </tspan>
 <tspan x="10" y="2442">  │ │ └── remove-trailing-separator@1.0.1 </tspan>
@@ -279,7 +279,7 @@
 <tspan x="10" y="4426">    │   │ ├── pify@2.3.0 </tspan>
 <tspan x="10" y="4442">    │   │ └─┬ strip-bom@2.0.0 </tspan>
 <tspan x="10" y="4458">    │   │   └── is-utf8@0.2.1 </tspan>
-<tspan x="10" y="4474">    │   ├─┬ normalize-package-data@2.3.6 </tspan>
+<tspan x="10" y="4474">    │   ├─┬ normalize-package-data@2.3.8 </tspan>
 <tspan x="10" y="4490">    │   │ ├── hosted-git-info@2.4.2 </tspan>
 <tspan x="10" y="4506">    │   │ ├─┬ is-builtin-module@1.0.0 </tspan>
 <tspan x="10" y="4522">    │   │ │ └── builtin-modules@1.1.1 </tspan>
